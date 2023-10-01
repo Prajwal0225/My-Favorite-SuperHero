@@ -1,1 +1,42 @@
 # My-Favorite-SuperHero
+
+![image](https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/b7a7c61d-fcf7-4882-9420-7747f4c4577b)
+
+Welcome to the My Fav Superhero project! This web application allows you to search for your favorite superhero's image and discover random superhero images with just a click. Whether you're a superhero enthusiast or just looking for some fun, this project is for you.
+
+## Table of Contents
+
+- [Demo](#demo)
+- [Features](#features)
+- [Usage](#usage)
+
+
+## Demo
+
+You can see a live demo of the project here: [My Fav Superhero Demo](https://prajwal0225.github.io/My-Favorite-SuperHero/)
+
+
+## Features
+
+- **Search Superheroes**: Enter the name of your favorite superhero, and the website will display the superhero's image along with some basic information.
+
+- **Random Superhero**: Click the "Random" button to discover random superhero images and learn about heroes you might not have known before.
+
+## Usage
+
+To use the My Fav Superhero project, simply open the `index.html` file in your web browser. There's no need for complex setup or dependencies.
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/Prajwal0225/My-Favorite-SuperHero.git
+
+- Open the index.html file in your preferred web browser.
+
+- Start searching for your favorite superheroes or enjoy random hero discoveries.
+
+  
+
+https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/6aae0cbc-c912-47ed-9e62-94abf60a7267
+
+
