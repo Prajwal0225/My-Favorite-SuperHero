@@ -17,17 +17,25 @@ const getSupperHero = (id) =>{
     })
 }
 
-const getSearchSuperHero = (name) =>{
-   fetch(`${BaseUrl}/search/${name}`)
-  .then(response => response.json())
-  .then(json =>{
-    const hero = json.results[0]
-    // console.log(hero)
-    const hero2 = `<h2>${name}</h2>`
-    heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" heiht=200 width=200/>`
-    })
-}
+const getSearchSuperHero = (name) => {
+  fetch(`${BaseUrl}/search/${name}`)
+    .then(response => response.json())
+    .then(json => {
+      const hero = json.results[0];
 
+      if (hero) {
+        const heroName = `<h2>${name}</h2>`;
+        const heroImage = `<img src="${hero.image.url}" height=200 width=200/>`;
+
+        heroImageDiv.innerHTML = `${heroName} ${heroImage}`;
+      } else {
+        heroImageDiv.innerHTML = `<p>No superhero found for "${name}"</p>`;
+      }
+    })
+    .catch(error => {
+      console.error(`Error fetching superhero data: ${error}`);
+    });
+};
 
 const randomid =()=> {
   return Math.floor(Math.random() * 731)+1
