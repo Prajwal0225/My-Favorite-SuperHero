@@ -34,7 +34,10 @@ const randomid =()=> {
 }
 
 
-btn.onclick = () => getSupperHero(randomid())
+btn.onclick = () => {
+  searchInput.value = "";
+  getSupperHero(randomid())
+}
 
 
 searchbtn.onclick = () => getSearchSuperHero(searchInput.value)
