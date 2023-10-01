@@ -43,7 +43,9 @@ h1{
   margin-bottom: 25px;
 
 }
-
+#SearchInput {
+  width:fit-content;
+}
 
 
 /* social media */
@@ -57,6 +59,7 @@ h1{
 .footer-img{
   width:2%;
   padding: 10px;
+  
 
 }
 
