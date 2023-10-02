@@ -10,9 +10,11 @@ jobs:
           issuesOpened: |
             👋 @{{ author }}
             Thank you for raising an issue. We will investigate the matter and get back to you as soon as possible 🚀.
-            Please make sure you have given us as much context as possible. Additionally, consider giving our repository a star ⭐; it will motivate us to do more.
+            Please make sure you have given us as much context as possible. Additionally, consider giving our repository a star. ⭐
+            It will motivate us to do more!
 
           pullRequestOpened: |
             👋 @{{ author }}
             Thank you for raising your pull request.
-            Please ensure that you have followed our contribution guidelines. We will review it as soon as possible. Additionally, consider giving our repository a star⭐ ; it will motivate us to do more.
+            Please ensure that you have followed our contribution guidelines. We will review it as soon as possible. Additionally, consider giving our repository a star.⭐ 
+            It will motivate us to do more!
