@@ -4,6 +4,16 @@ const btn = document.getElementById('newherrobtn')
 const heroImageDiv = document.getElementById('heroImage')
 const searchbtn = document.getElementById('searchId')
 const searchInput = document.getElementById('SearchInput')
+const toggleButtton = document.querySelector(".toggle-button");
+const linkContainer = document.querySelector(".links-container");
+const userSection = document.querySelector(".user-section");
+
+
+toggleButtton.addEventListener('click',()=>{
+  linkContainer.classList.toggle("active");
+  userSection.classList.toggle("active");
+  
+})
 
 
 const getSupperHero = (id) =>{

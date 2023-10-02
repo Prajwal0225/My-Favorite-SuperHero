@@ -1,8 +1,105 @@
 body {
-  background-color: #FFDEE9;
-  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-item: center;
+}
+.nav-brand {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.nav-brand a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  cursor: pointer;
+  display: block;
+}
+nav .navbar-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.links-container {
+  align-items: center;
+}
 
+nav .navbar-link li {
+  list-style: none;
+}
+nav .navbar-link li:hover {
+  background-color: #ede6ee;
+  border-radius: 5px;
+}
+nav .navbar-link li a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  cursor: pointer;
+  display: block;
+}
 
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  display: none;
+  right: 0.75rem;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21px;
+  width: 30px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+}
+.user-section {
+  color: black;
+  padding: 1rem;
+ display:flex;
+ justify-content:center;
+  
+  align-items: start;
+}
+
+@media (max-width: 580px) {
+  .toggle-button {
+    display: flex;
+  }
+  /* .navbar-link{
+    display:none
+  } */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .navbar-link {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav .navbar-link li {
+    width: 100%;
+  }
+  nav .navbar-link li a {
+    width: 100%;
+    text-align: start;
+    padding: 0.5rem 1rem;
+  }
+  .links-container {
+    width: 100%;
+  }
+  .active{
+    display:none;
+  }
 }
 
 .btnRandomhero {
@@ -10,9 +107,6 @@ body {
   margin-left: 50px;
   height: 30px;
 }
-
-
-
 
 .btnSearch {
   border-radius: 10px;
@@ -22,20 +116,18 @@ body {
 
 center {
   margin-top: 50px;
-
 }
 
-#heroImage>h2 {
+#heroImage > h2 {
   font-size: 3rem;
 }
 
-#heroImage>img {
+#heroImage > img {
   border-radius: 10%;
 }
 
-
 h1 {
-  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: "Edu VIC WA NT Beginner", cursive;
   font-size: 70px;
 }
 
@@ -44,20 +136,16 @@ h1 {
   height: 300px;
 }
 
-
-
 .inputtext {
   width: 20%;
   height: 30px;
   border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 25px;
-
 }
 #SearchInput {
-  width:fit-content;
+  width: fit-content;
 }
-
 
 /* social media */
 
@@ -71,14 +159,11 @@ h1 {
 .footer-img {
   width: 2%;
   padding: 10px;
-  
-
 }
 
 .footer-link {
   text-decoration: none;
 }
-
 
 .tilt {
   -webkit-transition: all 0.5s ease;
