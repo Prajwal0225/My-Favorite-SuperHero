@@ -27,8 +27,8 @@ const getSupperHero = (id) => {
     .then((json) => {
       //console.log(json)
       const name = `<h2>${json.name}</h2>`;
-      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" heiht=400
-    width=400/>`;
+      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" height=400
+    width=300/>`;
     });
 };
 
@@ -40,7 +40,7 @@ const getSearchSuperHero = (name) => {
 
       if (hero) {
         const heroName = `<h2>${name}</h2>`;
-        const heroImage = `<img src="${hero.image.url}" height=200 width=200/>`;
+        const heroImage = `<img src="${hero.image.url}" height=400 width=300/>`;
 
         heroImageDiv.innerHTML = `${heroName} ${heroImage}`;
       } else {
@@ -52,9 +52,17 @@ const getSearchSuperHero = (name) => {
     });
 };
 
-const randomid = () => {
-  return Math.floor(Math.random() * 731) + 1;
-};
+
+const randomid =()=> {
+  return Math.floor(Math.random() * 731)+1
+}
+
+
+btn.onclick = () => {
+  searchInput.value = "";
+  getSupperHero(randomid())
+}
+
 
 btn.onclick = () => getSupperHero(randomid());
 
