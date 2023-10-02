@@ -1,26 +1,25 @@
-var BaseUrl = "https://superheroapi.com/api.php/136899909020706"
+var BaseUrl = "https://superheroapi.com/api.php/136899909020706";
 
-const btn = document.getElementById('newherrobtn')
-const heroImageDiv = document.getElementById('heroImage')
-const searchbtn = document.getElementById('searchId')
-const searchInput = document.getElementById('SearchInput')
+const btn = document.getElementById("newherrobtn");
+const heroImageDiv = document.getElementById("heroImage");
+const searchbtn = document.getElementById("searchId");
+const searchInput = document.getElementById("SearchInput");
 
-
-const getSupperHero = (id) =>{
+const getSupperHero = (id) => {
   fetch(`${BaseUrl}/${id}`)
-  .then(response => response.json())
-  .then(json =>{
-    //console.log(json)
-    const name = `<h2>${json.name}</h2>`
-    heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" heiht=200
-    width=200/>`
-    })
-}
+    .then((response) => response.json())
+    .then((json) => {
+      //console.log(json)
+      const name = `<h2>${json.name}</h2>`;
+      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" heiht=400
+    width=400/>`;
+    });
+};
 
 const getSearchSuperHero = (name) => {
   fetch(`${BaseUrl}/search/${name}`)
-    .then(response => response.json())
-    .then(json => {
+    .then((response) => response.json())
+    .then((json) => {
       const hero = json.results[0];
 
       if (hero) {
@@ -32,10 +31,11 @@ const getSearchSuperHero = (name) => {
         heroImageDiv.innerHTML = `<p>No superhero found for "${name}"</p>`;
       }
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(`Error fetching superhero data: ${error}`);
     });
 };
+
 
 const randomid =()=> {
   return Math.floor(Math.random() * 731)+1
@@ -48,4 +48,6 @@ btn.onclick = () => {
 }
 
 
-searchbtn.onclick = () => getSearchSuperHero(searchInput.value)
+btn.onclick = () => getSupperHero(randomid());
+
+searchbtn.onclick = () => getSearchSuperHero(searchInput.value);
