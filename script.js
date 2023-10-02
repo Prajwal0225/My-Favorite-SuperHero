@@ -12,7 +12,7 @@ const getSupperHero = (id) => {
       //console.log(json)
       const name = `<h2>${json.name}</h2>`;
       heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" heiht=400
-    width=400/>`;
+    width=300/>`;
     });
 };
 
@@ -24,7 +24,7 @@ const getSearchSuperHero = (name) => {
 
       if (hero) {
         const heroName = `<h2>${name}</h2>`;
-        const heroImage = `<img src="${hero.image.url}" height=200 width=200/>`;
+        const heroImage = `<img src="${hero.image.url}" height=400 width=300/>`;
 
         heroImageDiv.innerHTML = `${heroName} ${heroImage}`;
       } else {
