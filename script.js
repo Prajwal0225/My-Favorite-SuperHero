@@ -1,9 +1,26 @@
 var BaseUrl = "https://superheroapi.com/api.php/136899909020706";
 
-const btn = document.getElementById("newherrobtn");
-const heroImageDiv = document.getElementById("heroImage");
-const searchbtn = document.getElementById("searchId");
-const searchInput = document.getElementById("SearchInput");
+
+const btn = document.getElementById('newherrobtn')
+const heroImageDiv = document.getElementById('heroImage')
+const searchbtn = document.getElementById('searchId')
+const searchInput = document.getElementById('SearchInput')
+const toggleButtton = document.querySelector(".toggle-button");
+const linkContainer = document.querySelector(".links-container");
+
+const getCurrentYear = () => {
+  const yearElement = document.getElementById("year");
+  yearElement.textContent = new Date().getFullYear();
+};
+getCurrentYear();
+
+
+toggleButtton.addEventListener('click',()=>{
+  linkContainer.classList.toggle("active");
+ 
+  
+})
+
 
 const getSupperHero = (id) => {
   fetch(`${BaseUrl}/${id}`)
