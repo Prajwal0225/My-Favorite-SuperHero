@@ -1,3 +1,6 @@
+html {
+  font-size: 16px;
+}
 body {
   background-color: #FFDEE9;
   background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
@@ -6,22 +9,22 @@ body {
 }
 
 .btnRandomhero {
-  border-radius: 10px;
-  margin-left: 50px;
-  height: 30px;
+  border-radius: 0.625rem;
+    margin-left: 3.125rem;
+    height: 1.875rem;
 }
 
 
 
 
 .btnSearch {
-  border-radius: 10px;
-  height: 30px;
-  width: 60px;
+  border-radius: 0.625rem;
+    height: 1.875rem;
+    width: 3.75rem;
 }
 
 center {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 
 }
 
@@ -36,22 +39,22 @@ center {
 
 h1 {
   font-family: 'Edu VIC WA NT Beginner', cursive;
-  font-size: 70px;
+  font-size: 4.375rem;
 }
 
 .mainpic {
-  width: 300px;
-  height: 300px;
+width: 18.75rem;
+  height: 18.75rem;
 }
 
 
 
 .inputtext {
   width: 20%;
-  height: 30px;
-  border-radius: 10px;
-  margin-top: 30px;
-  margin-bottom: 25px;
+    height: 1.875rem;
+    border-radius: 0.625rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.5625rem;
 
 }
 #SearchInput {
@@ -62,15 +65,14 @@ h1 {
 /* social media */
 
 .bottom-container {
-  margin-top: 30px;
-
-  padding: 30px;
+margin-top: 1.875rem;
+  padding: 1.875rem;
   text-decoration: none;
 }
 
 .footer-img {
   width: 2%;
-  padding: 10px;
+  padding: 0.625rem;;
   
 
 }
