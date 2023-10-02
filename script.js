@@ -11,7 +11,7 @@ const getSupperHero = (id) => {
     .then((json) => {
       //console.log(json)
       const name = `<h2>${json.name}</h2>`;
-      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" heiht=400
+      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" height=400
     width=300/>`;
     });
 };
