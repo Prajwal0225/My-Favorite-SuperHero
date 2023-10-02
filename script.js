@@ -8,6 +8,11 @@ const searchInput = document.getElementById('SearchInput')
 const toggleButtton = document.querySelector(".toggle-button");
 const linkContainer = document.querySelector(".links-container");
 
+const getCurrentYear = () => {
+  const yearElement = document.getElementById("year");
+  yearElement.textContent = new Date().getFullYear();
+};
+getCurrentYear();
 
 
 toggleButtton.addEventListener('click',()=>{
@@ -15,13 +20,6 @@ toggleButtton.addEventListener('click',()=>{
  
   
 })
-
-
-
-const btn = document.getElementById("newherrobtn");
-const heroImageDiv = document.getElementById("heroImage");
-const searchbtn = document.getElementById("searchId");
-const searchInput = document.getElementById("SearchInput");
 
 
 const getSupperHero = (id) => {
