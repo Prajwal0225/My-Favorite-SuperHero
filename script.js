@@ -36,9 +36,17 @@ const getSearchSuperHero = (name) => {
     });
 };
 
-const randomid = () => {
-  return Math.floor(Math.random() * 731) + 1;
-};
+
+const randomid =()=> {
+  return Math.floor(Math.random() * 731)+1
+}
+
+
+btn.onclick = () => {
+  searchInput.value = "";
+  getSupperHero(randomid())
+}
+
 
 btn.onclick = () => getSupperHero(randomid());
 

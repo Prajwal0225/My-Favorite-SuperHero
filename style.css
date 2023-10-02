@@ -5,19 +5,35 @@ body {
 
 }
 
-.btnRandomhero {
-  border-radius: 10px;
-  margin-left: 50px;
-  height: 30px;
+.btnRandomhero{
+  border-color: #07cfc9;
+border-radius: 10px;
+margin-left: 50px;
+height: 30px;
+font-family: 'Lilita One', cursive;
 }
 
 
 
+.btnSearch{
+  border-color: #07cfc9;
+border-radius: 10px;
+height: 30px;
+width: 60px;
+font-family: 'Lilita One', cursive;
+}
 
-.btnSearch {
-  border-radius: 10px;
-  height: 30px;
-  width: 60px;
+.btnRandomhero:hover{
+  cursor:pointer;
+  color:aliceblue;
+  background-color: rgb(134, 144, 146);
+}
+
+.btnSearch:hover{
+  cursor:pointer;
+  color:aliceblue;
+  background-color: rgb(134, 144, 146);
+
 }
 
 center {
@@ -29,13 +45,15 @@ center {
   font-size: 3rem;
 }
 
+
 #heroImage>img {
   border-radius: 10%;
 }
 
 
 h1 {
-  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: 'Lilita One', cursive;
+
   font-size: 70px;
 }
 
@@ -46,12 +64,16 @@ h1 {
 
 
 
-.inputtext {
-  width: 20%;
+.inputtext{
+  width:30%;
+
   height: 30px;
   border-radius: 10px;
+  border-color: #07cfc9;
   margin-top: 30px;
   margin-bottom: 25px;
+  text-align: center;
+  font-family: 'Lilita One', cursive;
 
 }
 #SearchInput {
