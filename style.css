@@ -1,3 +1,5 @@
+
+
 body {
   background-color: #FFDEE9;
   background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
@@ -13,8 +15,8 @@ h1{
 }
 
 .mainpic {
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
 }
 
 .searchActions{
@@ -67,26 +69,20 @@ h1{
   cursor: pointer;
 }
 
-
-/* social media */
-
 .bottom-container {
-  margin-top: 30px;
-
-  padding: 30px;
+  margin-top: 1.875rem;
+  padding: 1.875rem;
   text-decoration: none;
 }
 
 .footer-img {
   width: 2%;
   padding: 10px;
-  
 }
 
 .footer-link {
   text-decoration: none;
 }
-
 
 .tilt {
   -webkit-transition: all 0.5s ease;
