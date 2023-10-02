@@ -2,7 +2,6 @@ body {
   background-color: #FFDEE9;
   background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
   margin: 0;
-
 }
 
 /* NAVBAR */
@@ -84,9 +83,9 @@ h1 {
   margin-bottom: 25px;
 
 }
-#SearchInput {
+/* #SearchInput {
   width:fit-content;
-}
+} */
 
 
 /* social media */
