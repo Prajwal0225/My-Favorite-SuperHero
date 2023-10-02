@@ -27,12 +27,16 @@ const getSearchSuperHero = (name) => {
         const heroImage = `<img src="${hero.image.url}" height=400 width=300/>`;
 
         heroImageDiv.innerHTML = `${heroName} ${heroImage}`;
-      } else {
-        heroImageDiv.innerHTML = `<p>No superhero found for "${name}"</p>`;
+
+        heroImage.classList.add("animate-fade-in");
+
+      }
+       else {
+        console.log("Not exists")
       }
     })
     .catch((error) => {
-      console.error(`Error fetching superhero data: ${error}`);
+      console.log(error);
     });
 };
 
