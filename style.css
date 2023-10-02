@@ -1,6 +1,4 @@
-html {
-  font-size: 16px;
-}
+
 
 body {
 
@@ -119,19 +117,7 @@ nav .navbar-link li a {
   font-family: 'Lilita One', cursive;
 }
 
-
-
 .btnSearch {
-  border-radius: 10px;
-  height: 30px;
-  width: 60px;
-
-
-
-.btnSearch{
-
-.btnSearch {
-
   border-color: #07cfc9;
   border-radius: 0.625rem;
   height: 1.875rem;
@@ -149,41 +135,21 @@ nav .navbar-link li a {
   cursor: pointer;
   color: aliceblue;
   background-color: rgb(134, 144, 146);
-
-
-
-}
-
-center {
-  margin-top: 50px;
-
 }
 
 center {
   margin-top: 3.125rem;
-
 }
 
-#heroImage > h2 {
+#heroImage>h2 {
   font-size: 3rem;
 }
 
-
-
-#heroImage > img {
-
-
-
-
 #heroImage>img {
-
   border-radius: 10%;
 }
 
 h1 {
-
-  font-family: "Edu VIC WA NT Beginner", cursive;
-
   font-family: 'Lilita One', cursive;
   font-size: 4.375rem;
 }
@@ -192,29 +158,6 @@ h1 {
   width: 18.75rem;
   height: 18.75rem;
 }
-
-
-
-.inputtext {
-  width: 20%;
-
-
-
-.inputtext{
-  width:30%;
-
-
-  height: 30px;
-  border-radius: 10px;
-  border-color: #07cfc9;
-  margin-top: 30px;
-  margin-bottom: 25px;
-
-
-  text-align: center;
-  font-family: 'Lilita One', cursive;
-
-
 
 .inputtext {
   width: 30%;
@@ -225,17 +168,11 @@ h1 {
   margin-bottom: 1.5625rem;
   text-align: center;
   font-family: 'Lilita One', cursive;
-
 }
 
 #SearchInput {
   width: fit-content;
 }
-
-
-/* social media */
-
-
 
 .bottom-container {
   margin-top: 1.875rem;
@@ -245,11 +182,7 @@ h1 {
 
 .footer-img {
   width: 2%;
-
-  padding: 10px;
-
   padding: 0.625rem;
-
 }
 
 .footer-link {
