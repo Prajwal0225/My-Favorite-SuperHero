@@ -9,7 +9,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesOpened: |
             👋 @{{ author }}
-            Thank you for raising an issue. We will will investigate into the matter and get back to you as soon as possible 🚀.
+            Thank you for raising an issue. We will investigate the matter and get back to you as soon as possible 🚀.
             Please make sure you have given us as much context as possible. Additionally, consider giving our repository a star ⭐; it will motivate us to do more.
 
           pullRequestOpened: |
