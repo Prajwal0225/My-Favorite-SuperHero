@@ -6,6 +6,7 @@ const btn = document.getElementById("newherrobtn"); // random hero btn
 const heroImageDiv = document.getElementById("heroImage"); // output image
 const downloadImageBtn = document.getElementById("downloadImg"); // download the image
 
+
 const getSupperHero = (id) => {
   fetch(`${BaseUrl}/${id}`)
     .then((response) => response.json())
