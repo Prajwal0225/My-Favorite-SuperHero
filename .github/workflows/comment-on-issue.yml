@@ -23,4 +23,4 @@ jobs:
 
           Feel free to reach out if you have any questions or need further assistance. 🙌
           `;
-          github.issues.createComment({ issue_number: context.issue.number, owner: context.repo.owner, repo: context.repo.repo, body: issueComment });
+           github.issues.createComment({ issue_number: github.context.issue.number, owner: github.context.repo.owner, repo: github.context.repo.repo, body: issueComment });
