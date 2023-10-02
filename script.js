@@ -1,5 +1,6 @@
 var BaseUrl = "https://superheroapi.com/api.php/136899909020706";
 
+
 const btn = document.getElementById('newherrobtn')
 const heroImageDiv = document.getElementById('heroImage')
 const searchbtn = document.getElementById('searchId')
@@ -16,6 +17,11 @@ toggleButtton.addEventListener('click',()=>{
 })
 
 
+
+const btn = document.getElementById("newherrobtn");
+const heroImageDiv = document.getElementById("heroImage");
+const searchbtn = document.getElementById("searchId");
+const searchInput = document.getElementById("SearchInput");
 
 
 const getSupperHero = (id) => {
