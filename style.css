@@ -1,4 +1,9 @@
+html {
+  font-size: 16px;
+}
+
 body {
+
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
 }
@@ -100,15 +105,20 @@ nav .navbar-link li a {
   .active{
     display:none;
   }
+
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
 }
 
-.btnRandomhero{
+.btnRandomhero {
   border-color: #07cfc9;
-border-radius: 10px;
-margin-left: 50px;
-height: 30px;
-font-family: 'Lilita One', cursive;
+  border-radius: 0.625rem;
+  margin-left: 3.125rem;
+  height: 1.875rem;
+  font-family: 'Lilita One', cursive;
 }
+
 
 
 .btnSearch {
@@ -119,29 +129,39 @@ font-family: 'Lilita One', cursive;
 
 
 .btnSearch{
+
+.btnSearch {
+
   border-color: #07cfc9;
-border-radius: 10px;
-height: 30px;
-width: 60px;
-font-family: 'Lilita One', cursive;
+  border-radius: 0.625rem;
+  height: 1.875rem;
+  width: 3.75rem;
+  font-family: 'Lilita One', cursive;
 }
 
-.btnRandomhero:hover{
-  cursor:pointer;
-  color:aliceblue;
+.btnRandomhero:hover {
+  cursor: pointer;
+  color: aliceblue;
   background-color: rgb(134, 144, 146);
 }
 
-.btnSearch:hover{
-  cursor:pointer;
-  color:aliceblue;
+.btnSearch:hover {
+  cursor: pointer;
+  color: aliceblue;
   background-color: rgb(134, 144, 146);
+
 
 
 }
 
 center {
   margin-top: 50px;
+
+}
+
+center {
+  margin-top: 3.125rem;
+
 }
 
 #heroImage > h2 {
@@ -149,7 +169,10 @@ center {
 }
 
 
+
 #heroImage > img {
+
+
 
 
 #heroImage>img {
@@ -162,14 +185,14 @@ h1 {
   font-family: "Edu VIC WA NT Beginner", cursive;
 
   font-family: 'Lilita One', cursive;
-
-  font-size: 70px;
+  font-size: 4.375rem;
 }
 
 .mainpic {
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
 }
+
 
 
 .inputtext {
@@ -192,23 +215,41 @@ h1 {
   font-family: 'Lilita One', cursive;
 
 
+
+.inputtext {
+  width: 30%;
+  height: 1.875rem;
+  border-radius: 0.625rem;
+  border-color: #07cfc9;
+  margin-top: 1.875rem;
+  margin-bottom: 1.5625rem;
+  text-align: center;
+  font-family: 'Lilita One', cursive;
+
 }
+
 #SearchInput {
   width: fit-content;
 }
 
+
 /* social media */
 
-.bottom-container {
-  margin-top: 30px;
 
-  padding: 30px;
+
+.bottom-container {
+  margin-top: 1.875rem;
+  padding: 1.875rem;
   text-decoration: none;
 }
 
 .footer-img {
   width: 2%;
+
   padding: 10px;
+
+  padding: 0.625rem;
+
 }
 
 .footer-link {
