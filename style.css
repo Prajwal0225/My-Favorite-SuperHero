@@ -1,26 +1,254 @@
-html {
+body {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+
+center {
+  margin-top: 30px;
+}
+
+h1 {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-size: 70px;
+}
+
+.mainpic {
+  width: 21.75rem;
+  height: 24.75rem;
+}
+
+.searchActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: unset;
+}
+
+.inputtext {
+  width: 20%;
+  height: 30px;
+  color: #1d1b1b;
+  padding: 3px 3px 3px 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+.btnSearch {
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  /* background-color: #007bff; */
+  margin-left: 10px;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+
+.btnRandomhero {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+
+#downloadImg {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+
+.bottom-container {
+  margin-top: 1.875rem;
+  padding: 1.875rem;
+  text-decoration: none;
+}
+
+.footer-img {
+  width: 2%;
+  padding: 10px;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.tilt {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+/* scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lightskyblue;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  /* background-color: #FFDEE9; */
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  border-radius: 6px;
 }
 
 body {
-  background-color: #FFDEE9;
-  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  margin: 0;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  overflow: hidden;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  padding: 10px;
+}
+
+.navbar-item {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-item {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.btnRandomhero {
+  border-radius: 10px;
+  margin-left: 50px;
+  height: 30px;
+}
+
+.btnSearch {
+  border-radius: 10px;
+  height: 30px;
+  width: 60px;
+}
+
+center {
+  margin-top: 50px;
+}
+
+#heroImage > h2 {
+  font-size: 3rem;
+}
+
+#heroImage > img {
+  border-radius: 10%;
+}
+
+h1 {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-size: 70px;
+}
+
+.mainpic {
+  width: 300px;
+  height: 300px;
+}
+
+.inputtext {
+  width: 20%;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+/* #SearchInput {
+  width:fit-content;
+} */
+
+/* social media */
+
+.bottom-container {
+  margin-top: 30px;
+
+  padding: 30px;
+  text-decoration: none;
+}
+
+.footer-img {
+  width: 2%;
+  padding: 10px;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.tilt {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+body {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
 }
 
 .btnRandomhero {
   border-color: #07cfc9;
   border-radius: 0.625rem;
   margin-left: 3.125rem;
-  height: 1.875rem;
-  font-family: 'Lilita One', cursive;
+  height: 2.5rem;
+  font-family: "Lilita One", cursive;
 }
 
 .btnSearch {
   border-color: #07cfc9;
   border-radius: 0.625rem;
-  height: 1.875rem;
-  width: 3.75rem;
-  font-family: 'Lilita One', cursive;
+  height: 2.875rem;
+  width: 5.5rem;
+  font-family: "Lilita One", cursive;
 }
 
 .btnRandomhero:hover {
@@ -39,16 +267,16 @@ center {
   margin-top: 3.125rem;
 }
 
-#heroImage>h2 {
+#heroImage > h2 {
   font-size: 3rem;
 }
 
-#heroImage>img {
+#heroImage > img {
   border-radius: 10%;
 }
 
 h1 {
-  font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
   font-size: 4.375rem;
 }
 
@@ -60,12 +288,13 @@ h1 {
 .inputtext {
   width: 30%;
   height: 1.875rem;
+  font-size: xx-large;
   border-radius: 0.625rem;
   border-color: #07cfc9;
   margin-top: 1.875rem;
   margin-bottom: 1.5625rem;
   text-align: center;
-  font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
 }
 
 #SearchInput {
@@ -101,4 +330,18 @@ h1 {
   -o-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
   transform: rotate(-10deg);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: rgb(211, 211, 228);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(106, 216, 219);
+  border-radius: 0.3rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(90, 117, 168);
 }

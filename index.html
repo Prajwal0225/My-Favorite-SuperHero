@@ -14,23 +14,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <nav class="navbar">
+    <a href="/index.html" class="navbar-item">Home</a>
+    <a href="/about.html" class="navbar-item">About</a>
+    <a href="/contributers.html" class="navbar-item">Contributors</a>
+  </nav>
+
+
   <center>
-    <div class="top-container">
-    <h1><u>Your fav. Super Hero's</u></h1>
-    </div>
-    <div class="middle-container">
-      <input id='SearchInput' class="inputtext" type="text" placeholder="Type Your Hero Name">
-      <br>
-      <button id='searchId' class="btnSearch">Search</button>
-      <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
-      <br>
-      <div id='heroImage'><img class="mainpic" src="images/mainicon.png" alt=""></div>
-    </div>
-    <div class="bottom-container">
-      <a class="footer-link" href="https://www.linkedin.com/feed/"><img class="footer-img linkedin tilt pic" src="images/linkedin.png" alt="linkedin"> </a>
-      <a class="footer-link" href="https://twitter.com/home"><img class="footer-img  twitter tilt pic" src="images/twitter.png" alt="Twitter"> </a>
-      <a class="footer-link" href="https://github.com/Prajwal0225"><img class="footer-img global tilt pic" src="images/github.png" alt="Other work"> </a>
-      <p class="bookmark">© 2023 Superhero's World By Prajwal Somalkar. All rights reserved.</p>
+      <div class="top-container">
+        <h1><u>Your fav. Super Hero's</u></h1>
+      </div>
+      <!-- main actions elements : start -->
+      <div class="middle-container">
+        <div class="searchActions">
+        <input
+          id="SearchInput"
+          class="inputtext"
+          type="text"
+          placeholder="Type Your Hero Name"
+        />
+        <br />
+        <button id="searchId" class="btnSearch">🔍</button>
+        </div>
+        <div class="searchActions1">
+        <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
+        <button id="downloadImg">Download</button>
+      </div>
+      <!-- main actions elements : end-->
+        <br />
+        <div id="heroImage">
+          <img class="mainpic" src="images/mainicon.png" alt="" />
+        </div>
+      </div>
+      <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/feed/"
+          ><img
+            class="footer-img linkedin tilt pic"
+            src="images/linkedin.png"
+            alt="linkedin"
+          />
+        </a>
+        <a class="footer-link" href="https://twitter.com/home"
+          ><img
+            class="footer-img twitter tilt pic"
+            src="images/twitter.png"
+            alt="Twitter"
+          />
+        </a>
+        <a class="footer-link" href="https://github.com/Prajwal0225"
+          ><img
+            class="footer-img global tilt pic"
+            src="images/github.png"
+            alt="Other work"
+          />
+        </a>
+      <p class="bookmark">© <span id="year"></span> Superhero's World By Prajwal Somalkar. All rights reserved.</p>
     </div>
 
   </center>
