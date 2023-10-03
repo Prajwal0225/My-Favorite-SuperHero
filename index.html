@@ -4,38 +4,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Supperhero's</title>
+  <title>Superhero's</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="icon" href="images/superhero.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <center>
-    <div class="top-container">
-    <h1><u>Your fav. Super Hero's</u></h1>
-    </div>
-    <div class="middle-container">
-      <input id='SearchInput' class="inputtext" type="text" placeholder="Type Your Hero Name">
-      <br>
-      <button id='searchId' class="btnSearch">Search</button>
-      <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
-      <br>
-      <div id='heroImage'><img class="mainpic" src="images/mainicon.png" alt=""></div>
-    </div>
-    <div class="bottom-container">
-      <a class="footer-link" href="https://www.linkedin.com/feed/"><img class="footer-img linkedin tilt pic" src="images/linkedin.png" alt="linkedin"> </a>
-      <a class="footer-link" href="https://twitter.com/home"><img class="footer-img  twitter tilt pic" src="images/twitter.png" alt="Twitter"> </a>
-      <a class="footer-link" href="https://github.com/Prajwal0225"><img class="footer-img global tilt pic" src="images/github.png" alt="Other work"> </a>
-      <a class="footer-link" href="https://codepen.io/your-work"><img class="footer-img global tilt pic" src="images/codepen.png" alt="Other work"> </a>
-      <p class="bookmark">© Prajwal Somalkar.</p>
+
+  <main>
+    <div class="header">
+      <h1 class="header-text"><u>Your fav. Super Hero's</u></h1>
     </div>
 
-  </center>
+    <div class="main">
+      <input id='SearchInput' class="inputtext" type="text" placeholder="Type Your Hero Name">
+
+
+  <nav class="navbar">
+    <a href="/index.html" class="navbar-item">Home</a>
+    <a href="/about.html" class="navbar-item">About</a>
+    <a href="/contributers.html" class="navbar-item">Contributors</a>
+      </nav>
+
+      <div class="buttons">
+          <button id='searchId' class="btnSearch">Search</button>
+          <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
+      </div>
+
+
+      <div id='heroImage'>
+        <img class="mainpic" src="images/mainicon.png" alt="">
+      </div>
+
+
+    <footer>
+      <div class="footer-content">
+          <a class="footer-link" href="https://www.linkedin.com/feed/" target="_blank">
+            <img class="footer-img linkedin tilt pic" src="images/linkedin.png" alt="linkedin">
+          </a>
+          <a class="footer-link" href="https://twitter.com/home" target="_blank">
+            <img class="footer-img  twitter tilt pic" src="images/twitter.png" target="_blank" alt="Twitter">
+          </a>
+          <a class="footer-link" href="https://github.com/Prajwal0225" target="_blank">
+            <img class="footer-img global tilt pic" src="images/github.png" alt="Other work">
+          </a>
+      </div>
+
+        <p class="bookmark">
+          © 2023 Superhero's World By Prajwal Somalkar. All rights reserved.
+        </p>
+    </footer>
+
+  </main>
 
  <script src="script.js"></script>
 </body>

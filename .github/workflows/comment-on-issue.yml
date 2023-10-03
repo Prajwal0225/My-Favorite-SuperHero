@@ -1,0 +1,26 @@
+name: Comment on New Issues
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Comment on Issue
+      if: github.event.issue.user.login != github.event.repository.owner.login
+      uses: actions/github-script@0.10.0
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const issueComment = `
+          🎉 Thanks for raising an issue 🚀
+
+          The maintainer will be on the case shortly to review your issue. If everything checks out, they'll assign the issue to you. 📋✅
+
+          Your support means the world to us! 🌟 Please consider giving our repository a star ⭐ to show your appreciation 🚀
+
+          Feel free to reach out if you have any questions or need further assistance. 🙌
+          `;
+           github.issues.createComment({ issue_number: github.context.issue.number, owner: github.context.repo.owner, repo: github.context.repo.repo, body: issueComment });

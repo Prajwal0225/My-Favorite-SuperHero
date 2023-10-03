@@ -40,3 +40,6 @@ To use the My Fav Superhero project, simply open the `index.html` file in your w
 https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/6aae0cbc-c912-47ed-9e62-94abf60a7267
 
 
+
+If you want to contribute to this project then check out [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
