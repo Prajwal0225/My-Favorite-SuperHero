@@ -1,17 +1,15 @@
 var BaseUrl = "https://superheroapi.com/api.php/136899909020706";
 
 
-const searchInput = document.getElementById("SearchInput"); // input:search
-const searchbtn = document.getElementById("searchId"); // search button
-const btn = document.getElementById("newherrobtn"); // random hero btn
-const heroImageDiv = document.getElementById("heroImage"); // output image
-const downloadImageBtn = document.getElementById("downloadImg"); // download the image
+
+
 
 
 const btn = document.getElementById('newherrobtn')
 const heroImageDiv = document.getElementById('heroImage')
 const searchbtn = document.getElementById('searchId')
 const searchInput = document.getElementById('SearchInput')
+const downloadImageBtn = document.getElementById("downloadImg"); // download the image
 // const toggleButtton = document.querySelector(".toggle-button");
 // const linkContainer = document.querySelector(".links-container");
 
