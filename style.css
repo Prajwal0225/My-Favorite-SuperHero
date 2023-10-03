@@ -70,6 +70,10 @@ h1{
   cursor: pointer;
 }
 
+#loading{
+  margin: 30px 0px;
+}
+
 .bottom-container {
   margin-top: 1.875rem;
   padding: 1.875rem;
