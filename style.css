@@ -1,3 +1,4 @@
+
 body {
   background-color: #FFDEE9;
   background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
@@ -123,4 +124,119 @@ h1 {
   -o-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
   transform: rotate(-10deg);
+}
+
+body {
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+.btnRandomhero {
+  border-color: #07cfc9;
+  border-radius: 0.625rem;
+  margin-left: 3.125rem;
+  height: 1.875rem;
+  font-family: 'Lilita One', cursive;
+}
+
+.btnSearch {
+  border-color: #07cfc9;
+  border-radius: 0.625rem;
+  height: 1.875rem;
+  width: 3.75rem;
+  font-family: 'Lilita One', cursive;
+}
+
+.btnRandomhero:hover {
+  cursor: pointer;
+  color: aliceblue;
+  background-color: rgb(134, 144, 146);
+}
+
+.btnSearch:hover {
+  cursor: pointer;
+  color: aliceblue;
+  background-color: rgb(134, 144, 146);
+}
+
+center {
+  margin-top: 3.125rem;
+}
+
+#heroImage>h2 {
+  font-size: 3rem;
+}
+
+#heroImage>img {
+  border-radius: 10%;
+}
+
+h1 {
+  font-family: 'Lilita One', cursive;
+  font-size: 4.375rem;
+}
+
+.mainpic {
+  width: 18.75rem;
+  height: 18.75rem;
+}
+
+.inputtext {
+  width: 30%;
+  height: 1.875rem;
+  border-radius: 0.625rem;
+  border-color: #07cfc9;
+  margin-top: 1.875rem;
+  margin-bottom: 1.5625rem;
+  text-align: center;
+  font-family: 'Lilita One', cursive;
+}
+
+#SearchInput {
+  width: fit-content;
+}
+
+.bottom-container {
+  margin-top: 1.875rem;
+  padding: 1.875rem;
+  text-decoration: none;
+}
+
+.footer-img {
+  width: 2%;
+  padding: 0.625rem;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.tilt {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+    
+::-webkit-scrollbar{
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: rgb(211, 211, 228);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(106, 216, 219);
+  border-radius: 0.3rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(90, 117, 168);
 }
