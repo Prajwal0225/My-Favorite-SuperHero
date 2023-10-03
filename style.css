@@ -4,7 +4,13 @@ body {
   background-color: #FFDEE9;
   background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
 }
+.top-container{
+  margin-top: 0px;
+}
 
+.middle-container{
+  margin-top: 10px;
+}
 .btnRandomhero {
   border-color: #07cfc9;
   border-radius: 0.625rem;
@@ -35,6 +41,9 @@ body {
 
 center {
   margin-top: 3.125rem;
+  align-content: center;
+  align-items: center;
+  align-self: center;
 }
 
 #heroImage>h2 {
@@ -73,30 +82,93 @@ h1 {
 .bottom-container {
   margin-top: 1.875rem;
   padding: 1.875rem;
+  align-content: center;
   text-decoration: none;
 }
 
-.footer-img {
-  width: 2%;
-  padding: 0.625rem;
+.social-btn {
+  cursor: pointer;
+  display: flex;/* Add this to make the symbol and text appear side by side */
+  align-items: center; /*Vertically center the content*/
+  height: 50px;
+  width: 150px; /*Adjust the width as needed*/
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin: 5px;
+  transition: 1s;
 }
 
-.footer-link {
-  text-decoration: none;
+.social-btn span {
+ 
+  overflow: hidden;
+  transition: 1s;
+  text-align: center;
+  padding-left: 10px; /* Add some space between the symbol and text */
 }
 
-.tilt {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.tilt:hover {
-  -webkit-transform: rotate(-10deg);
-  -moz-transform: rotate(-10deg);
-  -o-transform: rotate(-10deg);
-  -ms-transform: rotate(-10deg);
-  transform: rotate(-10deg);
+body, .flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	height: 100vh;
+	background-color: #ffffff;
+	background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+.social-links {
+	display: flex;
+}
+
+.social-btn {
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #333;
+	border-radius: 10px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+	background: white;
+	margin: 5px;
+	transition: 1s;
+}
+
+.social-btn span {
+	width: 0px;
+	overflow: hidden;
+	transition: 1s;
+	text-align: center;
+}
+
+.social-btn:hover {
+	width: 150px;
+	border-radius: 5px;
+}
+
+.social-btn:hover span {
+	padding: 2px;
+	width: max-content;
+}
+
+#twitter svg {
+	fill: #1da1f2;
+}
+
+#linkedin svg {
+	fill: #0e76a8;
+}
+
+#github {
+	fill: #333;
 }
