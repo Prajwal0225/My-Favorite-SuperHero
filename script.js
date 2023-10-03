@@ -74,4 +74,13 @@ const randomid = () => {
 
 btn.onclick = () => getSupperHero(randomid());
 
-searchbtn.onclick = () => getSearchSuperHero(searchInput.value);
+searchbtn.onclick = () => {
+  const inputValue = searchInput.value.trim(); // Trim any leading/trailing spaces
+  if (inputValue !== "") {
+    getSearchSuperHero(inputValue);
+  } else {
+    // Handle the case where the input is empty (e.g., show an error message).
+    alert("Input is empty. Please enter a hero name.");
+  }
+};
+
