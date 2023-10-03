@@ -1,17 +1,14 @@
-
-
-
 body {
-  background-color: #FFDEE9;
-  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
 }
 
-center{
-  margin-top:30px;
+center {
+  margin-top: 30px;
 }
 
-h1{
-  font-family: 'Edu VIC WA NT Beginner', cursive;
+h1 {
+  font-family: "Edu VIC WA NT Beginner", cursive;
   font-size: 70px;
 }
 
@@ -20,22 +17,22 @@ h1{
   height: 24.75rem;
 }
 
-.searchActions{
+.searchActions {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom:unset;
+  margin-bottom: unset;
 }
 
-
-.inputtext{
+.inputtext {
   width: 20%;
   height: 30px;
   color: #1d1b1b;
-  padding: 3px 3px 3px 10px ;
+  padding: 3px 3px 3px 10px;
   border-radius: 10px;
   outline: none;
   border: 1px solid #000;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
 .btnSearch {
   height: 40px;
@@ -48,6 +45,7 @@ h1{
   outline: none;
   font-size: 15px;
   cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
 
 .btnRandomhero {
@@ -58,6 +56,7 @@ h1{
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
 
 #downloadImg {
@@ -68,6 +67,7 @@ h1{
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
 
 .bottom-container {
@@ -95,72 +95,66 @@ h1{
 
 .tilt:hover {
   -webkit-transform: rotate(-10deg);
-     -moz-transform: rotate(-10deg);
-       -o-transform: rotate(-10deg);
-      -ms-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 
-
 /* scrollbar styles */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:lightskyblue; 
-  border-radius: 6px; 
+  background-color: lightskyblue;
+  border-radius: 6px;
 }
 ::-webkit-scrollbar-track {
   /* background-color: #FFDEE9; */
-  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
-  border-radius: 6px; 
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  border-radius: 6px;
 }
 
 body {
-  background-color: #FFDEE9;
-  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
   margin: 0;
 }
 
 /* NAVBAR */
 
 .navbar {
-  background-color: #FFDEE9; 
-  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
   overflow: hidden;
   display: flex;
   font-size: 1.5rem;
-  justify-content: center; 
-  padding: 10px; 
+  justify-content: center;
+  padding: 10px;
 }
 
 .navbar-item {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 20px; 
+  padding: 14px 20px;
   text-decoration: none;
 }
-
 
 @media screen and (max-width: 600px) {
   .navbar-item {
     float: none;
     width: 100%;
-    text-align: center; 
+    text-align: center;
   }
 }
-
 
 .btnRandomhero {
   border-radius: 10px;
   margin-left: 50px;
   height: 30px;
 }
-
-
-
 
 .btnSearch {
   border-radius: 10px;
@@ -170,20 +164,18 @@ body {
 
 center {
   margin-top: 50px;
-
 }
 
-#heroImage>h2 {
+#heroImage > h2 {
   font-size: 3rem;
 }
 
-#heroImage>img {
+#heroImage > img {
   border-radius: 10%;
 }
 
-
 h1 {
-  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: "Edu VIC WA NT Beginner", cursive;
   font-size: 70px;
 }
 
@@ -192,20 +184,17 @@ h1 {
   height: 300px;
 }
 
-
-
 .inputtext {
   width: 20%;
   height: 30px;
   border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 25px;
-
+  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
 /* #SearchInput {
   width:fit-content;
 } */
-
 
 /* social media */
 
@@ -219,14 +208,11 @@ h1 {
 .footer-img {
   width: 2%;
   padding: 10px;
-  
-
 }
 
 .footer-link {
   text-decoration: none;
 }
-
 
 .tilt {
   -webkit-transition: all 0.5s ease;
@@ -245,8 +231,8 @@ h1 {
 }
 
 body {
-  background-color: #FFDEE9;
-  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
 }
 
 .btnRandomhero {
@@ -254,7 +240,7 @@ body {
   border-radius: 0.625rem;
   margin-left: 3.125rem;
   height: 2.5rem;
-  font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
 }
 
 .btnSearch {
@@ -262,7 +248,7 @@ body {
   border-radius: 0.625rem;
   height: 2.875rem;
   width: 5.5rem;
-  font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
 }
 
 .btnRandomhero:hover {
@@ -281,16 +267,16 @@ center {
   margin-top: 3.125rem;
 }
 
-#heroImage>h2 {
+#heroImage > h2 {
   font-size: 3rem;
 }
 
-#heroImage>img {
+#heroImage > img {
   border-radius: 10%;
 }
 
 h1 {
-  font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
   font-size: 4.375rem;
 }
 
@@ -308,7 +294,7 @@ h1 {
   margin-top: 1.875rem;
   margin-bottom: 1.5625rem;
   text-align: center;
-  font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
 }
 
 #SearchInput {
@@ -345,8 +331,8 @@ h1 {
   -ms-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
-    
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
