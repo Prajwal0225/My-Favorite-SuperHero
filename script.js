@@ -31,7 +31,7 @@ const getSupperHero = (id) => {
     .then((response) => response.json())
     .then((json) => {
       const name = `<h2>${json.name}</h2>`;
-      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" height=200 width=200/>`;
+      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" height=400 width=300/>`;
 
       console.log(json.image.url);
       downloadImageBtn.addEventListener("click", () => {
@@ -48,7 +48,7 @@ const getSearchSuperHero = (name) => {
       const hero = json.results[0];
       console.log(hero);
       const hero2 = `<h2>${name}</h2>`;
-      heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=200 width=200/>`;
+      heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
 
       console.log(hero.image.url);
       downloadImageBtn.addEventListener("click", () => {
