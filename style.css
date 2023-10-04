@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Questrial&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+}
 body {
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
@@ -9,7 +16,8 @@ center {
 
 h1 {
   font-family: "Edu VIC WA NT Beginner", cursive;
-  font-size: 70px;
+  font-size: 100px;
+  font-weight: 900;
 }
 
 .mainpic {
@@ -33,20 +41,18 @@ h1 {
   outline: none;
   border: 1px solid #000;
   box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
-  width: 30%;
-  height: 1.875rem;
-  font-size: xx-large;
-  border-radius: 0.625rem;
-  border-color: #07cfc9;
-  margin-top: 1.875rem;
-  margin-bottom: 1.5625rem;
-  text-align: center;
-  font-family: "Lilita One", cursive;
-  width: 20%;
-  height: 30px;
-  border-radius: 10px;
-  margin-top: 30px;
-  margin-bottom: 25px;
+}
+.btnSearch {
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  /* background-color: #007bff; */
+  margin-left: 10px;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
   box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
 
@@ -133,17 +139,18 @@ h1 {
 
 .navbar {
   background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-image: linear-gradient(0deg, #000000 0%, #000000 100%);
   overflow: hidden;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.85rem;
+  font-weight: 500;
   justify-content: center;
   padding: 10px;
 }
 
 .navbar-item {
   display: block;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
@@ -194,7 +201,7 @@ center {
 }
 
 h1 {
-  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-family: "Edu VIC WA NT Beginner",sans-serif;
   font-size: 70px;
 }
 
@@ -217,15 +224,23 @@ h1 {
 /* body {
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
-} */
+}
 
-/* .btnSearch {
+.btnRandomhero {
+  border-color: #07cfc9;
+  border-radius: 0.625rem;
+  margin-left: 3.125rem;
+  height: 2.5rem;
+  font-family: "Lilita One", cursive;
+}
+
+.btnSearch {
   border-color: #07cfc9;
   border-radius: 0.625rem;
   height: 2.875rem;
   width: 5.5rem;
   font-family: "Lilita One", cursive;
-} */
+}
 
 .btnRandomhero:hover {
   cursor: pointer;
@@ -252,7 +267,7 @@ center {
 }
 
 h1 {
-  font-family: "Lilita One", cursive;
+  font-family: "Lilita One",sans-serif;
   font-size: 4.375rem;
 }
 
@@ -261,12 +276,24 @@ h1 {
   height: 18.75rem;
 }
 
+.inputtext {
+  width: 30%;
+  height: 1.875rem;
+  font-size: xx-large;
+  border-radius: 0.625rem;
+  border-color: #07cfc9;
+  margin-top: 1.875rem;
+  margin-bottom: 1.5625rem;
+  text-align: center;
+  font-family: "Lilita One", cursive;
+}
+
 #SearchInput {
   width: fit-content;
 }
 
 .footer-img {
-  width: 2%;
+  width: 3%;
   padding: 0.625rem;
 }
 

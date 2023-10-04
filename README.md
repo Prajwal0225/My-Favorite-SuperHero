@@ -43,3 +43,14 @@ https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/6aae0cbc-c
 
 If you want to contribute to this project then check out [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
+
+##  Project Maintainers
+
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/Prajwal0225"><img src="https://avatars.githubusercontent.com/u/103810119?v=4" width="100px;" alt=""/><br /><sub><b>Prajwal </b></sub></a></td>
+     <td align="center"><a href="https://github.com/madhurafulkar"><img src="https://avatars.githubusercontent.com/u/120560129?v=4" width="100px;" alt=""/><br /><sub><b>Madhura</b></sub></a></td>
+  </tr>
+</table>
+
+
