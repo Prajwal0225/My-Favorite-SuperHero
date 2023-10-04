@@ -1,14 +1,9 @@
 var BaseUrl = "https://superheroapi.com/api.php/136899909020706";
 
-
-
-
-
-
-const btn = document.getElementById('newherrobtn')
-const heroImageDiv = document.getElementById('heroImage')
-const searchbtn = document.getElementById('searchId')
-const searchInput = document.getElementById('SearchInput')
+const btn = document.getElementById("newherrobtn");
+const heroImageDiv = document.getElementById("heroImage");
+const searchbtn = document.getElementById("searchId");
+const searchInput = document.getElementById("SearchInput");
 const downloadImageBtn = document.getElementById("downloadImg"); // download the image
 // const toggleButtton = document.querySelector(".toggle-button");
 // const linkContainer = document.querySelector(".links-container");
@@ -19,12 +14,9 @@ const getCurrentYear = () => {
 };
 getCurrentYear();
 
-
 // toggleButtton.addEventListener('click',()=>{
 //   linkContainer.classList.toggle("active");
 // })
-
-
 
 const getSupperHero = (id) => {
   fetch(`${BaseUrl}/${id}`)
@@ -82,10 +74,10 @@ const randomid = () => {
 
 btn.onclick = () => getSupperHero(randomid());
 
-
 // Function to handle search
 const handleSearch = () => {
   const inputValue = searchInput.value.trim();
+
   if (inputValue !== "") {
     getSearchSuperHero(inputValue);
   } else {
@@ -96,10 +88,19 @@ const handleSearch = () => {
 // Event listener for search button click
 searchbtn.addEventListener("click", handleSearch);
 
+//Event listener to clear placeholder on focus
+searchInput.addEventListener("focus", function () {
+  searchInput.placeholder = "";
+});
+
+//Event listener to add placeholder on focus out
+searchInput.addEventListener("blur", function () {
+  searchInput.placeholder = "Type Your Hero Name";
+});
+
 // Event listener for Enter key press on the input field
 searchInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     handleSearch();
   }
 });
-
