@@ -7,7 +7,7 @@
 }
 body {
   background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-image: url(bgimagef.jpg);
 }
 
 center {
@@ -15,6 +15,8 @@ center {
 }
 
 h1 {
+  color: #ffdee9;
+  border: #000;
   font-family: "Edu VIC WA NT Beginner", cursive;
   font-size: 100px;
   font-weight: 900;
@@ -128,11 +130,6 @@ h1 {
   border-radius: 6px;
 }
 
-body {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
-  margin: 0;
-}
 
 /* NAVBAR */
 
@@ -243,10 +240,6 @@ h1 {
   transform: rotate(-10deg);
 }
 
-body {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #f86c9b 0%, #3ef1ec 100%);
-}
 
 .btnRandomhero {
   border-color: #07cfc9;
