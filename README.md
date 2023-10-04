@@ -1,5 +1,4 @@
 # My-Favorite-SuperHero
-# Hello
 
 ![image](https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/b7a7c61d-fcf7-4882-9420-7747f4c4577b)
 
