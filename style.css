@@ -179,7 +179,7 @@ center {
 }
 
 h1 {
-  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-family: "Edu VIC WA NT Beginner",sans-serif;
   font-size: 70px;
 }
 
@@ -244,7 +244,7 @@ body {
   border-radius: 0.625rem;
   margin-left: 3.125rem;
   height: 2.5rem;
-  font-family: "Lilita One", cursive;
+  font-family: "Lilita One", sans-serif;
 }
 
 .btnSearch {
@@ -252,7 +252,7 @@ body {
   border-radius: 0.625rem;
   height: 2.875rem;
   width: 5.5rem;
-  font-family: "Lilita One", cursive;
+  font-family: "Lilita One",sans-serif ;
 }
 
 .btnRandomhero:hover {
@@ -280,7 +280,7 @@ center {
 }
 
 h1 {
-  font-family: "Lilita One", cursive;
+  font-family: "Lilita One",sans-serif;
   font-size: 4.375rem;
 }
 
