@@ -45,16 +45,24 @@ const getSearchSuperHero = (name) => {
   fetch(`${BaseUrl}/search/${name}`)
     .then((response) => response.json())
     .then((json) => {
-      const hero = json.results[0];
-      console.log(hero);
-      const hero2 = `<h2>${name}</h2>`;
-      heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
+      if (json.results && json.results.length > 0) {
+        const hero = json.results[0];
+        console.log(hero);
+        const hero2 = `<h2>${name}</h2>`;
+        heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
 
-      console.log(hero.image.url);
-      downloadImageBtn.addEventListener("click", () => {
-        const imageUrl = hero.image.url;
-        downloadImage(imageUrl);
-      });
+        console.log(hero.image.url);
+        downloadImageBtn.addEventListener("click", () => {
+          const imageUrl = hero.image.url;
+          downloadImage(imageUrl);
+        });
+      } else {
+        heroImageDiv.innerHTML = `<p class="error">The superhero with this name ${name} does not exist on the website</p>`;
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+      heroImageDiv.innerHTML = `<p> An error occurred while fetching data.</p>`;
     });
 };
 
