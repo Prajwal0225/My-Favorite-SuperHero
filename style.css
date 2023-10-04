@@ -359,6 +359,7 @@ h1 {
   background: rgb(90, 117, 168);
 }
 
+/* Add this CSS in your <style> tag or external stylesheet */
 .zoom-effect {
   transition: transform 0.3s ease;
 }
