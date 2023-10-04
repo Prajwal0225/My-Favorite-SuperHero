@@ -82,13 +82,24 @@ const randomid = () => {
 
 btn.onclick = () => getSupperHero(randomid());
 
-searchbtn.onclick = () => {
-  const inputValue = searchInput.value.trim(); // Trim any leading/trailing spaces
+
+// Function to handle search
+const handleSearch = () => {
+  const inputValue = searchInput.value.trim();
   if (inputValue !== "") {
     getSearchSuperHero(inputValue);
   } else {
-    // Handle the case where the input is empty (e.g., show an error message).
     alert("Input is empty. Please enter a hero name.");
   }
 };
+
+// Event listener for search button click
+searchbtn.addEventListener("click", handleSearch);
+
+// Event listener for Enter key press on the input field
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    handleSearch();
+  }
+});
 
