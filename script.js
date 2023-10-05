@@ -31,7 +31,7 @@ const getSupperHero = (id) => {
     .then((response) => response.json())
     .then((json) => {
       const name = `<h2>${json.name}</h2>`;
-      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" height=400 width=300/>`;
+      heroImageDiv.innerHTML = `${name} <div class="img_container"> <img src= "${json.image.url}"/> </div>`;
 
       console.log(json.image.url);
       downloadImageBtn.addEventListener("click", () => {
