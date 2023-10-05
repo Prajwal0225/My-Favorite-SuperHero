@@ -9,6 +9,9 @@
 body {
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-size: cover;
+
+  height: 1080px;
 }
 
 center {
@@ -46,6 +49,10 @@ h1 {
 .error {
   font-size: 35px;
   font-weight: 600;
+  margin-top: 160px;
+}
+.error p {
+  margin-top: -30px;
 }
 .btnSearch {
   height: 40px;
@@ -62,25 +69,63 @@ h1 {
 }
 
 .btnRandomhero {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  --bg: #365c33;
+  --hover-bg: hsl(129, 29%, 57%);
+  --hover-text: #365c33;
+  color: #d8ffd5;
+  border: 1px solid var(--bg);
+  border-radius: 6px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-right: 0.6rem;
   font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+
+.btnRandomhero:hover{
+  color: var(--hover-text);
+  transform: translate(-0.25rem,-0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  margin-right: 0.6rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.btnRandomhero:active{
+  transform: translate(0);
+  box-shadow: none;
 }
 
 #downloadImg {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  --bg: #ba4394;
+  --hover-bg: #ff90e8;
+  --hover-text: #ba4394;
+  color: #ffe4f9;
+  border: 1px solid var(--bg);
+  border-radius: 6px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-right: 0.6rem;
   font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+
+#downloadImg:hover{
+  color: var(--hover-text);
+  transform: translate(-0.25rem,-0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  margin-left: 0.6rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+#downloadImg:active{
+  transform: translate(0);
+  box-shadow: none;
 }
 
 .bottom-container {
@@ -355,11 +400,6 @@ nav ul li ul li a {
   }
 } */
 
-.btnRandomhero {
-  border-radius: 10px;
-  margin-left: 50px;
-  height: 30px;
-}
 
 .btnSearch {
   border-radius: 10px;
@@ -440,13 +480,6 @@ body {
   background-image: linear-gradient(0deg, #f86c9b 0%, #3ef1ec 100%);
 }
 
-.btnRandomhero {
-  border-color: #07cfc9;
-  border-radius: 0.625rem;
-  margin-left: 3.125rem;
-  height: 2.5rem;
-  font-family: "Lilita One", sans-serif;
-}
 
 .btnSearch {
   border-color: #07cfc9;
@@ -454,12 +487,15 @@ body {
   height: 2.875rem;
   width: 5.5rem;
   font-family: "Lilita One", sans-serif;
+
 }
 
 .btnRandomhero:hover {
   cursor: pointer;
   color: aliceblue;
   background-color: rgb(134, 144, 146);
+
+
 }
 
 .btnSearch:hover {
@@ -474,10 +510,6 @@ center {
 
 #heroImage > h2 {
   font-size: 3rem;
-}
-
-#heroImage > img {
-  border-radius: 10%;
 }
 
 h1 {
@@ -549,4 +581,53 @@ h1 {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(90, 117, 168);
+}
+
+/* Add this CSS in your <style> tag or external stylesheet */
+.zoom-effect {
+  transition: transform 0.3s ease;
+}
+
+.zoom-effect:hover {
+  transform: scale(
+    1.1
+  ); /* Adjust the scale factor as needed for the desired zoom effect */
+}
+
+/* Define the flip-left animation */
+@keyframes flip-left {
+  0% {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Apply the flip-left animation to elements with data-aos="flip-left" */
+[data-aos="flip-left"] {
+  animation: flip-left 0.5s ease;
+}
+
+
+/* hero image container  */
+
+.img_container{
+  height: 400px;
+  width: 300px;
+  border-radius: 10%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img_container img{
+  object-fit: cover;
+  width: 100%;
+  transition: .3s ease-in;
+}
+
+.img_container img:hover{
+  transform: scale(1.1);
 }
