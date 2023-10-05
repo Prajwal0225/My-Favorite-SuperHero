@@ -1,18 +1,16 @@
-var BaseUrl = "https://superheroapi.com/api.php/136899909020706";
+//get  api key  from https://superheroapi.com/index.html
+var BaseUrl = "Your_API_KEY";
 
 
 
-
-
-
+// Get page elements
 const btn = document.getElementById('newherrobtn')
 const heroImageDiv = document.getElementById('heroImage')
 const searchbtn = document.getElementById('searchId')
 const searchInput = document.getElementById('SearchInput')
 const downloadImageBtn = document.getElementById("downloadImg"); // download the image
-// const toggleButtton = document.querySelector(".toggle-button");
-// const linkContainer = document.querySelector(".links-container");
 
+// Get current year for footer
 const getCurrentYear = () => {
   const yearElement = document.getElementById("year");
   yearElement.textContent = new Date().getFullYear();
@@ -20,12 +18,9 @@ const getCurrentYear = () => {
 getCurrentYear();
 
 
-// toggleButtton.addEventListener('click',()=>{
-//   linkContainer.classList.toggle("active");
-// })
 
 
-
+// Fetch hero data by ID 
 const getSupperHero = (id) => {
   fetch(`${BaseUrl}/${id}`)
     .then((response) => response.json())
@@ -34,24 +29,32 @@ const getSupperHero = (id) => {
       heroImageDiv.innerHTML = `${name} <div class="img_container"> <img src= "${json.image.url}"/> </div>`;
 
       console.log(json.image.url);
-      downloadImageBtn.addEventListener("click", () => {
-        const imageUrl = json.image.url;
-        downloadImage(imageUrl);
-      });
-    });
+      downloadImageBtn.addEventListener('click', () => {
+               const imageUrl = json.image.url;
+                downloadImage(imageUrl);
+            });
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+            heroImageDiv.innerHTML = '<p> An error occurred while fetching data.</p>';
+        });
 };
-
+// Fetch hero data by name
 const getSearchSuperHero = (name) => {
+  // API call
   fetch(`${BaseUrl}/search/${name}`)
     .then((response) => response.json())
     .then((json) => {
+      // Display results or error message
       if (json.results && json.results.length > 0) {
+            // Display hero
         const hero = json.results[0];
         console.log(hero);
         const hero2 = `<h2>${name}</h2>`;
         heroImageDiv.innerHTML = `${hero2} <img src="${hero.image.url}" height=400 width=300 class="zoom-effect" data-aos="flip-left"/>`;
 
         console.log(hero.image.url);
+          // Set up image download
         downloadImageBtn.addEventListener("click", () => {
           const imageUrl = hero.image.url;
           downloadImage(imageUrl);
@@ -75,11 +78,11 @@ function downloadImage(imageUrl) {
   aTag.click();
   aTag.remove();
 }
-
+// Generate random ID
 const randomid = () => {
   return Math.floor(Math.random() * 731) + 1;
 };
-
+// Click handler to fetch random hero
 btn.onclick = () => getSupperHero(randomid());
 
 
