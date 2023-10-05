@@ -12,6 +12,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
 
@@ -44,7 +47,7 @@
       </div>
       <!-- main actions elements : end-->
         <br />
-        <div id="heroImage">
+        <div id="heroImage" data-aos="flip-left">
           <img class="mainpic" src="images/mainicon.png" alt="" />
         </div>
       </div>
@@ -76,5 +79,10 @@
   </center>
 
  <script src="script.js"></script>
+
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

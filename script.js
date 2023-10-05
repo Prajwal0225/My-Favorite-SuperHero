@@ -49,7 +49,7 @@ const getSearchSuperHero = (name) => {
         const hero = json.results[0];
         console.log(hero);
         const hero2 = `<h2>${name}</h2>`;
-        heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
+        heroImageDiv.innerHTML = `${hero2} <img src="${hero.image.url}" height=400 width=300 class="zoom-effect" data-aos="flip-left"/>`;
 
         console.log(hero.image.url);
         downloadImageBtn.addEventListener("click", () => {
