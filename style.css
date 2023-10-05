@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Questrial&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Questrial', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Questrial&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif;
 }
 body {
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-size: contain;
+
+  height: 100%;
 }
 
 center {
@@ -42,9 +45,13 @@ h1 {
   border: 1px solid #000;
   box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
-.error{
+.error {
   font-size: 35px;
   font-weight: 600;
+  margin-top: 160px;
+}
+.error p {
+  margin-top: -30px;
 }
 .btnSearch {
   height: 40px;
@@ -188,7 +195,7 @@ center {
 }
 
 h1 {
-  font-family: "Edu VIC WA NT Beginner",sans-serif;
+  font-family: "Edu VIC WA NT Beginner", sans-serif;
   font-size: 70px;
 }
 
@@ -261,7 +268,7 @@ body {
   border-radius: 0.625rem;
   height: 2.875rem;
   width: 5.5rem;
-  font-family: "Lilita One",sans-serif ;
+  font-family: "Lilita One", sans-serif;
 }
 
 .btnRandomhero:hover {
@@ -289,7 +296,7 @@ center {
 }
 
 h1 {
-  font-family: "Lilita One",sans-serif;
+  font-family: "Lilita One", sans-serif;
   font-size: 4.375rem;
 }
 
