@@ -5,13 +5,14 @@
   box-sizing: border-box;
   font-family: "Questrial", sans-serif;
 }
+
 body {
-  margin: 0;
+  background-image: linear-gradient(0deg, #f86c9b 0%, #3ef1ec 100%);
 }
+
 
 /* NAVBAR */
 .navbar {
-  background-color: #ffdee9;
   background-image: linear-gradient(0deg, #000000 0%, #000000 100%);
   overflow: hidden;
   display: flex;
@@ -30,8 +31,26 @@ body {
 }
 
 h1 {
+  padding: 70px;
   display: flex;
   justify-content: center;
+  font-size: 40px;
+  color: #100202;
+}
+.bottom-container {
+  margin-top: 1.875rem;
+  padding: 1.875rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer-img {
+  width: 4%;
+  padding: 0.625rem;
+}
+
+.footer-link {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
