@@ -192,13 +192,35 @@ body {
   padding: 10px;
 }
 
+/* CSS Class */
 .navbar-item {
-  display: block;
-  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  padding: 8px 20px;
   text-align: center;
-  padding: 14px 20px;
   text-decoration: none;
+  margin: 6px 0;
+  color: #FFFF; /* Use the color value for alphaBlack.400 */
 }
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFF; /* Use the color value for black */
+  transform-origin: bottom;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
+
 
 @media screen and (max-width: 600px) {
   .navbar-item {
@@ -328,7 +350,7 @@ h1 {
   border-radius: 0.625rem;
   border-color: #07cfc9;
   margin-top: 1.875rem;
-  margin-bottom: 1.5625rem;
+  margin-bottom: 1.875rem;
   text-align: center;
   font-family: "Lilita One", cursive;
 }
