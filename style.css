@@ -1,14 +1,38 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap");
+
+/* Update font styles for buttons */
+.btnSearch,
+.btnRandomhero {
+  font-family: "Lilita One", sans-serif; /* Apply Lilita One font for buttons */
+  font-weight: 400;
+}
+
+/* Update font styles for input text */
+.inputtext {
+  font-family: "Lilita One", cursive; /* Apply Lilita One font for input text */
+}
+
+.inputtext::placeholder {
+  font-size: 1.6rem; /* Adjust the font size as needed */
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Questrial&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Questrial", sans-serif;
+  /* font-family: "Questrial", sans-serif; */
 }
+
 body {
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
   background-size: contain;
+
+  font-family: "Inter", sans-serif; /* Change to the desired default font */
+  font-weight: 400;
 
   height: 100%;
 }
@@ -18,9 +42,13 @@ center {
 }
 
 h1 {
-  font-family: "Edu VIC WA NT Beginner", cursive;
+  /* font-family: "Edu VIC WA NT Beginner", cursive;
   font-size: 100px;
-  font-weight: 900;
+  font-weight: 900; */
+
+  font-family: "Lilita One", sans-serif; /* Apply Lilita One font for h1 */
+  font-size: 4.375rem;
+  font-weight: 400;
 }
 
 .mainpic {
@@ -160,6 +188,9 @@ body {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+
+  font-family: "Rubik", sans-serif; /* Apply Rubik font for navigation links */
+  font-weight: 500;
 }
 
 @media screen and (max-width: 600px) {
@@ -372,7 +403,9 @@ h1 {
 }
 
 .zoom-effect:hover {
-  transform: scale(1.1); /* Adjust the scale factor as needed for the desired zoom effect */
+  transform: scale(
+    1.1
+  ); /* Adjust the scale factor as needed for the desired zoom effect */
 }
 
 /* Define the flip-left animation */

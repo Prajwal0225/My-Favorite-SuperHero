@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Superhero's</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="images/superhero.png" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Superhero's</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="images/superhero.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="navbar-item">Home</a>
+      <a href="./about.html" class="navbar-item">About</a>
+      <a href="./contributers.html" class="navbar-item">Contributors</a>
+    </nav>
 
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-</head>
-<body>
-
-  <nav class="navbar">
-    <a href="./index.html" class="navbar-item">Home</a>
-    <a href="./about.html" class="navbar-item">About</a>
-    <a href="./contributers.html" class="navbar-item">Contributors</a>
-  </nav>
-
-
-  <center>
+    <center>
       <div class="top-container">
-        <h1><u>Your fav Super Heroes.</u></h1>
+        <h1>Your fav Super Heroes.</h1>
       </div>
       <!-- main actions elements : start -->
       <div class="middle-container">
         <div class="searchActions">
-        <input
-          id="SearchInput"
-          class="inputtext"
-          type="text"
-          placeholder="Type Your Hero Name"
-        />
-        <br />
-        <button id="searchId" class="btnSearch">🔍</button>
+          <input
+            id="SearchInput"
+            class="inputtext"
+            type="text"
+            placeholder="Your Hero Name"
+          />
+          <br />
+          <button id="searchId" class="btnSearch">🔍</button>
         </div>
         <div class="searchActions1">
-        <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
-        <button id="downloadImg">Download</button>
-      </div>
-      <!-- main actions elements : end-->
+          <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
+          <button id="downloadImg">Download</button>
+        </div>
+        <!-- main actions elements : end-->
         <br />
         <div id="heroImage" data-aos="flip-left">
           <img class="mainpic" src="images/mainicon.png" alt="" />
@@ -73,16 +72,18 @@
             alt="Other work"
           />
         </a>
-      <p class="bookmark">© <span id="year"></span> Superhero's World By Prajwal Somalkar. All rights reserved.</p>
-    </div>
+        <p class="bookmark">
+          © <span id="year"></span> Superhero's World By Prajwal Somalkar. All
+          rights reserved.
+        </p>
+      </div>
+    </center>
 
-  </center>
+    <script src="script.js"></script>
 
- <script src="script.js"></script>
-
- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
