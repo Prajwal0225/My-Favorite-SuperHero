@@ -26,14 +26,25 @@ You can see a live demo of the project here: [My Fav Superhero Demo](https://pra
 
 To use the My Fav Superhero project, simply open the `index.html` file in your web browser. There's no need for complex setup or dependencies.
 
-1. Clone this repository to your local machine:
+1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/Prajwal0225/My-Favorite-SuperHero.git
+    ```bash
+    git clone https://github.com/Prajwal0225/My-Favorite-SuperHero.git
+    ```
 
-- Open the index.html file in your preferred web browser.
+2. Obtain an API key from the [Superhero API site](https://superheroapi.com/):
+   
+    - Click on "Register" and follow the instructions to get an API key.
 
-- Start searching for your favorite superheroes or enjoy random hero discoveries.
+3. Add your API key to `script.js`:
+
+    ```javascript
+    var BaseUrl  = 'YOUR_API_KEY';
+    ```
+
+4. Open `index.html` in your web browser.
+
+5. You can now search for superheroes or click the "Random" button to get a random superhero.
 
   
 
