@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Questrial&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif;
+}
+
 body {
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-size: cover;
+
+  height: 1080px;
 }
 
 center {
@@ -9,7 +20,8 @@ center {
 
 h1 {
   font-family: "Edu VIC WA NT Beginner", cursive;
-  font-size: 70px;
+  font-size: 100px;
+  font-weight: 900;
 }
 
 .mainpic {
@@ -34,10 +46,18 @@ h1 {
   border: 1px solid #000;
   box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
+.error {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 160px;
+}
+.error p {
+  margin-top: -30px;
+}
 .btnSearch {
   height: 40px;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 100%;
   /* background-color: #007bff; */
   margin-left: 10px;
   color: #fff;
@@ -49,25 +69,63 @@ h1 {
 }
 
 .btnRandomhero {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  --bg: #365c33;
+  --hover-bg: hsl(129, 29%, 57%);
+  --hover-text: #365c33;
+  color: #d8ffd5;
+  border: 1px solid var(--bg);
+  border-radius: 6px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-right: 0.6rem;
   font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+
+.btnRandomhero:hover{
+  color: var(--hover-text);
+  transform: translate(-0.25rem,-0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  margin-right: 0.6rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.btnRandomhero:active{
+  transform: translate(0);
+  box-shadow: none;
 }
 
 #downloadImg {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  --bg: #ba4394;
+  --hover-bg: #ff90e8;
+  --hover-text: #ba4394;
+  color: #ffe4f9;
+  border: 1px solid var(--bg);
+  border-radius: 6px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-right: 0.6rem;
   font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
+}
+
+#downloadImg:hover{
+  color: var(--hover-text);
+  transform: translate(-0.25rem,-0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  margin-left: 0.6rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+#downloadImg:active{
+  transform: translate(0);
+  box-shadow: none;
 }
 
 .bottom-container {
@@ -124,37 +182,224 @@ body {
 
 /* NAVBAR */
 
-.navbar {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+/* .navbar {
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+
   overflow: hidden;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.85rem;
+  font-weight: 500;
   justify-content: center;
   padding: 10px;
-}
+  align-items: center;
+} */
 
-.navbar-item {
+/* .navbar-item {
   display: block;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
+  align-items: center;
   padding: 14px 20px;
   text-decoration: none;
+
+  background-image: linear-gradient(45deg, #ff7200, #5c00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
 }
 
-@media screen and (max-width: 600px) {
+.navbar-item:hover {
+  background-image: linear-gradient(45deg, #5c00ff, #ff7200);
+} */
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: transparent;
+  color: #463f3f;
+  text-decoration: none;
+  font-size: 25px;
+  /*
+  The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+  */
+}
+nav ul li a:hover {
+  background: #f2f2f2;
+  color: #fb5958;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  z-index: 1;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+    background: #dd5e89; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #f7bb97,
+      #dd5e89
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #f7bb97,
+      #dd5e89
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #463f3f;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+/* 
+.navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
+*/
+.navigation {
+  height: 70px;
+  background: #dd5e89; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f7bb97,
+    #dd5e89
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f7bb97,
+    #dd5e89
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*
+.nav-container – the inner wrapper for the navbar. Defines how far the actual content should stretch.
+*/
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #463f3f;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* @media screen and (max-width: 600px) {
   .navbar-item {
     float: none;
     width: 100%;
     text-align: center;
   }
-}
+} */
 
-.btnRandomhero {
-  border-radius: 10px;
-  margin-left: 50px;
-  height: 30px;
-}
 
 .btnSearch {
   border-radius: 10px;
@@ -175,7 +420,7 @@ center {
 }
 
 h1 {
-  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-family: "Edu VIC WA NT Beginner", sans-serif;
   font-size: 70px;
 }
 
@@ -232,35 +477,48 @@ h1 {
 
 body {
   background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-image: linear-gradient(0deg, #f86c9b 0%, #3ef1ec 100%);
 }
 
-.btnRandomhero {
-  border-color: #07cfc9;
-  border-radius: 0.625rem;
-  margin-left: 3.125rem;
-  height: 2.5rem;
-  font-family: "Lilita One", cursive;
-}
 
 .btnSearch {
   border-color: #07cfc9;
-  border-radius: 0.625rem;
-  height: 2.875rem;
-  width: 5.5rem;
-  font-family: "Lilita One", cursive;
+  border-radius: 100%;
+  height: 3.9rem;
+  width: 3.9rem;
+  font-family: "Lilita One", sans-serif;
+
+  margin:0;
+  z-index:50;
+  right: 0.9rem;
+  position: relative;
+  border: 3px solid #30A2FF;
+  transition: 0.3s;
+}
+
+.search-img{
+  height: 2rem;
+  width: 2rem;
+
+
 }
 
 .btnRandomhero:hover {
   cursor: pointer;
   color: aliceblue;
   background-color: rgb(134, 144, 146);
+
+
+
 }
 
 .btnSearch:hover {
   cursor: pointer;
   color: aliceblue;
-  background-color: rgb(134, 144, 146);
+  background-color: #30A2FF;
+  transform: scale(1.15);
+  /* transition: 0.3s; */
+  box-shadow: 0px 5px 15px rgba(78, 78, 78, 0.3);
 }
 
 center {
@@ -271,12 +529,8 @@ center {
   font-size: 3rem;
 }
 
-#heroImage > img {
-  border-radius: 10%;
-}
-
 h1 {
-  font-family: "Lilita One", cursive;
+  font-family: "Lilita One", sans-serif;
   font-size: 4.375rem;
 }
 
@@ -287,7 +541,7 @@ h1 {
 
 .inputtext {
   width: 30%;
-  height: 1.875rem;
+  height: 2.875rem;
   font-size: xx-large;
   border-radius: 0.625rem;
   border-color: #07cfc9;
@@ -308,7 +562,7 @@ h1 {
 }
 
 .footer-img {
-  width: 2%;
+  width: 3%;
   padding: 0.625rem;
 }
 
@@ -344,4 +598,53 @@ h1 {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(90, 117, 168);
+}
+
+/* Add this CSS in your <style> tag or external stylesheet */
+.zoom-effect {
+  transition: transform 0.3s ease;
+}
+
+.zoom-effect:hover {
+  transform: scale(
+    1.1
+  ); /* Adjust the scale factor as needed for the desired zoom effect */
+}
+
+/* Define the flip-left animation */
+@keyframes flip-left {
+  0% {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Apply the flip-left animation to elements with data-aos="flip-left" */
+[data-aos="flip-left"] {
+  animation: flip-left 0.5s ease;
+}
+
+
+/* hero image container  */
+
+.img_container{
+  height: 400px;
+  width: 300px;
+  border-radius: 10%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img_container img{
+  object-fit: cover;
+  width: 100%;
+  transition: .3s ease-in;
+}
+
+.img_container img:hover{
+  transform: scale(1.1);
 }
