@@ -9,7 +9,7 @@ body {
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
   height: 100%;
-  background-size: cover;
+  background-size: contain;
 }
 
 center {
