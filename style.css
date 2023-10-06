@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Questrial", sans-serif;
 }
+
 body {
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
@@ -181,32 +182,223 @@ body {
 
 /* NAVBAR */
 
-.navbar {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #000000 0%, #000000 100%);
+/* .navbar {
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+
   overflow: hidden;
   display: flex;
   font-size: 1.85rem;
   font-weight: 500;
   justify-content: center;
   padding: 10px;
-}
+  align-items: center;
+} */
 
-.navbar-item {
+/* .navbar-item {
   display: block;
   color: rgb(255, 255, 255);
   text-align: center;
+  align-items: center;
   padding: 14px 20px;
   text-decoration: none;
+
+  background-image: linear-gradient(45deg, #ff7200, #5c00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
 }
 
-@media screen and (max-width: 600px) {
+.navbar-item:hover {
+  background-image: linear-gradient(45deg, #5c00ff, #ff7200);
+} */
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: transparent;
+  color: #463f3f;
+  text-decoration: none;
+  font-size: 25px;
+  /*
+  The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+  */
+}
+nav ul li a:hover {
+  background: #f2f2f2;
+  color: #fb5958;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  z-index: 1;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+    background: #dd5e89; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #f7bb97,
+      #dd5e89
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #f7bb97,
+      #dd5e89
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #463f3f;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+/* 
+.navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
+*/
+.navigation {
+  height: 70px;
+  background: #dd5e89; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f7bb97,
+    #dd5e89
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f7bb97,
+    #dd5e89
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*
+.nav-container – the inner wrapper for the navbar. Defines how far the actual content should stretch.
+*/
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #463f3f;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* @media screen and (max-width: 600px) {
   .navbar-item {
     float: none;
     width: 100%;
     text-align: center;
   }
-}
+} */
 
 
 .btnSearch {
@@ -295,6 +487,7 @@ body {
   height: 3.9rem;
   width: 3.9rem;
   font-family: "Lilita One", sans-serif;
+
   margin:0;
   z-index:50;
   right: 0.9rem;
@@ -306,6 +499,17 @@ body {
 .search-img{
   height: 2rem;
   width: 2rem;
+
+
+}
+
+.btnRandomhero:hover {
+  cursor: pointer;
+  color: aliceblue;
+  background-color: rgb(134, 144, 146);
+
+
+
 }
 
 .btnSearch:hover {
