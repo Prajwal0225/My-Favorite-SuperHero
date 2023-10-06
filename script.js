@@ -1,14 +1,9 @@
 var BaseUrl = "https://superheroapi.com/api.php/136899909020706";
 
-
-
-
-
-
-const btn = document.getElementById('newherrobtn')
-const heroImageDiv = document.getElementById('heroImage')
-const searchbtn = document.getElementById('searchId')
-const searchInput = document.getElementById('SearchInput')
+const btn = document.getElementById("newherrobtn");
+const heroImageDiv = document.getElementById("heroImage");
+const searchbtn = document.getElementById("searchId");
+const searchInput = document.getElementById("SearchInput");
 const downloadImageBtn = document.getElementById("downloadImg"); // download the image
 // const toggleButtton = document.querySelector(".toggle-button");
 // const linkContainer = document.querySelector(".links-container");
@@ -19,19 +14,16 @@ const getCurrentYear = () => {
 };
 getCurrentYear();
 
-
 // toggleButtton.addEventListener('click',()=>{
 //   linkContainer.classList.toggle("active");
 // })
-
-
 
 const getSupperHero = (id) => {
   fetch(`${BaseUrl}/${id}`)
     .then((response) => response.json())
     .then((json) => {
       const name = `<h2>${json.name}</h2>`;
-      heroImageDiv.innerHTML = `${name} <div class="img_container"> <img src= "${json.image.url}"/> </div>`;
+      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" height=400 width=300/>`;
 
       console.log(json.image.url);
       downloadImageBtn.addEventListener("click", () => {
@@ -49,7 +41,7 @@ const getSearchSuperHero = (name) => {
         const hero = json.results[0];
         console.log(hero);
         const hero2 = `<h2>${name}</h2>`;
-        heroImageDiv.innerHTML = `${hero2} <img src="${hero.image.url}" height=400 width=300 class="zoom-effect" data-aos="flip-left"/>`;
+        heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
 
         console.log(hero.image.url);
         downloadImageBtn.addEventListener("click", () => {
@@ -82,24 +74,38 @@ const randomid = () => {
 
 btn.onclick = () => getSupperHero(randomid());
 
-
-// Function to handle search
-const handleSearch = () => {
-  const inputValue = searchInput.value.trim();
+searchbtn.onclick = () => {
+  const inputValue = searchInput.value.trim(); // Trim any leading/trailing spaces
   if (inputValue !== "") {
     getSearchSuperHero(inputValue);
   } else {
+    // Handle the case where the input is empty (e.g., show an error message).
     alert("Input is empty. Please enter a hero name.");
   }
 };
 
-// Event listener for search button click
-searchbtn.addEventListener("click", handleSearch);
-
-// Event listener for Enter key press on the input field
-searchInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    handleSearch();
-  }
-});
-
+(function ($) {
+  // Begin jQuery
+  $(function () {
+    // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $("nav ul li a:not(:only-child)").click(function (e) {
+      $(this).siblings(".nav-dropdown").toggle();
+      // Close one dropdown when selecting another
+      $(".nav-dropdown").not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $("html").click(function () {
+      $(".nav-dropdown").hide();
+    });
+    // Toggle open and close nav styles on click
+    $("#nav-toggle").click(function () {
+      $("nav ul").slideToggle();
+    });
+    // Hamburger to X toggle
+    $("#nav-toggle").on("click", function () {
+      this.classList.toggle("active");
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
