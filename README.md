@@ -44,6 +44,14 @@ https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/6aae0cbc-c
 If you want to contribute to this project then check out [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 
+# OUR AMAZING CONTRIBUTORS 🧑‍💻👩‍💻
+<a href="https://github.com/Prajwal0225/My-Favorite-SuperHero/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Prajwal0225/My-Favorite-SuperHero" />
+</a>
+<br/>
+
+
+
 ##  Project Maintainers
 
 <table>
