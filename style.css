@@ -128,14 +128,9 @@ h1 {
   box-shadow: none;
 }
 
-.bottom-container {
-  margin-top: 1.875rem;
-  padding: 1.875rem;
-  text-decoration: none;
-}
 
 .footer-img {
-  width: 2%;
+  width: 40px;
   padding: 10px;
 }
 
@@ -305,6 +300,17 @@ nav ul li ul li a {
   nav ul li ul li a {
     padding-left: 30px;
   }
+  footer{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .bottom-container {
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+  }
 }
 #nav-toggle {
   position: absolute;
@@ -442,16 +448,21 @@ h1 {
 } */
 
 /* social media */
+footer{
+  position: absolute;
+  bottom: 220px;
+  width: 100%;
+  text-align: center;
+}
 
 .bottom-container {
-  margin-top: 30px;
-
-  padding: 30px;
   text-decoration: none;
+  position: relative;
+  top: 220px;
 }
 
 .footer-img {
-  width: 2%;
+  width: 50px;
   padding: 10px;
 }
 
@@ -555,14 +566,8 @@ h1 {
   width: fit-content;
 }
 
-.bottom-container {
-  margin-top: 1.875rem;
-  padding: 1.875rem;
-  text-decoration: none;
-}
-
 .footer-img {
-  width: 3%;
+  width: 60px;
   padding: 0.625rem;
 }
 
@@ -647,4 +652,19 @@ h1 {
 
 .img_container img:hover{
   transform: scale(1.1);
+}
+
+@media (max-width:700px){
+  footer{
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .bottom-container {
+    text-decoration: none;
+    position: relative;
+    top: 290px;
+  }
 }
