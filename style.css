@@ -44,6 +44,7 @@ center {
   align-items: center;
   justify-content: center;
   margin: 2rem 2rem;
+  color: white;
 }
 h1 {
   /* font-family: "Edu VIC WA NT Beginner", cursive; */
@@ -595,6 +596,7 @@ h1 {
   margin-top: 1.875rem;
   padding: 1.875rem;
   text-decoration: none;
+  color: white;
 }
 
 .footer-img {
