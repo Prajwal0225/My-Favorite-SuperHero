@@ -12,9 +12,9 @@ center {
 
 .main-container{
   max-width: 100%;
-  height: 95vh;
+  height: 80vh;
   justify-content: center;
-  display: flex-column;
+  display: flex;
   margin: 2rem 2rem;
   box-shadow: rgb(98, 13, 88) 0px 3px 30px;
   border-radius: 0.75rem;
@@ -30,10 +30,11 @@ center {
   justify-content: center;
 }
 .hero-info{
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   color: white;
+  margin-top: 3rem;
 }
 .right-container{
   align-items: center;
@@ -168,21 +169,15 @@ h1 {
 }
 
 .footer-link {
+  display: inline-block;
   margin-right: 20px;
-  color: white;
   cursor: pointer;
-  /* background-color: white; */
-  /* z-index: -1; */
 }
 
-.footer-link img{
+#linkedin, #twitter, #github{
   /* background-color: #f5f5f5; */
-  width: 20px;
-  height: 20px;
-  padding: 18px;
-  margin-right: 20px;
-  
-  /* z-index: 50; */
+  width: 50px;
+  height: 50px;
 }
 
 .tilt {
