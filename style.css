@@ -6,15 +6,22 @@
   font-family: "Questrial", sans-serif;
 }
 
+body {
+  background-color: black;
+  /* background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-size: cover; */
+
+  height: 1080px;
+}
+
 center {
   margin-top: 30px;
 }
 
 .main-container{
   max-width: 100%;
-  height: 95vh;
   justify-content: center;
-  display: flex-column;
+  display: flex;
   margin: 2rem 2rem;
   box-shadow: rgb(98, 13, 88) 0px 3px 30px;
   border-radius: 0.75rem;
@@ -26,8 +33,6 @@ center {
 }
 .middle-container{
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .hero-info{
   position: absolute;
@@ -46,12 +51,12 @@ h1 {
   font-size: 100px;
   font-weight: 900;
   text-transform: uppercase;
-  /* background-image: url('/images/download.jpg'); */
+  background-image: url('/images/download.jpg');
   background-size:500px;
   background-position:center;
   background-clip: text;
   -webkit-text-stroke-color: white;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.05px;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -102,7 +107,7 @@ h1 {
 
 .btnRandomhero {
   --bg: #365c33;
-  --hover-bg: hsl(129, 32%, 37%);
+  --hover-bg: hsl(129, 29%, 57%);
   --hover-text: #365c33;
   color: #d8ffd5;
   border: 1px solid var(--bg);
@@ -110,7 +115,7 @@ h1 {
   padding: 0.8em 2em;
   background: var(--bg);
   transition: 0.2s;
-  margin: 1rem 0.6rem;
+  margin-right: 0.6rem;
   font-size: 16px;
 }
 
@@ -163,26 +168,16 @@ h1 {
 .bottom-container {
   margin-top: 1.875rem;
   padding: 1.875rem;
-  /* color: white; */
   text-decoration: none;
 }
 
-.footer-link {
-  margin-right: 20px;
-  color: white;
-  cursor: pointer;
-  /* background-color: white; */
-  /* z-index: -1; */
+.footer-img {
+  width: 2%;
+  padding: 10px;
 }
 
-.footer-link img{
-  /* background-color: #f5f5f5; */
-  width: 20px;
-  height: 20px;
-  padding: 18px;
-  margin-right: 20px;
-  
-  /* z-index: 50; */
+.footer-link {
+  text-decoration: none;
 }
 
 .tilt {
@@ -548,7 +543,7 @@ body {
 .btnRandomhero:hover {
   cursor: pointer;
   color: aliceblue;
-  background-color: rgb(47, 126, 70);
+  background-color: rgb(134, 144, 146);
 
 
 
@@ -557,7 +552,7 @@ body {
 .btnSearch:hover {
   cursor: pointer;
   color: aliceblue;
-  background-color: #bceaff;
+  background-color: #30A2FF;
   transform: scale(1.15);
   /* transition: 0.3s; */
   box-shadow: 0px 5px 15px rgba(78, 78, 78, 0.3);
