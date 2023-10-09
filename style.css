@@ -7,9 +7,9 @@
 }
 
 body {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
-  background-size: cover;
+  background-color: black;
+  /* background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-size: cover; */
 
   height: 1080px;
 }
@@ -18,10 +18,49 @@ center {
   margin-top: 30px;
 }
 
+.main-container{
+  max-width: 100%;
+  height: 80vh;
+  justify-content: center;
+  display: flex;
+  margin: 2rem 2rem;
+  box-shadow: rgb(98, 13, 88) 0px 3px 30px;
+  border-radius: 0.75rem;
+}
+
+.left-container{
+  align-items: center;
+  margin: 2rem 2rem;
+}
+.middle-container{
+  display: flex;
+}
+.hero-info{
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-top: 3rem;
+}
+.right-container{
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 2rem;
+  color: white;
+}
 h1 {
-  font-family: "Edu VIC WA NT Beginner", cursive;
+  /* font-family: "Edu VIC WA NT Beginner", cursive; */
   font-size: 100px;
   font-weight: 900;
+  text-transform: uppercase;
+  background-image: url('/images/download.jpg');
+  background-size:500px;
+  background-position:center;
+  background-clip: text;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.05px;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .mainpic {
@@ -134,6 +173,18 @@ h1 {
   text-decoration: none;
 }
 
+.footer-link {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#linkedin, #twitter, #github{
+  /* background-color: #f5f5f5; */
+  width: 50px;
+  height: 50px;
+}
+
 .footer-img {
   width: 2%;
   padding: 10px;
@@ -175,8 +226,8 @@ h1 {
 }
 
 body {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-color: black;
+  /* background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%); */
   margin: 0;
 }
 
@@ -476,8 +527,8 @@ h1 {
 }
 
 body {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #f86c9b 0%, #3ef1ec 100%);
+  background-color: black;
+  /* background-image: linear-gradient(0deg, #f86c9b 0%, #3ef1ec 100%); */
 }
 
 
@@ -559,6 +610,7 @@ h1 {
   margin-top: 1.875rem;
   padding: 1.875rem;
   text-decoration: none;
+  color: white;
 }
 
 .footer-img {
