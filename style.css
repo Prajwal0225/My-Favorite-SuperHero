@@ -13,6 +13,13 @@ body {
 
   height: 1080px;
 }
+canvas#canvas {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
 
 center {
   margin-top: 30px;
