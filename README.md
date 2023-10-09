@@ -64,7 +64,7 @@ If you want to contribute to this project then check out [CONTRIBUTING.md](CONTR
 ## Our Beloved Contributors 😍
 
 <a href="https://github.com/Prajwal0225/My-Favorite-SuperHero/graphs/contributors">
-  <img align="center" src="https://contrib.rocks/image?max=100&repo=Prajwal0225/My-Favorite-SuperHero" />
+  <img align="center" src="https://contrib.rocks/image?max=1000&repo=Prajwal0225/My-Favorite-SuperHero" />
 </a>
 <br>
 <br>
