@@ -84,6 +84,13 @@ searchbtn.onclick = () => {
   }
 };
 
+searchInput.addEventListener('keyup', (e) =>{
+  const inputValue = searchInput.value.trim();
+  if(e.keyCode === 13){
+    getSearchSuperHero(inputValue);
+  }
+});
+
 (function ($) {
   // Begin jQuery
   $(function () {
