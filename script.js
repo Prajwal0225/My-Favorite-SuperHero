@@ -5,8 +5,7 @@ const heroImageDiv = document.getElementById("heroImage");
 const searchbtn = document.getElementById("searchId");
 const searchInput = document.getElementById("SearchInput");
 const downloadImageBtn = document.getElementById("downloadImg"); // download the image
-// const toggleButtton = document.querySelector(".toggle-button");
-// const linkContainer = document.querySelector(".links-container");
+
 
 const getCurrentYear = () => {
   const yearElement = document.getElementById("year");
@@ -83,6 +82,13 @@ searchbtn.onclick = () => {
     alert("Input is empty. Please enter a hero name.");
   }
 };
+
+searchInput.addEventListener('keyup', (e) =>{
+  const inputValue = searchInput.value.trim();
+  if(e.keyCode === 13){
+    getSearchSuperHero(inputValue);
+  }
+});
 
 (function ($) {
   // Begin jQuery

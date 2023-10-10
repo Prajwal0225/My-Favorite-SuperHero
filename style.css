@@ -238,39 +238,6 @@ body {
   margin: 0;
 }
 
-/* NAVBAR */
-
-/* .navbar {
-  background-color: #130f40;
-  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
-
-  overflow: hidden;
-  display: flex;
-  font-size: 1.85rem;
-  font-weight: 500;
-  justify-content: center;
-  padding: 10px;
-  align-items: center;
-} */
-
-/* .navbar-item {
-  display: block;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  align-items: center;
-  padding: 14px 20px;
-  text-decoration: none;
-
-  background-image: linear-gradient(45deg, #ff7200, #5c00ff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: relative;
-}
-
-.navbar-item:hover {
-  background-image: linear-gradient(45deg, #5c00ff, #ff7200);
-} */
 
 nav {
   float: right;
@@ -292,9 +259,6 @@ nav ul li a {
   color: #463f3f;
   text-decoration: none;
   font-size: 25px;
-  /*
-  The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
-  */
 }
 nav ul li a:hover {
   background: #f2f2f2;
@@ -450,13 +414,6 @@ nav ul li ul li a {
   font-size: 25px;
 }
 
-/* @media screen and (max-width: 600px) {
-  .navbar-item {
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
-} */
 
 
 .btnSearch {
@@ -495,11 +452,6 @@ h1 {
   margin-bottom: 25px;
   box-shadow: 0px 5px 15px rgba(77, 77, 77, 0.5);
 }
-/* #SearchInput {
-  width:fit-content;
-} */
-
-/* social media */
 
 .bottom-container {
   margin-top: 30px;
