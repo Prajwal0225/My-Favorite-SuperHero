@@ -4,12 +4,12 @@ body {
 
 /* NAVBAR */
 .navbar {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  /*background-color: #060606;*/
+  /*background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);*/
   overflow: hidden;
   display: flex;
   font-size: 1.5rem;
-  justify-content: center;
+  justify-content: right;
   padding: 10px;
 }
 
@@ -19,6 +19,14 @@ body {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  font-size: larger;
+}
+
+nav a:hover {
+  background: #f2f2f2;
+  color: #fb5958;
+  display: block;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -27,4 +35,176 @@ body {
     width: 100%;
     text-align: center;
   }
+}
+
+.navigation {
+  height: 70px;
+  background: #dd5e89;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #f7bb97,
+      #dd5e89);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,
+      #f7bb97,
+      #dd5e89);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.brand a,
+.brand a:visited {
+  color: #463f3f;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+body {
+  background-color: black;
+  /* background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%); */
+  margin: 0;
+}
+
+h1 {
+  font-family: "Questrial", sans-serif;
+  font-size: 4.375rem;
+  font-weight: 900;
+  background-size: 500px;
+  background-position: center;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: #f2f2f2;
+  background-clip: text;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.05px;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.head h1 {
+  font-size: xx-large;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-text-stroke: 1px rgb(58, 219, 252);
+}
+
+.main-container {
+
+  justify-content: center;
+  display: flex;
+  margin: 2rem 2rem;
+  border-radius: 0.75rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+  /* Set a maximum width for the container */
+  margin: 0 auto;
+  height: 75%;
+}
+
+.left-container {
+  max-width: 45%;
+  justify-content: center;
+  display: flex;
+  margin: 2rem 2rem;
+  box-shadow: rgb(33, 98, 13) 0px 3px 30px;
+  border-radius: 0.75rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+  /* Set a maximum width for the container */
+  margin: 0 auto;
+  height: 75%;
+}
+
+.wr {
+  margin-left: 40%;
+
+}
+
+.l-container {
+  max-width: 45%;
+  max-width: 100%;
+  justify-content: center;
+  display: flex;
+  margin: 2rem 2rem;
+  box-shadow: rgb(98, 13, 88) 0px 3px 30px;
+  border-radius: 0.75rem;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.mainpic1 {
+  width: 350%;
+  height: 85%;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 30%;
+
+
+}
+
+.right-container {
+  align-items: right;
+  justify-content: right;
+  margin: 2rem 2rem;
+  float: right;
+  flex: 0 0 45%;
+  /* Set a flex basis of 45% */
+  max-width: 45%;
+  /* Set a maximum width of 45% */
+  border: 1px solid #000;
+  /* Optional: Add a border for visibility */
+  box-sizing: border-box;
+  height: 75%;
+  margin-top: 0%;
+}
+
+.bold {
+  align-items: center;
+
+}
+
+#heroImage>h2 {
+  font-size: 3rem;
+  float: Left;
+}
+
+.mainpic {
+  width: 25.75rem;
+  height: 23.75rem;
+  margin-left: 25%;
+  margin-top: 0%;
+}
+
+h2 {
+  color: white;
+  margin-left: 25px;
+  line-height: 28.5px;
+}
+
+h3 {
+  margin-left: 35px;
+  margin-right: 25px;
+  height: 50%;
+  color: white;
+  line-height: 28.5px;
+  font-size: x-large;
 }
