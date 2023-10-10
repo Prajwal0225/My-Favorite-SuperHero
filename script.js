@@ -17,7 +17,7 @@ getCurrentYear();
 //   linkContainer.classList.toggle("active");
 // })
 
-const getSupperHero = (id) => {
+const getSuperHero = (id) => {
   fetch(`${BaseUrl}/${id}`)
     .then((response) => response.json())
     .then((json) => {
@@ -71,7 +71,7 @@ const randomid = () => {
   return Math.floor(Math.random() * 731) + 1;
 };
 
-btn.onclick = () => getSupperHero(randomid());
+btn.onclick = () => getSuperHero(randomid());
 
 searchbtn.onclick = () => {
   const inputValue = searchInput.value.trim(); // Trim any leading/trailing spaces
