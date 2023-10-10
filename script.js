@@ -5,8 +5,7 @@ const heroImageDiv = document.getElementById("heroImage");
 const searchbtn = document.getElementById("searchId");
 const searchInput = document.getElementById("SearchInput");
 const downloadImageBtn = document.getElementById("downloadImg"); // download the image
-// const toggleButtton = document.querySelector(".toggle-button");
-// const linkContainer = document.querySelector(".links-container");
+
 
 const getCurrentYear = () => {
   const yearElement = document.getElementById("year");
