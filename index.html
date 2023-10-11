@@ -1,80 +1,143 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Superhero's</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="images/superhero.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="https://prajwal0225.github.io/My-Favorite-SuperHero/"
+            ><i class="fa-solid fa-mask"></i
+          ></a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <!-- Setting the links to #! will ensure that no action takes place on click. -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contributers.html">Contributors</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Superhero's</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="images/superhero.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <nav class="navbar">
-    <a href="/index.html" class="navbar-item">Home</a>
-    <a href="/about.html" class="navbar-item">About</a>
-    <a href="/contributers.html" class="navbar-item">Contributors</a>
-  </nav>
-
-
-  <center>
+    <center>
       <div class="top-container">
-        <h1><u>Your fav. Super Hero's</u></h1>
+        <h1>Your fav Super Heroes.</h1>
       </div>
       <!-- main actions elements : start -->
-      <div class="middle-container">
-        <div class="searchActions">
-        <input
-          id="SearchInput"
-          class="inputtext"
-          type="text"
-          placeholder="Type Your Hero Name"
-        />
-        <br />
-        <button id="searchId" class="btnSearch">🔍</button>
+      <div class="main-container">
+        <div class="left-container">
+          <div class="middle-container">
+            <div class="searchActions">
+              <input
+                id="SearchInput"
+                class="inputtext"
+                type="text"
+                placeholder="Find Your Hero"
+              />
+              <br />
+              <button id="searchId" class="btnSearch">🔍</button>
+            </div>
+          </div>
+          <!-- main actions elements : end-->
+          <br />
+          <div class="hero-info">
+            <label for="">Aliases: </label>
+            <p>Hero aliase</p>
+            <br>
+            <label for="">Place of Birth: </label>
+            <p>12/12/12</p>
+            <br>
+            <label for="">First Appearance: </label>
+            <p>India</p>
+            <br>
+            <label for="">Age: </label>
+            <p>29</p>
+            <br>
+          </div>
         </div>
-        <div class="searchActions1">
-        <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
-        <button id="downloadImg">Download</button>
+        <div class="right-container">
+          <div id="heroImage">
+            <img class="mainpic" src="images/bg.jpg" alt="" />
+          </div>
+          <div class="searchActions1">
+            <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
+            <button id="downloadImg">Download</button>
+          </div>
+        </div>
       </div>
-      <!-- main actions elements : end-->
+      
+
         <br />
-        <div id="heroImage">
-          <img class="mainpic" src="images/mainicon.png" alt="" />
-        </div>
+        
       </div>
       <div class="bottom-container">
+        
+
         <a class="footer-link" href="https://www.linkedin.com/feed/"
           ><img
             class="footer-img linkedin tilt pic"
-            src="images/linkedin.png"
+            id="linkedin"
+            src="./images/linkedin.png"
             alt="linkedin"
           />
         </a>
+
+        
         <a class="footer-link" href="https://twitter.com/home"
           ><img
             class="footer-img twitter tilt pic"
-            src="images/twitter.png"
+            id="twitter"
+            src="./images/twitter.png"
             alt="Twitter"
           />
         </a>
-        <a class="footer-link" href="https://github.com/Prajwal0225"
-          ><img
+
+        <a class="footer-link" href="https://github.com/Prajwal0225" target="_blank">
+        
+        <img
             class="footer-img global tilt pic"
-            src="images/github.png"
-            alt="Other work"
-          />
+            id="github"
+            src="./images/github.png"
+            alt="Github"
+        />
         </a>
-      <p class="bookmark">© <span id="year"></span> Superhero's World By Prajwal Somalkar. All rights reserved.</p>
-    </div>
 
-  </center>
-
+        <p class="bookmark">
+          © <span id="year"></span> Superhero's World By Prajwal Somalkar. All
+          rights reserved.
+        </p>
+      </div>
+    </center>
  <script src="script.js"></script>
 </body>
 </html>
