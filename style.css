@@ -478,6 +478,7 @@ body {
   position: relative;
   border: 3px solid #30A2FF;
   transition: 0.3s;
+  color:#000;
 }
 
 .search-img{
