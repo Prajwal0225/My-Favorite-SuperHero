@@ -11,7 +11,7 @@ body {
   /* background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
   background-size: cover; */
 
-  height: 1080px;
+  /* height: 1080px; */
 }
 
 center {
@@ -20,7 +20,7 @@ center {
 
 .main-container{
   max-width: 100%;
-  height: 92vh;
+  height: 80vh;
   justify-content: center;
   display: flex;
   margin: 2rem 2rem;
@@ -119,8 +119,6 @@ h1 {
   transition: 0.2s;
   margin-right: 0.6rem;
   font-size: 16px;
-  margin-top: 16px;
-
 }
 
 .btnRandomhero:hover{
@@ -183,17 +181,21 @@ h1 {
 
 #linkedin, #twitter, #github{
   /* background-color: #f5f5f5; */
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 }
 
 .footer-img {
-  width: 2%;
+  width: 35px;
   padding: 10px;
 }
 
 .footer-link {
   text-decoration: none;
+}
+
+.bookmark{
+  padding-top: 15px;
 }
 
 .tilt {
@@ -251,12 +253,13 @@ nav ul li a {
   padding: 0 20px;
   line-height: 70px;
   background: transparent;
-  color: #fff;
+  color: #463f3f;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 nav ul li a:hover {
-  transition: 0.2s ease-in;
+  background: #f2f2f2;
+  color: #fb5958;
 }
 nav ul li a:not(:only-child):after {
   padding-left: 4px;
@@ -296,8 +299,17 @@ nav ul li ul li a {
   nav {
     width: 100%;
     padding: 70px 0 15px;
-    background: #000; /* fallback for old browsers */
-    box-shadow: 0 3px 12px rgba(256, 256, 256, 0.35);
+    background: #dd5e89; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #f7bb97,
+      #dd5e89
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #f7bb97,
+      #dd5e89
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   nav ul {
     display: none;
@@ -327,7 +339,7 @@ nav ul li ul li a {
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: #fff;
+  background: #463f3f;
   position: absolute;
   display: block;
   content: "";
@@ -363,8 +375,17 @@ nav ul li ul li a {
 */
 .navigation {
   height: 70px;
-  background: #000; /* fallback for old browsers */
-  box-shadow: 0 3px 12px rgba(256, 256, 256, 0.17);
+  background: #dd5e89; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f7bb97,
+    #dd5e89
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f7bb97,
+    #dd5e89
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /*
@@ -385,7 +406,7 @@ nav ul li ul li a {
 }
 .brand a,
 .brand a:visited {
-  color: #fff;
+  color: #463f3f;
   text-decoration: none;
   font-size: 25px;
 }
@@ -480,23 +501,17 @@ body {
   position: relative;
   border: 3px solid #30A2FF;
   transition: 0.3s;
-  color:#000;
 }
 
 .search-img{
   height: 2rem;
   width: 2rem;
-
-
 }
 
 .btnRandomhero:hover {
   cursor: pointer;
   color: aliceblue;
   background-color: rgb(134, 144, 146);
-
-
-
 }
 
 .btnSearch:hover {
@@ -542,6 +557,14 @@ h1 {
   width: fit-content;
 }
 
+footer{
+  background: linear-gradient(
+    to right,
+    #f7bb97,
+    #dd5e89
+  );;
+}
+
 .bottom-container {
   margin-top: 1.875rem;
   padding: 1.875rem;
@@ -549,9 +572,21 @@ h1 {
   color: white;
 }
 
-.footer-img {
+.footer-icon {
+  /* padding: 5px;
+  background-color: hsl(0, 0%, 0%);
+  text-align: center; */
+  display: inline;
+  /* border-radius: 50%;
   width: 3%;
+  height: 3%; */
+}
+
+.footer-img {
+  width: 10px;
   padding: 0.625rem;
+  border-radius: 50%;
+  background-color: #000;
 }
 
 .footer-link {
@@ -635,8 +670,4 @@ h1 {
 
 .img_container img:hover{
   transform: scale(1.1);
-}
-.nav-list li a:hover {
-  color: orange;
-  transition: 0.2s ease-in;
 }
