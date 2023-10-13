@@ -6,6 +6,13 @@ const searchbtn = document.getElementById("searchId");
 const searchInput = document.getElementById("SearchInput");
 const downloadImageBtn = document.getElementById("downloadImg"); // download the image
 
+searchInput.addEventListener("focus", function() {
+  searchInput.placeholder = "";
+});
+
+searchInput.addEventListener("blur", function() {
+  searchInput.placeholder = "Find Your Hero";
+});
 
 const getCurrentYear = () => {
   const yearElement = document.getElementById("year");
