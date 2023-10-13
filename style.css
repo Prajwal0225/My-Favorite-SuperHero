@@ -63,6 +63,18 @@ h1 {
   color: transparent;
 }
 
+h2
+{
+  color: #d895c3;
+}
+
+.quality
+{
+  margin-top: 3px;
+}
+
+
+
 .mainpic {
   width: 21.75rem;
   height: 24.75rem;
