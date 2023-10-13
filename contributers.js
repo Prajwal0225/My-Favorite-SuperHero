@@ -1,16 +1,8 @@
-const owner = "Pavilion-devs";
-const repo = "My-Favorite-SuperHero";
-const token = "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";
-
 const container = document.querySelector('.contributors');
 const maintainersContainer = document.querySelector('.maintainers');
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch(`https://api.github.com/repos/${owner}/${repo}/contributors`, {
-    headers: {
-      Authorization: `token ${token}`
-    }
-  })
+  fetch('/api/github/contributors')
     .then(res => {
       return res.json()
     })
