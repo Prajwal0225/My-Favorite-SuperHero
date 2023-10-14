@@ -2,7 +2,7 @@ const container = document.querySelector('.contributors');
 const maintainersContainer = document.querySelector('.maintainers');
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/api/github/contributors')
+  fetch('contributer.json')
     .then(res => {
       return res.json()
     })
