@@ -20,7 +20,7 @@ center {
 
 .main-container{
   max-width: 100%;
-  height: 80vh;
+  height: 92vh;
   justify-content: center;
   display: flex;
   margin: 2rem 2rem;
@@ -40,7 +40,7 @@ center {
   display: flex;
   flex-direction: column;
   color: white;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .right-container{
   align-items: center;
@@ -62,6 +62,18 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+h2
+{
+  color: #d895c3;
+}
+
+.quality
+{
+  margin-top: 3px;
+}
+
+
 
 .mainpic {
   width: 21.75rem;
@@ -119,6 +131,8 @@ h1 {
   transition: 0.2s;
   margin-right: 0.6rem;
   font-size: 16px;
+  margin-top: 16px;
+
 }
 
 .btnRandomhero:hover{
@@ -231,6 +245,26 @@ body {
   margin: 0;
 }
 
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: white;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
 
 nav {
   float: right;
@@ -249,13 +283,12 @@ nav ul li a {
   padding: 0 20px;
   line-height: 70px;
   background: transparent;
-  color: #463f3f;
+  color: #fff;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
 }
 nav ul li a:hover {
-  background: #f2f2f2;
-  color: #fb5958;
+  transition: 0.2s ease-in;
 }
 nav ul li a:not(:only-child):after {
   padding-left: 4px;
@@ -295,17 +328,8 @@ nav ul li ul li a {
   nav {
     width: 100%;
     padding: 70px 0 15px;
-    background: #dd5e89; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #f7bb97,
-      #dd5e89
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #f7bb97,
-      #dd5e89
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000; /* fallback for old browsers */
+    box-shadow: 0 3px 12px rgba(256, 256, 256, 0.35);
   }
   nav ul {
     display: none;
@@ -335,7 +359,7 @@ nav ul li ul li a {
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: #463f3f;
+  background: #fff;
   position: absolute;
   display: block;
   content: "";
@@ -371,17 +395,8 @@ nav ul li ul li a {
 */
 .navigation {
   height: 70px;
-  background: #dd5e89; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f7bb97,
-    #dd5e89
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f7bb97,
-    #dd5e89
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000; /* fallback for old browsers */
+  box-shadow: 0 3px 12px rgba(256, 256, 256, 0.17);
 }
 
 /*
@@ -402,7 +417,7 @@ nav ul li ul li a {
 }
 .brand a,
 .brand a:visited {
-  color: #463f3f;
+  color: #fff;
   text-decoration: none;
   font-size: 25px;
 }
@@ -497,6 +512,7 @@ body {
   position: relative;
   border: 3px solid #30A2FF;
   transition: 0.3s;
+  color:#000;
 }
 
 .search-img{
@@ -651,4 +667,8 @@ h1 {
 
 .img_container img:hover{
   transform: scale(1.1);
+}
+.nav-list li a:hover {
+  color: orange;
+  transition: 0.2s ease-in;
 }
