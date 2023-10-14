@@ -24,12 +24,26 @@ getCurrentYear();
 //   linkContainer.classList.toggle("active");
 // })
 
+let hname=document.getElementById("hname")
+let hstr=document.getElementById("hstr")
+let hgen=document.getElementById("hgen")
+let hspe=document.getElementById("hspe")
+let hplac=document.getElementById("hplac")
+let hfap=document.getElementById("hfap")
+
+
 const getSupperHero = (id) => {
   fetch(`${BaseUrl}/${id}`)
     .then((response) => response.json())
     .then((json) => {
-      const name = `<h2>${json.name}</h2>`;
-      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" height=400 width=300/>`;
+      const name = `${json.name}`;
+      heroImageDiv.innerHTML = ` <img src= "${json.image.url}" height=400 width=300/>`;
+      hname.innerHTML= `${json.name}`;
+      hstr.innerHTML=`${json.powerstats.strength}`
+      hspe.innerHTML=`${json.powerstats.speed}`
+      hgen.innerHTML=`${json.appearance.gender}`
+      hplac.innerHTML=`${json.biography["place-of-birth"]}`
+      hfap.innerHTML=`${json.biography["first-appearance"]}`
 
       console.log(json.image.url);
       downloadImageBtn.addEventListener("click", () => {
@@ -47,6 +61,12 @@ const getSearchSuperHero = (name) => {
         const hero = json.results[0];
         console.log(hero);
         const hero2 = `<h2>${name}</h2>`;
+        hname.innerHTML= `${json.name}`;
+      hstr.innerHTML=`${json.powerstats.strength}`
+      hspe.innerHTML=`${json.powerstats.speed}`
+      hgen.innerHTML=`${json.appearance.gender}`
+      hplac.innerHTML=`${json.biography["place-of-birth"]}`
+      hfap.innerHTML=`${json.biography["first-appearance"]}`
         heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
 
         console.log(hero.image.url);

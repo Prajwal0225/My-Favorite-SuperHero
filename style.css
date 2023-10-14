@@ -40,7 +40,7 @@ center {
   display: flex;
   flex-direction: column;
   color: white;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .right-container{
   align-items: center;
@@ -62,6 +62,18 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+h2
+{
+  color: #d895c3;
+}
+
+.quality
+{
+  margin-top: 3px;
+}
+
+
 
 .mainpic {
   width: 21.75rem;
