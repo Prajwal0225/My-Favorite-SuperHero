@@ -50,6 +50,17 @@ https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/6aae0cbc-c
 
 
 If you want to contribute to this project then check out [CONTRIBUTING.md](CONTRIBUTING.md) file.
+##  Issue Assignment Guidelines and Collaboration Process 📌
+
+- 📝 Issue Assignment: Before you start working on any issues, please make sure that the issue is assigned to you. If it's a new issue, create one if it doesn't already exist. 📌
+
+- 👤 One person will be assigned one issue at a time. When you raise a pull request for that issue, only then can you create the next issue. Work on one issue at a time, and once the pull request for that issue gets merged, you can create another issue. This approach allows maximum contributors to have a chance to contribute, resulting in more work being done on the repository. 🏃‍♂
+
+- 🚫 Avoid Direct PRs: Refrain from creating direct pull requests (PRs) for issues that are already assigned to someone else. This helps prevent duplicated efforts and keeps our work organized. Even if an issue is not assigned to anyone, you should create the issue first. Only when a maintainer assigns it to you, you can then raise a PR. 🚧
+
+- 🤝 Collaboration: If you find that an issue is already assigned to someone and you're interested in working on it, feel free to comment on the issue. If the first assigned person isn't able to complete the task or doesn't create a PR, we can reassign the issue to ensure it's addressed properly. Normally, we assign the issue to the person who created it. If they are not interested in working on it, we assign it to someone who is interested. You can comment if you want to work on it. 💬
+
+Your cooperation is greatly appreciated, and it helps us maintain an efficient and collaborative development process. 🙌 Happy coding! 🚀
 
 
 ##  Project Maintainers
