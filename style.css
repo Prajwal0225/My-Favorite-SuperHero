@@ -73,17 +73,13 @@ h1 {
   color: transparent;
 }
 
-h2
-{
+h2 {
   color: #d895c3;
 }
 
-.quality
-{
+.quality {
   margin-top: 3px;
 }
-
-
 
 .mainpic {
   width: 21.75rem;
@@ -451,6 +447,7 @@ center {
 #heroImage > img {
   border-radius: 10%;
   width: 100%;
+  height: 300px;
 }
 
 h1 {
