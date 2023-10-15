@@ -416,10 +416,19 @@ center {
 #heroImage > img {
   border-radius: 10%;
 }
-
 h1 {
-  font-family: "Edu VIC WA NT Beginner", sans-serif;
-  font-size: 70px;
+  /* font-family: "Edu VIC WA NT Beginner", cursive; */
+  font-size: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-image: url("/images/download.jpg");
+  background-size: 500px;
+  background-position: center;
+  background-clip: text;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.05px;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .mainpic {
