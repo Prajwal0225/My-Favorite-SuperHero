@@ -683,3 +683,26 @@ h1 {
     flex-direction: column;
   }
 }
+
+.mask-loader-icon {
+  font-size: xxx-large;
+}
+
+.hero-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  animation: spin-horizontal 2s linear infinite;
+}
+
+@keyframes spin-horizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}

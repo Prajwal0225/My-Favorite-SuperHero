@@ -32,6 +32,11 @@ let hplac = document.getElementById("hplac");
 let hfap = document.getElementById("hfap");
 
 const getSupperHero = (id) => {
+  heroImageDiv.innerHTML = `
+  <div class="hero-image-placeholder" height=400 width=300>
+    <i class="mask-loader-icon fa-solid fa-mask"></i>
+  </div>
+  `;
   fetch(`${BaseUrl}/${id}`)
     .then((response) => response.json())
     .then((json) => {
