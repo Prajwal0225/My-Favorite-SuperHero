@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Superheroes</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/main.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" href="images/superhero.png" />
+    <link rel="icon" href="/images/superhero.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,7 +43,7 @@
             <!-- Setting the links to #! will ensure that no action takes place on click. -->
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contributers.html">Contributors</a></li>
+            <li><a href="contributor.html">Contributors</a></li>
           </ul>
         </nav>
       </div>
@@ -73,22 +73,22 @@
           <div class="hero-info">
             <h2><label for=""> Aliases: </label></h2>
             <p class="quality" id="hname">Hero aliase</p>
-            <br>
+            <br />
             <h2><label for=""> Strength: </label></h2>
             <p class="quality" id="hstr">0</p>
-            <br>
+            <br />
             <h2><label for=""> Gender: </label></h2>
             <p class="quality" id="hgen">Male/Female</p>
-            <br>
+            <br />
             <h2><label for=""> Speed: </label></h2>
             <p class="quality" id="hspe">0</p>
-            <br>
+            <br />
             <h2><label for=""> Place-of-birth: </label></h2>
             <p class="quality" id="hplac">NULL</p>
-            <br>
+            <br />
             <h2><label for=""> First-appearance: </label></h2>
             <p class="quality" id="hfap">NULL</p>
-            <br>
+            <br />
           </div>
         </div>
         <div class="right-container">
@@ -101,14 +101,10 @@
           </div>
         </div>
       </div>
-      
 
-        <br />
-        
-      </div>
+      <br />
+
       <div class="bottom-container">
-        
-
         <a class="footer-link" href="https://www.linkedin.com/feed/"
           ><img
             class="footer-img linkedin tilt pic"
@@ -118,7 +114,6 @@
           />
         </a>
 
-        
         <a class="footer-link" href="https://twitter.com/home"
           ><img
             class="footer-img twitter tilt pic"
@@ -128,14 +123,17 @@
           />
         </a>
 
-        <a class="footer-link" href="https://github.com/Prajwal0225" target="_blank">
-        
-        <img
+        <a
+          class="footer-link"
+          href="https://github.com/Prajwal0225"
+          target="_blank"
+        >
+          <img
             class="footer-img global tilt pic"
             id="github"
             src="./images/github.png"
             alt="Github"
-        />
+          />
         </a>
 
         <p class="bookmark">
@@ -144,6 +142,7 @@
         </p>
       </div>
     </center>
- <script src="script.js"></script>
-</body>
+    <script src="/js/index.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
