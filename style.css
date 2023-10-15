@@ -48,20 +48,7 @@ center {
   margin: 2rem 2rem;
   color: white;
 }
-h1 {
-  /* font-family: "Edu VIC WA NT Beginner", cursive; */
-  font-size: 100px;
-  font-weight: 900;
-  text-transform: uppercase;
-  background-image: url('/images/download.jpg');
-  background-size:500px;
-  background-position:center;
-  background-clip: text;
-  -webkit-text-stroke-color: white;
-  -webkit-text-stroke-width: 0.05px;
-  -webkit-background-clip: text;
-  color: transparent;
-}
+
 
 .mainpic {
   width: 21.75rem;
@@ -536,10 +523,6 @@ center {
   font-size: 3rem;
 }
 
-h1 {
-  font-family: "Lilita One", sans-serif;
-  font-size: 4.375rem;
-}
 
 .mainpic {
   width: 18.75rem;
