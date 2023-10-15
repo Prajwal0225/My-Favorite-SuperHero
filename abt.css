@@ -134,3 +134,21 @@ h3 {
   line-height: 28.5px;
   font-size: x-large;
 }
+
+/* Added hover effect like home page */
+
+nav ul li a:hover {
+  transition: 0.2s ease-in;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+  
+}
+nav a:hover {
+  border-bottom: 3px solid white;
+}
+
+nav a.active {
+  border-bottom: 3px solid white;
+}

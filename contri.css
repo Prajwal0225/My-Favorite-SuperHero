@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-a{
+{
     text-decoration: none;
     transition: 0.5s;
 }
-a:hover{
+/*a:hover{
     color: rgb(41, 38, 38);
     background-color: #fff;
-}
+}*/
 #maintainer-body{
     background-color: rgb(41, 38, 38);
     height: 250vh;
@@ -72,3 +72,19 @@ a:hover{
     align-items: flex-start;
     gap: 10px;
 }
+
+nav ul li a:hover {
+    transition: 0.2s ease-in;
+  }
+  nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+    
+  }
+  nav a:hover {
+    border-bottom: 3px solid white;
+  }
+  
+  nav a.active {
+    border-bottom: 3px solid white;
+  }
