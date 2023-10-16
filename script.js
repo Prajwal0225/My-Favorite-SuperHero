@@ -6,11 +6,11 @@ const searchbtn = document.getElementById("searchId");
 const searchInput = document.getElementById("SearchInput");
 const downloadImageBtn = document.getElementById("downloadImg"); // download the image
 
-searchInput.addEventListener("focus", function() {
+searchInput.addEventListener("focus", function () {
   searchInput.placeholder = "";
 });
 
-searchInput.addEventListener("blur", function() {
+searchInput.addEventListener("blur", function () {
   searchInput.placeholder = "Find Your Hero";
 });
 
@@ -24,12 +24,32 @@ getCurrentYear();
 //   linkContainer.classList.toggle("active");
 // })
 
+let hname = document.getElementById("hname");
+let hstr = document.getElementById("hstr");
+let hgen = document.getElementById("hgen");
+let hspe = document.getElementById("hspe");
+let hplac = document.getElementById("hplac");
+let hfap = document.getElementById("hfap");
+
 const getSupperHero = (id) => {
+  heroImageDiv.innerHTML = `
+  <div class="hero-image-placeholder" height=400 width=300>
+    <i class="mask-loader-icon fa-solid fa-mask"></i>
+  </div>
+  `;
   fetch(`${BaseUrl}/${id}`)
     .then((response) => response.json())
     .then((json) => {
-      const name = `<h2>${json.name}</h2>`;
-      heroImageDiv.innerHTML = `${name} <img src= "${json.image.url}" height=400 width=300/>`;
+      const name = `${json.name}`;
+      const hero2 = `<h2>${name}</h2>`;
+      heroImageDiv.append();
+      heroImageDiv.innerHTML =  `${hero2} <img src= "${json.image.url}" height=400 width=300/>`;
+      hname.innerHTML = `${json.name}`;
+      hstr.innerHTML = `${json.powerstats.strength}`;
+      hspe.innerHTML = `${json.powerstats.speed}`;
+      hgen.innerHTML = `${json.appearance.gender}`;
+      hplac.innerHTML = `${json.biography["place-of-birth"]}`;
+      hfap.innerHTML = `${json.biography["first-appearance"]}`;
 
       console.log(json.image.url);
       downloadImageBtn.addEventListener("click", () => {
@@ -47,6 +67,13 @@ const getSearchSuperHero = (name) => {
         const hero = json.results[0];
         console.log(hero);
         const hero2 = `<h2>${name}</h2>`;
+        hname.innerHTML = `${hero.name}`;
+        hstr.innerHTML = `${hero.powerstats.strength}`;
+        hspe.innerHTML = `${hero.powerstats.speed}`;
+        hgen.innerHTML = `${hero.appearance.gender}`;
+        hplac.innerHTML = `${hero.biography["place-of-birth"]}`;
+        hfap.innerHTML = `${hero.biography["first-appearance"]}`;
+        heroImageDiv.append();
         heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
 
         console.log(hero.image.url);
@@ -90,9 +117,9 @@ searchbtn.onclick = () => {
   }
 };
 
-searchInput.addEventListener('keyup', (e) =>{
+searchInput.addEventListener("keyup", (e) => {
   const inputValue = searchInput.value.trim();
-  if(e.keyCode === 13){
+  if (e.keyCode === 13) {
     getSearchSuperHero(inputValue);
   }
 });

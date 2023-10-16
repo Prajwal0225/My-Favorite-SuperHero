@@ -25,6 +25,7 @@ a:hover{
     padding: 20px;
     width: 900px;
     display: flex;
+    color: #fff;
     align-items: center;
     flex-wrap: wrap;
     gap: 25px;
@@ -33,6 +34,7 @@ a:hover{
 .contributor{
     display: flex;
     flex-direction: column;
+    color: #fff;
     align-items: flex-start;
     gap: 8px;
 }
@@ -51,6 +53,7 @@ a:hover{
     height: 100%;
     display: flex;
     align-items: flex-start;
+    color: #fff;
     gap: 25px;
 }
 .avatar{
@@ -66,6 +69,6 @@ a:hover{
 .user{
     display: flex;
     flex-direction: column;
-align-items: flex-start;
-gap: 10px;
+    align-items: flex-start;
+    gap: 10px;
 }
