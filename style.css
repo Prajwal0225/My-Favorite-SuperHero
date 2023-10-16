@@ -75,17 +75,13 @@ h1 {
 }
 
 
-h2
-{
+h2{
   color: #d895c3;
 }
 
-.quality
-{
+.quality {
   margin-top: 3px;
 }
-
-
 
 .mainpic {
   width: 21.75rem;
@@ -471,7 +467,7 @@ h1 {
 
 .mainpic {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
 .inputtext {
@@ -564,11 +560,6 @@ center {
   font-size: 3rem;
 }
 
-
-.mainpic {
-  width: 18.75rem;
-  height: 18.75rem;
-}
 
 .inputtext {
   width: 30%;
