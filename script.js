@@ -36,7 +36,9 @@ const getSupperHero = (id) => {
     .then((response) => response.json())
     .then((json) => {
       const name = `${json.name}`;
-      heroImageDiv.innerHTML = ` <img src= "${json.image.url}" height=400 width=300/>`;
+      const hero2 = `<h2>${name}</h2>`;
+      heroImageDiv.append();
+      heroImageDiv.innerHTML =  `${hero2} <img src= "${json.image.url}" height=400 width=300/>`;
       hname.innerHTML = `${json.name}`;
       hstr.innerHTML = `${json.powerstats.strength}`;
       hspe.innerHTML = `${json.powerstats.speed}`;
@@ -66,6 +68,7 @@ const getSearchSuperHero = (name) => {
         hgen.innerHTML = `${hero.appearance.gender}`;
         hplac.innerHTML = `${hero.biography["place-of-birth"]}`;
         hfap.innerHTML = `${hero.biography["first-appearance"]}`;
+        heroImageDiv.append();
         heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
 
         console.log(hero.image.url);
