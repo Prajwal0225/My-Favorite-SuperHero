@@ -4,29 +4,8 @@ body {
   margin: 0;
 }
 
-h1 {
-  font-family: "Questrial", sans-serif;
-  font-size: 4.375rem;
-  font-weight: 900;
-  background-size: 500px;
-  background-position: center;
-  text-transform: uppercase;
-  text-align: center;
-  text-shadow: #f2f2f2;
-  background-clip: text;
-  -webkit-text-stroke-color: white;
-  -webkit-text-stroke-width: 0.05px;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 2px white;
-}
 
-.head h1 {
-  font-size: xx-large;
-  align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  -webkit-text-stroke: 1px rgb(58, 219, 252);
-}
+
 
 .main-container {
 
@@ -54,7 +33,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   max-width: 90%;
-  /* Set a maximum width for the container */
   margin: 0 auto;
   height: 75%;
 }
@@ -78,7 +56,7 @@ h1 {
 }
 
 .mainpic1 {
-  width: 350%;
+  width: 300%;
   height: 85%;
   margin-left: 20px;
   margin-top: 20px;
@@ -93,11 +71,8 @@ h1 {
   margin: 2rem 2rem;
   float: right;
   flex: 0 0 45%;
-  /* Set a flex basis of 45% */
   max-width: 45%;
-  /* Set a maximum width of 45% */
   border: 1px solid #000;
-  /* Optional: Add a border for visibility */
   box-sizing: border-box;
   height: 75%;
   margin-top: 0%;
@@ -108,29 +83,99 @@ h1 {
 
 }
 
-#heroImage>h2 {
-  font-size: 3rem;
-  float: Left;
-}
 
-.mainpic {
-  width: 25.75rem;
-  height: 23.75rem;
-  margin-left: 25%;
-  margin-top: 0%;
-}
 
-h2 {
-  color: white;
-  margin-left: 25px;
-  line-height: 28.5px;
-}
-
-h3 {
-  margin-left: 35px;
+.wr>p{
+  margin-left: 3rem;
   margin-right: 25px;
   height: 50%;
   color: white;
   line-height: 28.5px;
-  font-size: x-large;
+
+}
+
+.first-para>p{
+  color: #F6AA1C;
+  font-size: 2.5rem;
+  padding-left: 5rem;
+
+
+
+}
+
+.first-para>div{
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  
+}
+
+.second-para>p{
+  color: #F6AA1C;
+  font-size: 2.5rem;
+  padding-left: 5rem;
+  padding-top: 6rem;
+}
+
+.second-para>div{
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  
+}
+
+
+.third-para>p{
+  color: #F6AA1C;
+  font-size: 2.5rem;
+  padding-left: 5rem;
+  padding-top: 6rem;
+}
+
+.third-para>div{
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  
+}
+
+.image > img{
+  width: 40rem;
+  height: 40rem;
+  border: 2px solid red;
+  float: right;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem; 
+}
+
+.grid-item {
+  text-align: center;
+  background-color: black;
+  padding: 2rem;
+  margin: 5rem;
+  color:#F6AA1C;
+}
+
+.heading{
+  color: #F6AA1C;
+  font-size: 3rem;
+  padding-left: 5rem;
+  padding-top: 6rem;
+}
+
+.head>p{
+  color: rgb(211, 248, 5);
+  padding:3rem;
+  font-size: 3rem;
+  text-align: center;
+  
 }
