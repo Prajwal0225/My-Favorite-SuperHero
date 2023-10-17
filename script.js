@@ -32,11 +32,18 @@ let hplac = document.getElementById("hplac");
 let hfap = document.getElementById("hfap");
 
 const getSupperHero = (id) => {
+  heroImageDiv.innerHTML = `
+  <div class="hero-image-placeholder" height=400 width=300>
+    <i class="mask-loader-icon fa-solid fa-mask"></i>
+  </div>
+  `;
   fetch(`${BaseUrl}/${id}`)
     .then((response) => response.json())
     .then((json) => {
       const name = `${json.name}`;
-      heroImageDiv.innerHTML = ` <img src= "${json.image.url}" height=400 width=300/>`;
+      const hero2 = `<h2>${name}</h2>`;
+      heroImageDiv.append();
+      heroImageDiv.innerHTML =  `${hero2} <img src= "${json.image.url}" height=400 width=300/>`;
       hname.innerHTML = `${json.name}`;
       hstr.innerHTML = `${json.powerstats.strength}`;
       hspe.innerHTML = `${json.powerstats.speed}`;
@@ -58,17 +65,16 @@ const getSearchSuperHero = (name) => {
     .then((json) => {
       if (json.results && json.results.length > 0) {
         const hero = json.results[0];
-        console.log(hero);
-        const hero2 = `<h2>${name}</h2>`;
+        const hero2 = `<h2>${hero.name}</h2>`;
         hname.innerHTML = `${hero.name}`;
         hstr.innerHTML = `${hero.powerstats.strength}`;
         hspe.innerHTML = `${hero.powerstats.speed}`;
         hgen.innerHTML = `${hero.appearance.gender}`;
         hplac.innerHTML = `${hero.biography["place-of-birth"]}`;
         hfap.innerHTML = `${hero.biography["first-appearance"]}`;
+        heroImageDiv.append();
         heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
 
-        console.log(hero.image.url);
         downloadImageBtn.addEventListener("click", () => {
           const imageUrl = hero.image.url;
           downloadImage(imageUrl);

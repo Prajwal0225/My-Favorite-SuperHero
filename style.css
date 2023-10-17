@@ -58,12 +58,13 @@ center {
   color: white;
   /* width: 100%; */
 }
+
 h1 {
   /* font-family: "Edu VIC WA NT Beginner", cursive; */
   font-size: 100px;
   font-weight: 900;
   text-transform: uppercase;
-  background-image: url("/images/download.jpg");
+  background-image: url("./images/download.jpg");
   background-size: 500px;
   background-position: center;
   background-clip: text;
@@ -73,17 +74,14 @@ h1 {
   color: transparent;
 }
 
-h2
-{
+
+h2{
   color: #d895c3;
 }
 
-.quality
-{
+.quality {
   margin-top: 3px;
 }
-
-
 
 .mainpic {
   width: 21.75rem;
@@ -452,15 +450,24 @@ center {
   border-radius: 10%;
   width: 100%;
 }
-
 h1 {
-  font-family: "Edu VIC WA NT Beginner", sans-serif;
-  font-size: 70px;
+  /* font-family: "Edu VIC WA NT Beginner", cursive; */
+  font-size: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-image: url("/images/download.jpg");
+  background-size: 500px;
+  background-position: center;
+  background-clip: text;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.05px;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .mainpic {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
 .inputtext {
@@ -553,15 +560,6 @@ center {
   font-size: 3rem;
 }
 
-h1 {
-  font-family: "Lilita One", sans-serif;
-  font-size: 4.375rem;
-}
-
-.mainpic {
-  width: 18.75rem;
-  height: 18.75rem;
-}
 
 .inputtext {
   width: 30%;
@@ -681,5 +679,41 @@ h1 {
 @media (max-width: 922px) {
   .main-container {
     flex-direction: column;
+  }
+}
+
+.mask-loader-icon {
+  font-size: xxx-large;
+}
+
+.hero-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  animation: spin-horizontal 2s linear infinite;
+}
+
+@media screen and (max-width: 406px) {
+  .head-title {
+    font-size: 50px;
+  }
+  
+  .main-container {
+    margin-inline: 0.5rem;
+  }
+  .inputtext::placeholder {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes spin-horizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
   }
 }
