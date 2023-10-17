@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Superhero's</title>
+    <title>Superheroes</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" href="images/superhero.png" />
@@ -26,8 +26,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Primary Meta Tags -->
+    <title>Superheroes</title>
+    <meta name="title" content="Superheroes" />
+    <meta name="description" content="Discover superhero images in a click! Search your heroes or get random image." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prajwal0225.github.io/My-Favorite-SuperHero/" />
+    <meta property="og:title" content="Superheroes" />
+    <meta property="og:description" content="Discover superhero images in a click! Search your heroes or get random image." />
+    <meta property="og:image" content="https://prajwal0225.github.io/My-Favorite-SuperHero/images/preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://prajwal0225.github.io/My-Favorite-SuperHero/" />
+    <meta property="twitter:title" content="Superheroes" />
+    <meta property="twitter:description" content="Discover superhero images in a click! Search your heroes or get random image." />
+    <meta property="twitter:image" content="https://prajwal0225.github.io/My-Favorite-SuperHero/images/preview.png" />
   </head>
   <body>
+    
     <section class="navigation">
       <div class="nav-container">
         <div class="brand">
@@ -35,7 +54,7 @@
             ><i class="fa-solid fa-mask"></i
           ></a>
         </div>
-        <nav>
+        <nav class="stroke">
           <div class="nav-mobile">
             <a id="nav-toggle" href="#!"><span></span></a>
           </div>
@@ -51,37 +70,57 @@
 
     <center>
       <div class="top-container">
-        <h1>Your fav Super Heroes.</h1>
+        <h1 class="head-title">Your fav Super Heroes</h1>
+      </div>
+      <div class="searchActions">
+        <input
+          id="SearchInput"
+          class="inputtext"
+          type="text"
+          placeholder="Find Your Hero"
+        />
+        <br />
+        <button id="searchId" class="btnSearch">🔍</button>
       </div>
       <!-- main actions elements : start -->
       <div class="main-container">
-        <div class="left-container">
-          <div class="middle-container">
-            <div class="searchActions">
-              <input
-                id="SearchInput"
-                class="inputtext"
-                type="text"
-                placeholder="Find Your Hero"
-              />
-              <br />
-              <button id="searchId" class="btnSearch">🔍</button>
-            </div>
+
+        <!-- <div class="middle-container">
+          <div class="searchActions">
+            <input
+              id="SearchInput"
+              class="inputtext"
+              type="text"
+              placeholder="Find Your Hero"
+            />
+            <br />
+            <button id="searchId" class="btnSearch">🔍</button>
           </div>
+        </div> -->
+
+
+        <div class="left-container">
+          
           <!-- main actions elements : end-->
           <br />
           <div class="hero-info">
-            <label for="">Aliases: </label>
-            <p>Hero aliase</p>
+            <h2><label for=""> Aliases: </label></h2>
+            <p class="quality" id="hname">Hero aliase</p>
             <br>
-            <label for="">Place of Birth: </label>
-            <p>12/12/12</p>
+            <h2><label for=""> Strength: </label></h2>
+            <p class="quality" id="hstr">0</p>
             <br>
-            <label for="">First Appearance: </label>
-            <p>India</p>
+            <h2><label for=""> Gender: </label></h2>
+            <p class="quality" id="hgen">Male/Female</p>
             <br>
-            <label for="">Age: </label>
-            <p>29</p>
+            <h2><label for=""> Speed: </label></h2>
+            <p class="quality" id="hspe">0</p>
+            <br>
+            <h2><label for=""> Place-of-birth: </label></h2>
+            <p class="quality" id="hplac">NULL</p>
+            <br>
+            <h2><label for=""> First-appearance: </label></h2>
+            <p class="quality" id="hfap">NULL</p>
             <br>
           </div>
         </div>
