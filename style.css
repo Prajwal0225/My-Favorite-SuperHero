@@ -18,9 +18,10 @@ center {
   margin-top: 30px;
 }
 
-.main-container{
+.main-container {
   max-width: 100%;
-  height: 80vh;
+  /* height: 92vh; */
+  height: auto;
   justify-content: center;
   display: flex;
   margin: 2rem 2rem;
@@ -28,39 +29,58 @@ center {
   border-radius: 0.75rem;
 }
 
-.left-container{
+.left-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
   align-items: center;
+  justify-content: center;
   margin: 2rem 2rem;
+  /* width: 100%; */
 }
-.middle-container{
+.middle-container {
   display: flex;
 }
-.hero-info{
+.hero-info {
   /* position: absolute; */
   display: flex;
   flex-direction: column;
   color: white;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
-.right-container{
+.right-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
   align-items: center;
   justify-content: center;
   margin: 2rem 2rem;
   color: white;
+  /* width: 100%; */
 }
+
 h1 {
   /* font-family: "Edu VIC WA NT Beginner", cursive; */
   font-size: 100px;
   font-weight: 900;
   text-transform: uppercase;
-  background-image: url('/images/download.jpg');
-  background-size:500px;
-  background-position:center;
+  background-image: url("./images/download.jpg");
+  background-size: 500px;
+  background-position: center;
   background-clip: text;
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 0.05px;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+
+h2{
+  color: #d895c3;
+}
+
+.quality {
+  margin-top: 3px;
 }
 
 .mainpic {
@@ -119,11 +139,13 @@ h1 {
   transition: 0.2s;
   margin-right: 0.6rem;
   font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.btnRandomhero:hover{
+.btnRandomhero:hover {
   color: var(--hover-text);
-  transform: translate(-0.25rem,-0.25rem);
+  transform: translate(-0.25rem, -0.25rem);
   background: var(--hover-bg);
   box-shadow: 0.25rem 0.25rem var(--bg);
   margin-right: 0.6rem;
@@ -132,7 +154,7 @@ h1 {
   font-weight: bold;
 }
 
-.btnRandomhero:active{
+.btnRandomhero:active {
   transform: translate(0);
   box-shadow: none;
 }
@@ -151,9 +173,9 @@ h1 {
   font-size: 16px;
 }
 
-#downloadImg:hover{
+#downloadImg:hover {
   color: var(--hover-text);
-  transform: translate(-0.25rem,-0.25rem);
+  transform: translate(-0.25rem, -0.25rem);
   background: var(--hover-bg);
   box-shadow: 0.25rem 0.25rem var(--bg);
   margin-left: 0.6rem;
@@ -162,7 +184,7 @@ h1 {
   font-weight: bold;
 }
 
-#downloadImg:active{
+#downloadImg:active {
   transform: translate(0);
   box-shadow: none;
 }
@@ -179,7 +201,9 @@ h1 {
   cursor: pointer;
 }
 
-#linkedin, #twitter, #github{
+#linkedin,
+#twitter,
+#github {
   /* background-color: #f5f5f5; */
   width: 50px;
   height: 50px;
@@ -231,6 +255,26 @@ body {
   margin: 0;
 }
 
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: white;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
 
 nav {
   float: right;
@@ -249,13 +293,12 @@ nav ul li a {
   padding: 0 20px;
   line-height: 70px;
   background: transparent;
-  color: #463f3f;
+  color: #fff;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
 }
 nav ul li a:hover {
-  background: #f2f2f2;
-  color: #fb5958;
+  transition: 0.2s ease-in;
 }
 nav ul li a:not(:only-child):after {
   padding-left: 4px;
@@ -295,17 +338,8 @@ nav ul li ul li a {
   nav {
     width: 100%;
     padding: 70px 0 15px;
-    background: #dd5e89; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #f7bb97,
-      #dd5e89
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #f7bb97,
-      #dd5e89
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000; /* fallback for old browsers */
+    box-shadow: 0 3px 12px rgba(256, 256, 256, 0.35);
   }
   nav ul {
     display: none;
@@ -335,7 +369,7 @@ nav ul li ul li a {
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: #463f3f;
+  background: #fff;
   position: absolute;
   display: block;
   content: "";
@@ -371,17 +405,8 @@ nav ul li ul li a {
 */
 .navigation {
   height: 70px;
-  background: #dd5e89; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f7bb97,
-    #dd5e89
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f7bb97,
-    #dd5e89
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000; /* fallback for old browsers */
+  box-shadow: 0 3px 12px rgba(256, 256, 256, 0.17);
 }
 
 /*
@@ -402,12 +427,10 @@ nav ul li ul li a {
 }
 .brand a,
 .brand a:visited {
-  color: #463f3f;
+  color: #fff;
   text-decoration: none;
   font-size: 25px;
 }
-
-
 
 .btnSearch {
   border-radius: 10px;
@@ -425,16 +448,26 @@ center {
 
 #heroImage > img {
   border-radius: 10%;
+  width: 100%;
 }
-
 h1 {
-  font-family: "Edu VIC WA NT Beginner", sans-serif;
-  font-size: 70px;
+  /* font-family: "Edu VIC WA NT Beginner", cursive; */
+  font-size: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-image: url("/images/download.jpg");
+  background-size: 500px;
+  background-position: center;
+  background-clip: text;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.05px;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .mainpic {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
 .inputtext {
@@ -483,7 +516,6 @@ body {
   /* background-image: linear-gradient(0deg, #f86c9b 0%, #3ef1ec 100%); */
 }
 
-
 .btnSearch {
   border-color: #07cfc9;
   border-radius: 100%;
@@ -491,34 +523,30 @@ body {
   width: 3.9rem;
   font-family: "Lilita One", sans-serif;
 
-  margin:0;
-  z-index:50;
+  margin: 0;
+  z-index: 50;
   right: 0.9rem;
   position: relative;
-  border: 3px solid #30A2FF;
+  border: 3px solid #30a2ff;
   transition: 0.3s;
+  color: #000;
 }
 
-.search-img{
+.search-img {
   height: 2rem;
   width: 2rem;
-
-
 }
 
 .btnRandomhero:hover {
   cursor: pointer;
   color: aliceblue;
   background-color: rgb(134, 144, 146);
-
-
-
 }
 
 .btnSearch:hover {
   cursor: pointer;
   color: aliceblue;
-  background-color: #30A2FF;
+  background-color: #30a2ff;
   transform: scale(1.15);
   /* transition: 0.3s; */
   box-shadow: 0px 5px 15px rgba(78, 78, 78, 0.3);
@@ -532,15 +560,6 @@ center {
   font-size: 3rem;
 }
 
-h1 {
-  font-family: "Lilita One", sans-serif;
-  font-size: 4.375rem;
-}
-
-.mainpic {
-  width: 18.75rem;
-  height: 18.75rem;
-}
 
 .inputtext {
   width: 30%;
@@ -555,7 +574,7 @@ h1 {
 }
 
 #SearchInput {
-  width: fit-content;
+  width: 100%;
 }
 
 .bottom-container {
@@ -632,10 +651,9 @@ h1 {
   animation: flip-left 0.5s ease;
 }
 
-
 /* hero image container  */
 
-.img_container{
+.img_container {
   height: 400px;
   width: 300px;
   border-radius: 10%;
@@ -643,12 +661,59 @@ h1 {
   cursor: pointer;
 }
 
-.img_container img{
+.img_container img {
   object-fit: cover;
   width: 100%;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
 }
 
-.img_container img:hover{
+.img_container img:hover {
   transform: scale(1.1);
+}
+.nav-list li a:hover {
+  color: orange;
+  transition: 0.2s ease-in;
+}
+
+/* Media Queries  */
+@media (max-width: 922px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+.mask-loader-icon {
+  font-size: xxx-large;
+}
+
+.hero-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  animation: spin-horizontal 2s linear infinite;
+}
+
+@media screen and (max-width: 406px) {
+  .head-title {
+    font-size: 50px;
+  }
+  
+  .main-container {
+    margin-inline: 0.5rem;
+  }
+  .inputtext::placeholder {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes spin-horizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
 }
