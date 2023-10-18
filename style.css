@@ -25,7 +25,7 @@ center {
   justify-content: center;
   display: flex;
   margin: 2rem 2rem;
-  box-shadow: rgb(98, 13, 88) 0px 3px 30px;
+  box-shadow: #F83309 0px 3px 30px;  /** Changed box-shadow **/
   border-radius: 0.75rem;
 }
 
@@ -45,7 +45,7 @@ center {
   /* position: absolute; */
   display: flex;
   flex-direction: column;
-  color: white;
+  color: rgb(137, 211, 156);  /** Changed color **/
   margin-top: 1rem;
 }
 .right-container {
@@ -55,7 +55,7 @@ center {
   align-items: center;
   justify-content: center;
   margin: 2rem 2rem;
-  color: white;
+  color: whitesmoke; /** Changed color **/
   /* width: 100%; */
 }
 
@@ -68,7 +68,7 @@ h1 {
   background-size: 500px;
   background-position: center;
   background-clip: text;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: rgb(255, 255, 255); /** Changed color **/
   -webkit-text-stroke-width: 0.05px;
   -webkit-background-clip: text;
   color: transparent;
@@ -76,7 +76,7 @@ h1 {
 
 
 h2{
-  color: #d895c3;
+  color: #1fb3ee; /** Changed color **/
 }
 
 .quality {
