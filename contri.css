@@ -3,14 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
-a{
-    text-decoration: none;
-    transition: 0.5s;
+
+
+.nav-list li a:hover {
+    color: orange;
+    transition: 0.2s ease-in;
+  } 
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
 }
-a:hover{
-    color: rgb(41, 38, 38);
-    background-color: #fff;
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: white;
+  height: 1px;
 }
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+
 #maintainer-body{
     background-color: rgb(41, 38, 38);
     height: 250vh;
