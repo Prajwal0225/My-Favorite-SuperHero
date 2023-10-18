@@ -43,26 +43,21 @@ body {
 }
 
 .l-container {
-  max-width: 45%;
   max-width: 100%;
-  justify-content: center;
   display: flex;
   margin: 2rem 2rem;
   box-shadow: rgb(98, 13, 88) 0px 3px 30px;
   border-radius: 0.75rem;
   margin-left: 5%;
   margin-right: 5%;
-
+  padding: 30px;
 }
+
 
 .mainpic1 {
   width: 300%;
-  height: 85%;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-right: 30%;
-
-
+  height: auto;
+  margin: 0 auto;
 }
 
 .right-container {
@@ -83,15 +78,17 @@ body {
 
 }
 
-
-
 .wr>p{
-  margin-left: 3rem;
-  margin-right: 25px;
-  height: 50%;
+  font-weight: bold;
   color: white;
-  line-height: 28.5px;
+  padding: 10px;
+  transform: translateY(75px);
+}
 
+.wr p:nth-child(2) {
+  margin: auto;
+  line-height: 35px;
+  transform: translateY(150px);
 }
 
 .first-para>p{
@@ -170,6 +167,10 @@ body {
   font-size: 3rem;
   padding-left: 5rem;
   padding-top: 6rem;
+}
+
+.head {
+  padding-bottom: 50px;
 }
 
 .head>p{
