@@ -1,143 +1,179 @@
-var BaseUrl = "https://superheroapi.com/api.php/136899909020706";
+document.addEventListener("DOMContentLoaded", () => {
+  const apiPath = "https://superheroapi.com/api.php/136899909020706";
+  const rootInfo = document.querySelector("#info");
+  const dataInfo = rootInfo.querySelector("div:nth-child(2)");
+  const searchInput = rootInfo.querySelector("input");
+  const resultsImg = document.querySelector("#results img");
 
-const btn = document.getElementById("newherrobtn");
-const heroImageDiv = document.getElementById("heroImage");
-const searchbtn = document.getElementById("searchId");
-const searchInput = document.getElementById("SearchInput");
-const downloadImageBtn = document.getElementById("downloadImg"); // download the image
-
-searchInput.addEventListener("focus", function () {
-  searchInput.placeholder = "";
-});
-
-searchInput.addEventListener("blur", function () {
-  searchInput.placeholder = "Find Your Hero";
-});
-
-const getCurrentYear = () => {
-  const yearElement = document.getElementById("year");
-  yearElement.textContent = new Date().getFullYear();
-};
-getCurrentYear();
-
-// toggleButtton.addEventListener('click',()=>{
-//   linkContainer.classList.toggle("active");
-// })
-
-let hname = document.getElementById("hname");
-let hstr = document.getElementById("hstr");
-let hgen = document.getElementById("hgen");
-let hspe = document.getElementById("hspe");
-let hplac = document.getElementById("hplac");
-let hfap = document.getElementById("hfap");
-
-const getSupperHero = (id) => {
-  fetch(`${BaseUrl}/${id}`)
-    .then((response) => response.json())
-    .then((json) => {
-      const name = `${json.name}`;
-      heroImageDiv.innerHTML = ` <img src= "${json.image.url}" height=400 width=300/>`;
-      hname.innerHTML = `${json.name}`;
-      hstr.innerHTML = `${json.powerstats.strength}`;
-      hspe.innerHTML = `${json.powerstats.speed}`;
-      hgen.innerHTML = `${json.appearance.gender}`;
-      hplac.innerHTML = `${json.biography["place-of-birth"]}`;
-      hfap.innerHTML = `${json.biography["first-appearance"]}`;
-
-      console.log(json.image.url);
-      downloadImageBtn.addEventListener("click", () => {
-        const imageUrl = json.image.url;
-        downloadImage(imageUrl);
-      });
-    });
-};
-
-const getSearchSuperHero = (name) => {
-  fetch(`${BaseUrl}/search/${name}`)
-    .then((response) => response.json())
-    .then((json) => {
-      if (json.results && json.results.length > 0) {
-        const hero = json.results[0];
-        console.log(hero);
-        const hero2 = `<h2>${name}</h2>`;
-        hname.innerHTML = `${json.name}`;
-        hstr.innerHTML = `${json.powerstats.strength}`;
-        hspe.innerHTML = `${json.powerstats.speed}`;
-        hgen.innerHTML = `${json.appearance.gender}`;
-        hplac.innerHTML = `${json.biography["place-of-birth"]}`;
-        hfap.innerHTML = `${json.biography["first-appearance"]}`;
-        heroImageDiv.innerHTML = `${hero2} <img src= "${hero.image.url}" height=400 width=300/>`;
-
-        console.log(hero.image.url);
-        downloadImageBtn.addEventListener("click", () => {
-          const imageUrl = hero.image.url;
-          downloadImage(imageUrl);
-        });
-      } else {
-        heroImageDiv.innerHTML = `<p class="error">The superhero with this name ${name} does not exist on the website</p>`;
+  const btn = {
+    random: document.querySelector("#random-hero"),
+    find: document.querySelector("#find"),
+    download: document.querySelector("#download-hero"),
+  };
+  const finder = {
+    el: document.querySelector("#find-results"),
+    setEmpty() {
+      return (this.el.textContent = "");
+    },
+    isOpen() {
+      return this.el.classList.contains("open");
+    },
+    close() {
+      return this.el.classList.remove("open");
+    },
+    toggle() {
+      return this.el.classList.toggle("open");
+    },
+    addItem(node) {
+      return this.el.appendChild(node);
+    },
+  };
+  /**
+   * event listener in here
+   */
+  searchInput.addEventListener("focus", function () {
+    searchInput.placeholder = "";
+  });
+  searchInput.addEventListener("blur", function () {
+    searchInput.placeholder = "Find Your Hero";
+  });
+  searchInput.addEventListener("keyup", async (e) => {
+    try {
+      const value = searchInput.value.trim();
+      if (e.keyCode === 13) {
+        if (!value) throw Error("Input is required");
+        await getSuperHero(value, true);
+        if (finder.isOpen()) return;
+        finder.toggle();
       }
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-      heroImageDiv.innerHTML = `<p> An error occurred while fetching data.</p>`;
-    });
-};
+    } catch (err) {
+      showError(err.message);
+    }
+  });
+  btn.random.addEventListener("click", () =>
+    getSuperHero(Math.floor(Math.random() * 731) + 1),
+  );
+  btn.find.addEventListener("click", () => {
+    const value = searchInput.value.trim();
+    if (value) return getSuperHero(searchInput.value, true);
+  });
+  btn.download.addEventListener("click", () => {
+    const src = resultsImg.getAttribute("src");
+    if (!src) return;
+    downloadImage(src);
+  });
 
-// Download the image function
-function downloadImage(imageUrl) {
-  const aTag = document.createElement("a");
-  aTag.href = imageUrl;
-  aTag.download = imageUrl.split("/").pop();
-  document.body.appendChild(aTag);
-  aTag.click();
-  aTag.remove();
-}
+  /**
+   * create node for information heroes
+   */
+  function createPreviewHero(response) {
+    // reset data info
+    dataInfo.textContent = "";
 
-const randomid = () => {
-  return Math.floor(Math.random() * 731) + 1;
-};
+    const data = [
+      { text: "Aliases", value: response.name },
+      { text: "Strength", value: response.powerstats.strength },
+      { text: "Speed", value: response.powerstats.speed },
+      { text: "Gender", value: response.appearance.gender },
+      { text: "Place of Birth", value: response.biography["place-of-birth"] },
+      {
+        text: "First Appearance",
+        value: response.biography["first-appearance"],
+      },
+    ];
+    for (const value of data) {
+      let root = document.createElement("div");
+      let h2 = document.createElement("h2");
+      let p = document.createElement("p");
 
-btn.onclick = () => getSupperHero(randomid());
+      h2.textContent = value.text;
+      p.textContent = value.value || "-";
 
-searchbtn.onclick = () => {
-  const inputValue = searchInput.value.trim(); // Trim any leading/trailing spaces
-  if (inputValue !== "") {
-    getSearchSuperHero(inputValue);
-  } else {
-    // Handle the case where the input is empty (e.g., show an error message).
-    alert("Input is empty. Please enter a hero name.");
+      root.appendChild(h2);
+      root.appendChild(p);
+      dataInfo.appendChild(root);
+    }
+    resultsImg.setAttribute("src", response.image.url);
   }
-};
+  /**
+   * create row results for '#find-results'
+   */
+  function createRowResults(item, isFind) {
+    const div = document.createElement("div");
+    const p = document.createElement("p");
+    const i = document.createElement("i");
 
-searchInput.addEventListener("keyup", (e) => {
-  const inputValue = searchInput.value.trim();
-  if (e.keyCode === 13) {
-    getSearchSuperHero(inputValue);
+    p.textContent = item.name;
+    i.classList.add("fa-solid", "fa-arrow-right");
+
+    div.appendChild(p);
+    div.appendChild(i);
+    div.addEventListener("click", () => {
+      createPreviewHero(item, isFind);
+      finder.close();
+    });
+    return div;
+  }
+  /**
+   * fetching api heroes, then create node
+   */
+  async function getSuperHero(id, isFind = false) {
+    try {
+      let url = isFind ? `${apiPath}/search/${id}` : `${apiPath}/${id}`;
+      let response = await fetch(url);
+      response = await response.json();
+      if (
+        !response ||
+        (isFind && (!response.results || !response.results.length))
+      )
+        throw Error(`The superhero does not exist on the website`);
+      if (isFind && response.results && response.results.length) {
+        finder.setEmpty();
+
+        if (response.results.length > 1) {
+          const equal = response.results.find(
+            (result) => result.name === searchInput.value.trim(),
+          );
+          if (equal) response = equal;
+          else {
+            for (const item of response.results) {
+              finder.addItem(createRowResults(item, isFind));
+            }
+            return;
+          }
+        } else {
+          response = response.results[0];
+        }
+      }
+      createPreviewHero(response, isFind);
+      finder.close();
+    } catch (err) {
+      showError(err.message);
+    }
+  }
+  /**
+   * download the image hero
+   * @param url string
+   */
+  function downloadImage(url) {
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = url.split("/").pop();
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  /**
+   * show error to dom
+   * @param message string
+   */
+  function showError(message) {
+    const errorEl = document.querySelector("#info .errors");
+    errorEl.textContent = message;
+    errorEl.classList.add("open");
+    setTimeout(() => {
+      errorEl.classList.remove("open");
+    }, 5000);
   }
 });
-
-(function ($) {
-  // Begin jQuery
-  $(function () {
-    // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $("nav ul li a:not(:only-child)").click(function (e) {
-      $(this).siblings(".nav-dropdown").toggle();
-      // Close one dropdown when selecting another
-      $(".nav-dropdown").not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $("html").click(function () {
-      $(".nav-dropdown").hide();
-    });
-    // Toggle open and close nav styles on click
-    $("#nav-toggle").click(function () {
-      $("nav ul").slideToggle();
-    });
-    // Hamburger to X toggle
-    $("#nav-toggle").on("click", function () {
-      this.classList.toggle("active");
-    });
-  }); // end DOM ready
-})(jQuery); // end jQuery

@@ -1,0 +1,158 @@
+.title {
+  text-align: center;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  font-family: "Lilita One", sans-serif;
+  -webkit-text-stroke: 0.05px white;
+  -webkit-text-fill-color: white;
+  color: transparent;
+  font-size: 4.375rem;
+}
+
+.heroes {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #4a4a4a;
+  box-shadow: 1rem 1rem #4a4a4a;
+  transition: 0.4s all;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .heroes {
+    flex-direction: row;
+    gap: 0px;
+  }
+}
+.heroes > div {
+  flex: 1 0%;
+}
+
+#results {
+  text-align: center;
+}
+#results img {
+  max-width: 70vw;
+}
+#results .action {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#random-hero,
+#download-hero {
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s all;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 0;
+}
+#random-hero {
+  --shadow-color: #417c3c;
+  background-color: #365c33;
+}
+#download-hero {
+  --shadow-color: #ed39b3;
+  background-color: #ba4394;
+}
+#random-hero:hover,
+#download-hero:hover {
+  transform: translateY(-5px);
+  box-shadow: 0.25rem 0.25rem var(--shadow-color);
+}
+#random-hero:active,
+#download-hero:active {
+  box-shadow: none;
+}
+
+#info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#info > div:nth-child(1) {
+  position: relative;
+  max-width: 400px;
+}
+#info input {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 24px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 40px;
+}
+#info input::placeholder {
+  font-weight: bold;
+}
+#info input:focus {
+  outline: none;
+}
+#info #find {
+  padding: 0.5rem;
+  border-radius: 100%;
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 22px;
+  background: var(--color-secondary);
+  border: 0px;
+  transition: 0.3s all;
+}
+#info #find:hover {
+  transform: scale(1.2);
+}
+#info > div:nth-child(2) > div {
+  margin-top: 0.5rem;
+}
+#info .errors {
+  margin-bottom: 1rem;
+  border-radius: 40px;
+  max-width: 300px;
+  width: 100%;
+}
+
+#find-results {
+  position: absolute;
+  margin-top: 10px;
+  width: 100%;
+  max-height: 200px;
+  overflow: auto;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  border: 1px solid #424242;
+  transition: 0.5s all;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+#find-results.open {
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+#find-results div {
+  padding: 0.5rem;
+  border-bottom: 1px solid #424242;
+  cursor: pointer;
+  display: flex;
+}
+#find-results div:hover {
+  background-color: #424242;
+}
+#find-results div p {
+  flex: 1;
+}
+
+@media (min-width: 786px) {
+  #results img {
+    max-width: 300px;
+  }
+}

@@ -31,15 +31,23 @@ You can see a live demo of the project here: [My Fav Superhero Demo](https://pra
 
 ## 🚀 Getting Started
 
-To use the My Fav Superhero project, simply open the `index.html` file in your web browser. There's no need for complex setup or dependencies.
+To use the My Fav Superhero project, simply open the `index.html` file in your web browser.
 
-1. Clone this repository to your local machine:
+- Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/Prajwal0225/My-Favorite-SuperHero.git
-   ```
+  ```bash
+  git clone https://github.com/Prajwal0225/My-Favorite-SuperHero.git
+  ```
 
-- Open the index.html file in your preferred web browser.
+- Install package
+  ```bash
+  npm i
+  ```
+- Run development mode
+  ```bash
+  npm run dev
+  ```
+- Open 'http://localhost:5173/' in your web browser.
 
 - Start searching for your favorite superheroes or enjoy random hero discoveries.
 

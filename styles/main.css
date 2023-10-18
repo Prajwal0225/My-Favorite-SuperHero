@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Questrial&display=swap");
+
+:root {
+  --color-primary: #d895c3;
+  --color-secondary: #680fbb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +16,6 @@ body {
   background-color: black;
   /* background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
   background-size: cover; */
-
-  height: 1080px;
 }
 
 center {

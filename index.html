@@ -1,148 +1,41 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Superheroes</title>
-    <link href="/styles/main.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" href="/images/superhero.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    {{> head }}
+    <title>{{title}}</title>
+    <link href="/styles/index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <section class="navigation">
-      <div class="nav-container">
-        <div class="brand">
-          <a href="https://prajwal0225.github.io/My-Favorite-SuperHero/"
-            ><i class="fa-solid fa-mask"></i
-          ></a>
-        </div>
-        <nav class="stroke">
-          <div class="nav-mobile">
-            <a id="nav-toggle" href="#!"><span></span></a>
-          </div>
-          <ul class="nav-list">
-            <!-- Setting the links to #! will ensure that no action takes place on click. -->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contributor.html">Contributors</a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-
-    <center>
-      <div class="top-container">
-        <h1>Your fav Super Heroes</h1>
-      </div>
-      <!-- main actions elements : start -->
-      <div class="main-container">
-        <div class="left-container">
-          <div class="middle-container">
-            <div class="searchActions">
-              <input
-                id="SearchInput"
-                class="inputtext"
-                type="text"
-                placeholder="Find Your Hero"
-              />
-              <br />
-              <button id="searchId" class="btnSearch">🔍</button>
+    {{> navigation }}
+    <div class="container">
+      <h1 class="title">Your Fav Super Heroes</h1>
+      <div class="heroes">
+        <div id="info">
+          <div>
+            <div class="errors">
+              <p>An error occurred while fetching data.</p>
             </div>
+            <input list="filtering" type="text" placeholder="Find Your Hero" />
+            <button id="find">🔍</button>
+            <div id="find-results"></div>
           </div>
-          <!-- main actions elements : end-->
-          <br />
-          <div class="hero-info">
-            <h2><label for=""> Aliases: </label></h2>
-            <p class="quality" id="hname">Hero aliase</p>
-            <br />
-            <h2><label for=""> Strength: </label></h2>
-            <p class="quality" id="hstr">0</p>
-            <br />
-            <h2><label for=""> Gender: </label></h2>
-            <p class="quality" id="hgen">Male/Female</p>
-            <br />
-            <h2><label for=""> Speed: </label></h2>
-            <p class="quality" id="hspe">0</p>
-            <br />
-            <h2><label for=""> Place-of-birth: </label></h2>
-            <p class="quality" id="hplac">NULL</p>
-            <br />
-            <h2><label for=""> First-appearance: </label></h2>
-            <p class="quality" id="hfap">NULL</p>
-            <br />
+          <div>
+            <h2 style="color: rgb(212 212 216)">[Please Choice Your Heroes]</h2>
           </div>
         </div>
-        <div class="right-container">
-          <div id="heroImage">
-            <img class="mainpic" src="images/bg.jpg" alt="" />
+        <div id="results">
+          <div>
+            <img src="images/bg.jpg" alt="heroes" />
           </div>
-          <div class="searchActions1">
-            <button id="newherrobtn" class="btnRandomhero">Random Hero</button>
-            <button id="downloadImg">Download</button>
+          <div class="action">
+            <button id="random-hero">Random Hero</button>
+            <button id="download-hero">Download</button>
           </div>
         </div>
       </div>
-
-      <br />
-
-      <div class="bottom-container">
-        <a class="footer-link" href="https://www.linkedin.com/feed/"
-          ><img
-            class="footer-img linkedin tilt pic"
-            id="linkedin"
-            src="./images/linkedin.png"
-            alt="linkedin"
-          />
-        </a>
-
-        <a class="footer-link" href="https://twitter.com/home"
-          ><img
-            class="footer-img twitter tilt pic"
-            id="twitter"
-            src="./images/twitter.png"
-            alt="Twitter"
-          />
-        </a>
-
-        <a
-          class="footer-link"
-          href="https://github.com/Prajwal0225"
-          target="_blank"
-        >
-          <img
-            class="footer-img global tilt pic"
-            id="github"
-            src="./images/github.png"
-            alt="Github"
-          />
-        </a>
-
-        <p class="bookmark">
-          © <span id="year"></span> Superhero's World By Prajwal Somalkar. All
-          rights reserved.
-        </p>
-      </div>
-    </center>
-    <script src="/js/index.js"></script>
-    <script type="module" src="/main.js"></script>
+    </div>
+    {{> footer }}
+    <script src="/js/index.js" type="module"></script>
+    {{> script }}
   </body>
 </html>

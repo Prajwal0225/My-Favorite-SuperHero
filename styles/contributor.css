@@ -5,45 +5,44 @@ body {
 .contributor a {
   text-decoration: none;
   transition: 0.5s;
+  color: rgb(161 161 170);
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 1px solid rgb(161 161 170);
 }
 .contributor a:hover {
-  color: rgb(41, 38, 38);
-  background-color: #fff;
+  color: white;
+  border-color: white;
 }
 
-.container {
-  width: 100%;
-  padding: 1rem 5rem;
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
-.contributors {
+.container .header h2 {
+  font-size: 35px;
+}
+.container > section {
+  margin: 2rem 0px;
+}
+
+.contributors,
+.maintainers {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+  place-items: center;
 }
-.contributor {
+.contributors > div,
+.maintainers > div {
   display: flex;
   flex-direction: column;
   color: #fff;
   align-items: flex-start;
   gap: 8px;
-}
-#container-header {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-#container-header h2 {
-  font-size: 35px;
-}
-.maintainers {
-  width: 350px;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  color: #fff;
-  gap: 25px;
+  place-items: center;
 }
 .avatar {
   width: 130px;
@@ -60,4 +59,18 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .contributors,
+  .maintainers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .contributors,
+  .maintainers {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
 }
