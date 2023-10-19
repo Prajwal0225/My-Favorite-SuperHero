@@ -99,7 +99,7 @@ p {
 }
 #content-1 img {
   max-width: 70vw;
-  animation: flip-left 0.5s ease-in-out
+  animation: flip-left 0.5s ease-in-out;
 }
 
 #content-2 {

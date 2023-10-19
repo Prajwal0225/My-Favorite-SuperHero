@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     div.appendChild(p);
     div.appendChild(i);
+    div.setAttribute("tabindex", 0);
     div.addEventListener("click", () => {
       createPreviewHero(item);
       finder.close();
@@ -134,19 +135,28 @@ document.addEventListener("DOMContentLoaded", () => {
         throw Error(`The superhero does not exist on the website`);
 
       finder.setEmpty();
-      if (response.results.length > 1) {
-        const equal = response.results.find(
-          (result) => result.name === searchInput.value.trim(),
-        );
-        if (equal) response = equal;
-        else {
-          for (const item of response.results) {
-            finder.addItem(createRowResults(item));
+      if (!response.id) {
+        if (response.results && response.results.length > 1) {
+          const equal = response.results.find(
+            (result) => result.name === searchInput.value.trim(),
+          );
+          if (equal) response = equal;
+          else {
+            for (const item of response.results) {
+              finder.addItem(createRowResults(item));
+            }
+            document.body.addEventListener(
+              "click",
+              () => {
+                finder.close();
+              },
+              { once: true },
+            );
+            return true;
           }
-          return true;
+        } else {
+          response = response.results[0];
         }
-      } else {
-        response = response.results[0];
       }
       createPreviewHero(response);
       finder.close();

@@ -144,7 +144,8 @@
   cursor: pointer;
   display: flex;
 }
-#find-results div:hover {
+#find-results div:hover,
+#find-results div:focus {
   background-color: #424242;
 }
 #find-results div p {
