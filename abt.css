@@ -4,6 +4,26 @@ body {
   margin: 0;
 }
 
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: white;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
 
 
 
@@ -200,5 +220,49 @@ nav a.active {
   font-size: 3rem;
   text-align: center;
   
+ Title
 
 }
+
+}
+.footer-container{
+  width:100%;
+  padding: 70px 30px 20px;
+}
+
+.social-icons{
+  display:flex;
+  justify-content: center;
+}
+
+.social-icons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin:20px;
+  border-radius: 50%;
+}
+
+.social-icons a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+.social-icons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+}
+.social-icons a:hover i{
+  color:white;
+  transition: 0.5s;
+}
+.footer-bottom{
+  padding:10px;
+  padding-bottom: 100px;
+  text-align: center;
+  background-color: #000;
+}
+.footer-bottom p{
+  color:white;
+}
+ main

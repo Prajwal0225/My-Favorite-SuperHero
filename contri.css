@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+ Title
 {
     text-decoration: none;
     transition: 0.5s;
@@ -11,6 +12,37 @@
     color: rgb(41, 38, 38);
     background-color: #fff;
 }*/
+
+
+
+.nav-list li a:hover {
+    color: orange;
+    transition: 0.2s ease-in;
+  } 
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: white;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+
+ main
 #maintainer-body{
     background-color: rgb(41, 38, 38);
     height: 250vh;
@@ -72,6 +104,7 @@
     align-items: flex-start;
     gap: 10px;
 }
+ 
 
 nav ul li a:hover {
     transition: 0.2s ease-in;
@@ -88,3 +121,44 @@ nav ul li a:hover {
   nav a.active {
     border-bottom: 3px solid white;
   }
+
+.footer-containerc{
+  width:100%;
+  padding: 70px 30px 20px;
+}
+
+.social-iconsc{
+  display:flex;
+  justify-content: center;
+}
+
+.social-iconsc a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin:20px;
+  border-radius: 50%;
+}
+
+.social-iconsc a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+.social-iconsc a:hover{
+  background-color: rgb(41, 38, 38);
+  transition: 0.5s;
+}
+.social-iconsc a:hover i{
+  color:white;
+  transition: 0.5s;
+}
+.footer-bottomc{
+  padding:10px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.footer-bottomc p{
+  color:white;
+}
+ 
