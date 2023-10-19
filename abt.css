@@ -1,6 +1,6 @@
 
 body {
-  background-color: black;
+  background-color: rgb(116, 201, 211);
   margin: 0;
 }
 
@@ -56,8 +56,8 @@ body {
 }
 
 .mainpic1 {
-  width: 300%;
-  height: 85%;
+  width: 280%;
+  height: 80%;
   margin-left: 20px;
   margin-top: 20px;
   margin-right: 30%;
@@ -89,8 +89,10 @@ body {
   margin-left: 3rem;
   margin-right: 25px;
   height: 50%;
-  color: white;
+  color: rgb(216, 144, 156);
   line-height: 28.5px;
+  font-size:25px;
+  font-family:'Times New Roman', Times, serif
 
 }
 
@@ -166,16 +168,16 @@ body {
 }
 
 .heading{
-  color: #F6AA1C;
+  color:chocolate;
   font-size: 3rem;
   padding-left: 5rem;
   padding-top: 6rem;
 }
 
 .head>p{
-  color: rgb(211, 248, 5);
+  color:bisque;
   padding:3rem;
-  font-size: 3rem;
+  font-size: 60px;
   text-align: center;
   
 }
