@@ -68,12 +68,14 @@ h1 {
   background-size: 500px;
   background-position: center;
   background-clip: text;
-  -webkit-text-stroke-color: white;
-  -webkit-text-stroke-width: 0.05px;
   -webkit-background-clip: text;
   color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.05px;
+  
+  
 }
-
 
 h2{
   color: #d895c3;
@@ -455,7 +457,7 @@ h1 {
   font-size: 100px;
   font-weight: 900;
   text-transform: uppercase;
-  background-image: url("/images/download.jpg");
+  background-image: url("images/download.jpg");
   background-size: 500px;
   background-position: center;
   background-clip: text;

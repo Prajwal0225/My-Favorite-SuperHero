@@ -4,6 +4,26 @@ body {
   margin: 0;
 }
 
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: white;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
 
 
 
