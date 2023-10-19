@@ -38,30 +38,33 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.placeholder = "Find Your Hero";
   });
   searchInput.addEventListener("keyup", async (e) => {
-    try {
-      const value = searchInput.value.trim();
-      if (e.keyCode === 13) {
-        if (!value) throw Error("Input is required");
-        await getSuperHero(value, true);
-        if (finder.isOpen()) return;
-        finder.toggle();
-      }
-    } catch (err) {
-      showError(err.message);
+    if (e.keyCode === 13) {
+      handleSearch();
     }
   });
   btn.random.addEventListener("click", () =>
     getSuperHero(Math.floor(Math.random() * 731) + 1),
   );
-  btn.find.addEventListener("click", () => {
-    const value = searchInput.value.trim();
-    if (value) return getSuperHero(searchInput.value, true);
-  });
+  btn.find.addEventListener("click", handleSearch);
   btn.download.addEventListener("click", () => {
     const src = resultsImg.getAttribute("src");
     if (!src) return;
     downloadImage(src);
   });
+
+  /**
+   * input search handlers
+   */
+  async function handleSearch() {
+    try {
+      const value = searchInput.value.trim();
+      let isSuccess = await getSuperHero(value, true);
+      if (finder.isOpen() || !isSuccess) return;
+      finder.toggle();
+    } catch (err) {
+      showError(err.message);
+    }
+  }
 
   /**
    * create node for information heroes
@@ -98,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /**
    * create row results for '#find-results'
    */
-  function createRowResults(item, isFind) {
+  function createRowResults(item) {
     const div = document.createElement("div");
     const p = document.createElement("p");
     const i = document.createElement("i");
@@ -109,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     div.appendChild(p);
     div.appendChild(i);
     div.addEventListener("click", () => {
-      createPreviewHero(item, isFind);
+      createPreviewHero(item);
       finder.close();
     });
     return div;
@@ -119,6 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   async function getSuperHero(id, isFind = false) {
     try {
+      if (isFind && !id) throw Error("Input is required");
+
       let url = isFind ? `${apiPath}/search/${id}` : `${apiPath}/${id}`;
       let response = await fetch(url);
       response = await response.json();
@@ -127,26 +132,25 @@ document.addEventListener("DOMContentLoaded", () => {
         (isFind && (!response.results || !response.results.length))
       )
         throw Error(`The superhero does not exist on the website`);
-      if (isFind && response.results && response.results.length) {
-        finder.setEmpty();
 
-        if (response.results.length > 1) {
-          const equal = response.results.find(
-            (result) => result.name === searchInput.value.trim(),
-          );
-          if (equal) response = equal;
-          else {
-            for (const item of response.results) {
-              finder.addItem(createRowResults(item, isFind));
-            }
-            return;
+      finder.setEmpty();
+      if (response.results.length > 1) {
+        const equal = response.results.find(
+          (result) => result.name === searchInput.value.trim(),
+        );
+        if (equal) response = equal;
+        else {
+          for (const item of response.results) {
+            finder.addItem(createRowResults(item));
           }
-        } else {
-          response = response.results[0];
+          return true;
         }
+      } else {
+        response = response.results[0];
       }
-      createPreviewHero(response, isFind);
+      createPreviewHero(response);
       finder.close();
+      return true;
     } catch (err) {
       showError(err.message);
     }
