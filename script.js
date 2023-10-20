@@ -87,6 +87,7 @@ const getSearchSuperHero = (name) => {
       console.error("Error fetching data:", error);
       heroImageDiv.innerHTML = `<p> An error occurred while fetching data.</p>`;
     });
+    searchInput.value = "" // clear value after searching from inputbox
 };
 
 // Download the image function
