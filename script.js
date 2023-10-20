@@ -99,6 +99,20 @@ function downloadImage(imageUrl) {
   aTag.remove();
 }
 
+
+// function for message modal
+function messageModal(message){
+  const modal =  document.getElementById('messageModal')
+  modal.style.display = "flex";
+
+  const messageElement = document.getElementById('messageModalText')
+  messageElement.textContent = message;
+  
+  document.getElementById('acknowledgmentBtn').addEventListener('click',function(){
+    modal.style.display = "none";
+  });
+}
+
 const randomid = () => {
   return Math.floor(Math.random() * 731) + 1;
 };
@@ -111,7 +125,8 @@ searchbtn.onclick = () => {
     getSearchSuperHero(inputValue);
   } else {
     // Handle the case where the input is empty (e.g., show an error message).
-    alert("Input is empty. Please enter a hero name.");
+    messageModal("Input is empty. Please enter a hero name.");
+    // alert("Input is empty. Please enter a hero name.");
   }
 };
 

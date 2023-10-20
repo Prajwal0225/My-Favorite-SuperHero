@@ -738,6 +738,72 @@ center {
   color:white;
 }
 
+.modal{
+  display: flex;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal > div {
+  color: white;
+  background-color: black;
+  border:1px solid white;
+  border-radius: 10px;
+  padding: 30px 40px 30px 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  top: -50px;
+  z-index: 10000;
+  max-width: 500px;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.modalButtons{
+  margin-top: 20px;
+  display:flex;
+  justify-content: end;
+}
+
+.modalButtons button{
+  --bg: #ba4394;
+  --hover-bg: #ff90e8;
+  --hover-text: #ba4394;
+  color: #ffe4f9;
+  border: 1px solid var(--bg);
+  border-radius: 6px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-right: 0.6rem;
+  font-size: 16px;
+}
+
+.modalButtons button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  margin-left: 0.6rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.modalButtons button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
 
 @media screen and (max-width: 406px) {
   .head-title {
