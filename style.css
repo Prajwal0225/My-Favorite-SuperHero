@@ -406,6 +406,8 @@ nav ul li ul li a {
 .navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
 */
 .navigation {
+  position: sticky;
+  top: 0px;
   height: 70px;
   background: #000; /* fallback for old browsers */
   box-shadow: 0 3px 12px rgba(256, 256, 256, 0.17);
