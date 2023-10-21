@@ -13,8 +13,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border: 1px solid #4a4a4a;
-  box-shadow: 1rem 1rem #4a4a4a;
+  box-shadow: 0px 3px 30px rgb(98 13 88);
   transition: 0.4s all;
   gap: 20px;
 }
@@ -66,6 +65,7 @@
 #random-hero:active,
 #download-hero:active {
   box-shadow: none;
+  transform: translateY(0px);
 }
 
 #info {
@@ -79,6 +79,9 @@
 #info > div:nth-child(1) {
   position: relative;
   max-width: 400px;
+}
+#info h2 {
+  color: #d895c3;
 }
 #info input {
   padding: 0.5rem;
