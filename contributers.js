@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
          </div>
          `
             )
-            maintainersContainer.innerHTML = userHTML;
+            maintainersContainer.innerHTML = userHTML.join("");
       })
       .catch(error => {
         console.error("Everything is wrong mann...")
