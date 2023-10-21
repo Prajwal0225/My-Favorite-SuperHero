@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         contributorElement.appendChild(avatar)
         contributorElement.appendChild(userName)
-        contributorElement.appendChild(userLink)
         contributorElement.appendChild(userContributions)
+        contributorElement.appendChild(userLink)
 
         container.appendChild(contributorElement);
 
