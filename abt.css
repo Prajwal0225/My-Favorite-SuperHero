@@ -94,10 +94,11 @@ body {
   margin-top: 0%;
 }
 
-.first-para>p{
+.first-para-title {
   color: #F6AA1C;
   font-size: 2.5rem;
-  padding-left: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .first-para>div{
