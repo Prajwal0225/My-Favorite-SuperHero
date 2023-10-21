@@ -57,27 +57,28 @@ nav.stroke ul li a:hover:after {
   height: 75%;
 }
 
-.wr {
-  margin-left: 40%;
-
-}
-
 .l-container {
-  max-width: 100%;
-  display: flex;
-  margin: 2rem 2rem;
+  max-width: 90%;
   box-shadow: rgb(98, 13, 88) 0px 3px 30px;
   border-radius: 0.75rem;
   margin-left: 5%;
   margin-right: 5%;
-  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
+.m-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 .mainpic1 {
   width: 300%;
   height: auto;
-  margin: 90px auto;
+  margin: 0 auto;
 }
 
 .right-container {
@@ -99,28 +100,22 @@ nav.stroke ul li a:hover:after {
 }
 
 .wr>p{
+  font-weight: bold;
   color: white;
   padding: 10px;
-  transform: translateY(1px);
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
+  transform: translateY(75px);
 }
 
 .wr p:nth-child(2) {
   margin: auto;
   line-height: 35px;
-  transform: translateY(20px);
-  font-family: 'Nunito Sans', sans-serif;
-  color: rgb(158, 201, 222);
+  transform: translateY(150px);
 }
 
 .first-para>p{
   color: #F6AA1C;
   font-size: 2.5rem;
   padding-left: 5rem;
-
-
-
 }
 
 .first-para>div{
@@ -146,7 +141,6 @@ nav.stroke ul li a:hover:after {
   
 }
 
-
 .third-para>p{
   color: #F6AA1C;
   font-size: 2.5rem;
@@ -162,7 +156,7 @@ nav.stroke ul li a:hover:after {
   
 }
 
-.image > img{
+.image > img {
   width: 40rem;
   height: 40rem;
   border: 2px solid red;
@@ -179,6 +173,7 @@ nav.stroke ul li a:hover:after {
 
 .grid-item {
   text-align: center;
+  font-size: 20px;
   background-color: black;
   padding: 2rem;
   margin: 5rem;
