@@ -119,8 +119,6 @@ nav.stroke ul li a:hover:after {
   font-size: 2.5rem;
   padding-left: 5rem;
 
-
-
 }
 
 .first-para>div{
@@ -243,4 +241,17 @@ nav.stroke ul li a:hover:after {
 }
 .footer-bottom p{
   color:white;
+}
+
+
+.forContri{
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 0rem;
+  padding-top: 4rem;
+  padding-left: 5rem;
+}
+.forContri>p{
+  font-size: 6rem;
+  color: #F6AA1C;
 }
