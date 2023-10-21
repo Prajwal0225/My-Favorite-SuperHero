@@ -22,6 +22,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -60,14 +61,20 @@
     <div class="image">
       <img class="mainpic" src="images/mainicon.png" alt=""  />
     </div>
+    <div 
+    data-aos="fade-right"
+    data-aos-duration="700">
     <p>My Fav Superhero</p>
     <div>Welcome to the mind-blowing universe of superheroes!<br/>
        My Fav Superhero caters to enthusiasts of all levels, <br/>
        sparking awe and wonder with its addictive user-friendly <br/>
        platform.</div>
+    </div>
   </div>
 
-  <div class="second-para">
+  <div class="second-para" 
+  data-aos="fade-right"
+  data-aos-duration="1000">
 
     <p>Find Heroes Faster Than a Speeding Bullet</p>
     <div>With a clean interface, you can swiftly search for your <br/>
@@ -76,7 +83,9 @@
   </div>
 
 
-  <div class="third-para">
+  <div class="third-para"
+  data-aos="fade-right"
+  data-aos-duration="1300">
     <p>Expect the Unexpected: Random Superhero Generator</p>
     <div>Unleash a realm of adventure with our random superhero generator.<br/>
        With just a click, you’ll be amazed by exhilarating images of heroes<br/> 
@@ -87,18 +96,26 @@
   <p>Curious Cases</p>
 </div>
   <div class="grid-container">
-    <div class="grid-item">
+    <div class="grid-item" 
+    data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom">
       <h2><b>Who can use the website?</b></h2><br/>
       Everyone! My Fav Superhero is designed<br/>
       for both superhero fanatics and casual<br/>
       enthusiasts seeking fun and excitement.
     </div>
-    <div class="grid-item">
+
+    <div class="grid-item"
+    data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom">
       <h2><b>How often is it updated?</b></h2><br/>
       We update our content frequently<br/>
       to keep you hooked on your beloved heroes!
     </div>
-    <div class="grid-item">
+
+    <div class="grid-item"
+    data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom">
       <p>
         <h2>Is it free to use?</h2><br>
         Absolutely! Dive into our mystifying <br/>
@@ -120,7 +137,7 @@
     </div>
     
     <div class="l-container">
-        <div class="m-container">
+        <div class="m-container" data-aos="flip-right">
             <img class="mainpic1" src="images/hacktos.png" alt="" />
         </div>
 
@@ -153,8 +170,10 @@
       </p>
     </div> 
 
-
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

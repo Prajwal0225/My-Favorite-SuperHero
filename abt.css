@@ -77,7 +77,7 @@ nav.stroke ul li a:hover:after {
 .mainpic1 {
   width: 300%;
   height: auto;
-  margin: 0 auto;
+  margin: 90px auto;
 }
 
 .right-container {
@@ -99,16 +99,19 @@ nav.stroke ul li a:hover:after {
 }
 
 .wr>p{
-  font-weight: bold;
   color: white;
   padding: 10px;
-  transform: translateY(75px);
+  transform: translateY(1px);
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
 }
 
 .wr p:nth-child(2) {
   margin: auto;
   line-height: 35px;
-  transform: translateY(150px);
+  transform: translateY(20px);
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgb(158, 201, 222);
 }
 
 .first-para>p{
@@ -180,6 +183,7 @@ nav.stroke ul li a:hover:after {
   padding: 2rem;
   margin: 5rem;
   color:#F6AA1C;
+  font-size: 24px;
 }
 
 .heading{
