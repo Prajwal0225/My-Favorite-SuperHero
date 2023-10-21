@@ -4,29 +4,6 @@ body {
   margin: 0;
 }
 
-nav.stroke ul li a,
-nav.fill ul li a {
-  position: relative;
-}
-nav.stroke ul li a:after,
-nav.fill ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: ".";
-  color: transparent;
-  background: white;
-  height: 1px;
-}
-nav.stroke ul li a:hover:after {
-  width: 100%;
-}
-
-
-
 .main-container {
 
   justify-content: center;
@@ -76,9 +53,32 @@ nav.stroke ul li a:hover:after {
 }
 
 .mainpic1 {
-  width: 300%;
-  height: auto;
-  margin: 0 auto;
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.title-text {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.summary-text {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  padding: 15px;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
 }
 
 .right-container {
@@ -92,24 +92,6 @@ nav.stroke ul li a:hover:after {
   box-sizing: border-box;
   height: 75%;
   margin-top: 0%;
-}
-
-.bold {
-  align-items: center;
-
-}
-
-.wr>p{
-  font-weight: bold;
-  color: white;
-  padding: 10px;
-  transform: translateY(75px);
-}
-
-.wr p:nth-child(2) {
-  margin: auto;
-  line-height: 35px;
-  transform: translateY(150px);
 }
 
 .first-para>p{
@@ -178,7 +160,6 @@ nav.stroke ul li a:hover:after {
   padding: 2rem;
   margin: 5rem;
   color:#F6AA1C;
-  font-size: 24px;
 }
 
 .heading{
