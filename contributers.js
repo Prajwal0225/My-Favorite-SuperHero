@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         contributorElement.appendChild(avatar)
         contributorElement.appendChild(userName)
-        contributorElement.appendChild(userLink)
         contributorElement.appendChild(userContributions)
+        contributorElement.appendChild(userLink)
 
         container.appendChild(contributorElement);
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
          </div>
          `
             )
-            maintainersContainer.innerHTML = userHTML;
+            maintainersContainer.innerHTML = userHTML.join("");
       })
       .catch(error => {
         console.error("Everything is wrong mann...")
