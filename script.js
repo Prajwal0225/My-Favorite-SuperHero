@@ -30,7 +30,7 @@ let hgen = document.getElementById("hgen");
 let hspe = document.getElementById("hspe");
 let hplac = document.getElementById("hplac");
 let hfap = document.getElementById("hfap");
-
+let imageUrl;
 const getSupperHero = (id) => {
   heroImageDiv.innerHTML = `
   <div class="hero-image-placeholder" height=400 width=300>
@@ -51,13 +51,17 @@ const getSupperHero = (id) => {
       hplac.innerHTML = `${json.biography["place-of-birth"]}`;
       hfap.innerHTML = `${json.biography["first-appearance"]}`;
 
-      console.log(json.image.url);
-      downloadImageBtn.addEventListener("click", () => {
-        const imageUrl = json.image.url;
-        downloadImage(imageUrl);
-      });
+      imageUrl =  json.image.url;
     });
 };
+
+downloadImageBtn.addEventListener("click", () => {
+  if (imageUrl) {
+    downloadImage(imageUrl);
+  } else {
+    messageModal("Please search for a hero or select 'Random Hero' first.");
+  }
+});
 
 const getSearchSuperHero = (name) => {
   fetch(`${BaseUrl}/search/${name}`)
