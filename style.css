@@ -85,10 +85,7 @@ h2{
   margin-top: 3px;
 }
 
-.mainpic {
-  width: 21.75rem;
-  height: 24.75rem;
-}
+
 
 .searchActions {
   display: flex;
@@ -826,4 +823,18 @@ center {
   100% {
     transform: rotateY(360deg);
   }
+}
+
+.mainpic {
+  width: 21.75rem;
+  height: 24.75rem;
+}
+#heroImage{
+  transition: scale 4s , transform 3s;
+  transform: rotate(0deg); 
+}
+#heroImage:hover {
+  cursor: pointer;
+  transform: rotate(180deg);
+  scale: -0.95;
 }
