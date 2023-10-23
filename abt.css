@@ -244,3 +244,18 @@ nav.stroke ul li a:hover:after {
 .footer-bottom p{
   color:white;
 }
+
+
+@media screen and (max-width: 500px) {
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .grid-item {
+    margin: auto;
+    width:21.4rem;
+    margin-top: 1rem;
+  }
+}
