@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head }}
+    <title>Contributors</title>
+    <link href="/styles/contributor.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body id="contributor">
+    {{> navigation }}
+    <div class="loading">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div style="display: none" class="container">
+      <section>
+        <div class="header">
+          <h2>Project Maintainers</h2>
+        </div>
+        <div class="maintainers"></div>
+      </section>
+      <section>
+        <div class="header">
+          <h2>Contributors</h2>
+        </div>
+        <div class="contributors"></div>
+      </section>
+    </div>
+    {{> footer }}
+    <script src="/js/contributor.js" type="module"></script>
+    {{> script }}
+  </body>
+</html>
