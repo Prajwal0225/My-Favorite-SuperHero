@@ -259,6 +259,7 @@ nav.stroke ul li a:hover:after {
     margin-top: 1rem;
   }
 }
+
 section {
   position: relative;
   width: 100%;
@@ -360,4 +361,5 @@ section::after {
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
+
 
