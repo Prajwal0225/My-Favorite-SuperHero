@@ -273,6 +273,7 @@ nav.fill ul li a:after {
   color: transparent;
   background: white;
   height: 1px;
+  transition: 0.3s;
 }
 nav.stroke ul li a:hover:after {
   width: 100%;
