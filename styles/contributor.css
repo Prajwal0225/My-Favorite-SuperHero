@@ -1,0 +1,72 @@
+.contributor a {
+  text-decoration: none;
+  transition: 0.5s;
+  color: rgb(161 161 170);
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 1px solid rgb(161 161 170);
+}
+.contributor a:hover {
+  color: white;
+  border-color: white;
+}
+
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.container .header h2 {
+  font-size: 35px;
+}
+.container > section {
+  margin: 2rem 0px;
+}
+
+.contributors,
+.maintainers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  place-items: center;
+}
+.contributors > div,
+.maintainers > div {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: flex-start;
+  gap: 8px;
+  place-items: center;
+}
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+.line {
+  width: 5px;
+  height: 400px;
+  color: #fff;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .contributors,
+  .maintainers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .contributors,
+  .maintainers {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
