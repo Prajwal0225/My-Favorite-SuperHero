@@ -258,6 +258,28 @@ nav.stroke ul li a:hover:after {
     width:21.4rem;
     margin-top: 1rem;
   }
+  .l-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin:0 5%;
+    min-width: 330px;
+    padding: 7% 4%;
+  }
+
+  .mainpic1 {
+    width: 95%;
+    margin: 48px auto;
+  }
+
+  .wr {
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .wr-head{
+    font-size: 1.3rem;
+  }
 }
 
 section {
