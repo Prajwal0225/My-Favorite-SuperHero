@@ -1,6 +1,6 @@
 h2,
 h3 {
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 p {
   line-height: 1.2rem;
@@ -115,8 +115,10 @@ p {
 }
 #content-2 > div > div {
   padding: 1rem;
+  margin: 1rem;
   background: #201710;
   border: 1px solid #603c20;
+  border-radius: 25px;
 }
 
 @media (min-width: 768px) {
@@ -143,4 +145,29 @@ p {
   #content-2 > div {
     gap: 5rem;
   }
+}
+
+.color-gray{
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
+
+}
+
+.question {
+  cursor: pointer;
+}
+
+.question:hover{
+  text-decoration: underline;
+}
+
+.style {
+  box-shadow: rgb(98, 13, 88) 0px 3px 7px;
+}
+
+.answer {
+  font-size: 1.2rem;
 }
