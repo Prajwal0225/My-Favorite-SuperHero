@@ -34,10 +34,10 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- end global head -->
-    <title>Superheroes</title>
-    <link href="/styles/index.css" rel="stylesheet" type="text/css" />
+    <title>Contributor - Superheroes</title>
+    <link href="/styles/contributor.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body id="contributor">
     <!-- navigation -->
     <nav class="navigation">
       <div class="brand">
@@ -59,28 +59,27 @@
       </div>
     </nav>
     <!-- end navigation -->
-    <div class="container">
-      <h1 class="title">Your Fav Super Heroes</h1>
-      <div class="heroes">
-        <div id="info">
-          <div>
-            <input list="filtering" type="text" placeholder="Find Your Hero" />
-            <button id="find">🔍</button>
-          </div>
-          <div>
-            <h2 style="color: rgb(212 212 216)">[Please Choice Your Heroes]</h2>
-          </div>
-        </div>
-        <div id="results">
-          <div>
-            <img src="images/bg.jpg" alt="heroes" />
-          </div>
-          <div class="action">
-            <button id="random-hero">Random Hero</button>
-            <button id="download-hero">Download</button>
-          </div>
-        </div>
+    <div class="loading">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
+    </div>
+    <div style="display: none" class="container">
+      <section>
+        <div class="header">
+          <h2>Project Maintainers</h2>
+        </div>
+        <div class="maintainers"></div>
+      </section>
+      <section>
+        <div class="header">
+          <h2>Contributors</h2>
+        </div>
+        <div class="contributors"></div>
+      </section>
     </div>
     <!-- footer -->
     <footer class="footer">
@@ -107,7 +106,7 @@
     <!-- script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="/js/app.js" type="module"></script>
-    <script src="/js/index.js" type="module"></script>
+    <script src="/js/contributor.js" type="module"></script>
     <!-- end script -->
   </body>
 </html>
