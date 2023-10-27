@@ -80,13 +80,13 @@ document.addEventListener("DOMContentLoaded", () => {
     dataInfo.textContent = "";
 
     const data = [
-      { text: "Aliases", value: response.name },
-      { text: "Strength", value: response.powerstats.strength },
-      { text: "Speed", value: response.powerstats.speed },
-      { text: "Gender", value: response.appearance.gender },
-      { text: "Place of Birth", value: response.biography["place-of-birth"] },
+      { text: "Aliases : ", value: response.name },
+      { text: "Strength : ", value: response.powerstats.strength },
+      { text: "Speed : ", value: response.powerstats.speed },
+      { text: "Gender : ", value: response.appearance.gender },
+      { text: "Place of Birth : ", value: response.biography["place-of-birth"] },
       {
-        text: "First Appearance",
+        text: "First Appearance : ",
         value: response.biography["first-appearance"],
       },
     ];
@@ -96,7 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
       let p = document.createElement("p");
 
       h2.textContent = value.text;
-      p.textContent = value.value || "-";
+      // p.textContent = value.text;
+      let resultSpan = document.createElement("span");
+      resultSpan.textContent = value.value || "-";
+      resultSpan.style.color = "white";
+      resultSpan.style.fontSize = "smaller";
+  
+      h2.appendChild(resultSpan);
+      
 
       root.appendChild(h2);
       root.appendChild(p);
