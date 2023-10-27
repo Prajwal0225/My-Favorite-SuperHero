@@ -9,7 +9,7 @@
       content="the site generates images and information of your favourite superhero, know your hero"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" href="/images/superhero.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +35,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- end global head -->
     <title>Superheroes</title>
-    <link href="/styles/index.css" rel="stylesheet" type="text/css" />
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- navigation -->
@@ -60,19 +61,21 @@
     </nav>
     <!-- end navigation -->
     <div class="container">
-      <h1 class="title">Your Fav Super Heroes</h1>
+      <div data-aos="zoom-in-right" data-aos-duration="1500">
+         <h1 class="title">Your Fav Super Heroes</h1>
+      </div>
       <div class="heroes">
         <div id="info">
           <div>
             <input list="filtering" type="text" placeholder="Find Your Hero" />
             <button id="find">🔍</button>
           </div>
-          <div>
+          <div  data-aos="zoom-in">
             <h2 style="color: rgb(212 212 216)">[Please Choice Your Heroes]</h2>
           </div>
         </div>
         <div id="results">
-          <div>
+          <div data-aos="flip-left" data-aos-duration="1000">
             <img src="images/bg.jpg" alt="heroes" />
           </div>
           <div class="action">
@@ -108,6 +111,10 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="/js/app.js" type="module"></script>
     <script src="/js/index.js" type="module"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- end script -->
   </body>
 </html>
