@@ -106,6 +106,7 @@
   background: #fff;
   border: 1.2px solid #01b4ff;
   font-family: 'Lilita One', sans-serif;
+  color: black;
 }
 
 #info input::placeholder {
@@ -128,6 +129,7 @@
   background: #fff;
   border: 2.1px solid #01b4ff;
   transition: 0.3s all;
+
 }
 
 #info #find:hover {
