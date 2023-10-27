@@ -32,6 +32,7 @@
 }
 #results img {
   max-width: 70vw;
+  border-radius: 3%;
 }
 #results .action {
   margin: 1rem 0;
