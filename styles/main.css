@@ -69,6 +69,8 @@ a {
   color: white;
   padding: var(--pad-link);
   font-size: 20px;
+  width: 120px;
+  height: 95px;
 }
 .navigation .list {
   display: none;
