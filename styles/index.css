@@ -17,29 +17,34 @@
   transition: 0.4s all;
   gap: 20px;
 }
+
 @media (min-width: 1024px) {
   .heroes {
     flex-direction: row;
     gap: 0px;
   }
 }
-.heroes > div {
+
+.heroes>div {
   flex: 1 0%;
 }
 
 #results {
   text-align: center;
 }
+
 #results img {
   max-width: 70vw;
   border-radius: 3%;
 }
+
 #results .action {
   margin: 1rem 0;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
+
 #random-hero,
 #download-hero {
   padding: 0.8rem 1.5rem;
@@ -50,19 +55,23 @@
   font-size: 16px;
   border: 0;
 }
+
 #random-hero {
   --shadow-color: #417c3c;
   background-color: #365c33;
 }
+
 #download-hero {
   --shadow-color: #ed39b3;
   background-color: #ba4394;
 }
+
 #random-hero:hover,
 #download-hero:hover {
   transform: translateY(-5px);
   box-shadow: 0.25rem 0.25rem var(--shadow-color);
 }
+
 #random-hero:active,
 #download-hero:active {
   box-shadow: none;
@@ -77,45 +86,58 @@
   align-items: center;
   gap: 50px;
 }
-#info > div:nth-child(1) {
+
+#info>div:nth-child(1) {
   position: relative;
   max-width: 400px;
 }
+
 #info h2 {
   color: #d895c3;
 }
+
 #info input {
   padding: 0.5rem;
   text-align: center;
   font-size: 24px;
   width: 100%;
   max-width: 400px;
-  border-radius: 40px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1.2px solid #01b4ff;
+  font-family: 'Lilita One', sans-serif;
 }
+
 #info input::placeholder {
   font-weight: bold;
 }
+
 #info input:focus {
   outline: none;
 }
+
 #info #find {
   padding: 0.5rem;
   border-radius: 100%;
   position: absolute;
-  right: 0px;
+  top: -1.1px;
+  right: -8px;
   z-index: 1;
   cursor: pointer;
   font-size: 22px;
-  background: var(--color-secondary);
-  border: 0px;
+  background: #fff;
+  border: 2.1px solid #01b4ff;
   transition: 0.3s all;
 }
+
 #info #find:hover {
   transform: scale(1.2);
 }
-#info > div:nth-child(2) > div {
+
+#info>div:nth-child(2)>div {
   margin-top: 0.5rem;
 }
+
 #info .errors {
   margin-bottom: 1rem;
   border-radius: 40px;
@@ -137,6 +159,7 @@
   visibility: hidden;
   transform: translateY(20px);
 }
+
 #find-results.open {
   visibility: visible;
   transform: translateY(0px);
@@ -148,10 +171,12 @@
   cursor: pointer;
   display: flex;
 }
+
 #find-results div:hover,
 #find-results div:focus {
   background-color: #424242;
 }
+
 #find-results div p {
   flex: 1;
 }
