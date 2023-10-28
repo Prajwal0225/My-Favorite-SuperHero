@@ -15,11 +15,17 @@ Welcome to the My Fav Superhero project! This web application allows you to sear
 
 ## About
 
+![image](https://raw.githubusercontent.com/Pro-18/My-Favorite-SuperHero/main/images/about.png)
+
+More information about this project and Hactoberfest will found on the about page. 
+ 
+
 ## Contributor
 
 ![image](https://raw.githubusercontent.com/Pro-18/My-Favorite-SuperHero/main/images/contributor.jpeg)
 
-![image]()
+Here are the wonderful contributors who have helped shape the My Fav Superhero project; some of them are listed on the contributor page.
+ 
 
 ## Demo
 
@@ -51,7 +57,6 @@ To use the My Fav Superhero project, simply open the `index.html` file in your w
 
 - Start searching for your favorite superheroes or enjoy random hero discoveries.
 
-https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/6aae0cbc-c912-47ed-9e62-94abf60a7267
 
 If you want to contribute to this project then check out [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
