@@ -9,7 +9,7 @@ Contributions to this repository will count towards Hacktoberfest participation 
 
 # Welcome to My-Favorite-SuperHero
 
-![image](https://github.com/Prajwal0225/My-Favorite-SuperHero/assets/103810119/b7a7c61d-fcf7-4882-9420-7747f4c4577b)
+![image](https://raw.githubusercontent.com/Pro-18/My-Favorite-SuperHero/main/images/home.jpeg)
 
 Welcome to the My Fav Superhero project! This web application allows you to search for your favorite superhero's image and discover random superhero images with just a click. Whether you're a superhero enthusiast or just looking for some fun, this project is for you.
 
