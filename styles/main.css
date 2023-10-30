@@ -38,12 +38,16 @@ img {
 }
 
 h1,
-h2,
+/* h2, */
 h3,
 h4,
-h5,
-p {
+h5{
+  text-align: center;
   color: white;
+}
+
+h2, p{
+  text-align: justify;
 }
 
 a {
