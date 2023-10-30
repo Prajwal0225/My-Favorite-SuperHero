@@ -1,122 +1,120 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- global head -->
-    <meta charset="UTF-8" />
-    <meta name="author" content="Prajwal,MadhuraFulkar and Our Contributers" />
-    <meta
-      name="description"
-      content="the site generates images and information of your favourite superhero, know your hero"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/main.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" href="/images/superhero.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
-      integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- end global head -->
-    <title>Superheroes</title>
-    <link href="styles/index.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  </head>
-  <body>
-    <!-- navigation -->
-    <nav class="navigation">
-      <div class="brand">
-        <a href="/">
-          <i class="fa-solid fa-mask"></i>
-        </a>
-      </div>
-      <div id="menu">
-        <button class="hamburger hamburger--elastic" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-      </div>
-      <div class="list">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contributor.html">Contributors</a>
-      </div>
-    </nav>
-    <!-- end navigation -->
-    <div class="container">
-      <div data-aos="zoom-in-right" data-aos-duration="1500">
-         <h1 class="title">Your Fav Super Heroes</h1>
-      </div>
-      <div class="heroes">
-        <div id="info">
-          <div>
-            <input list="filtering" type="text" placeholder="Find Your Hero" />
-            <button id="find">🔍</button>
-          </div>
 
-          <div  data-aos="zoom-in">
-            <h2 style="color: rgb(212 212 216)">[Type Hero Name]</h2>
+<head>
+  <!-- global head -->
+  <meta charset="UTF-8" />
+  <meta name="author" content="Prajwal,MadhuraFulkar and Our Contributers" />
+  <meta name="description"
+    content="the site generates images and information of your favourite superhero, know your hero" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="styles/main.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="/images/superhero.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Eater&family=Inter:wght@400;600;700&family=Lilita+One&family=Rowdies:wght@700&family=Rubik:wght@500&display=swap"
+    rel="stylesheet" />
 
-          </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins&family=Signika+Negative:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+    integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- end global head -->
+  <title>Superheroes</title>
+  <link href="styles/index.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <!-- navigation -->
+  <nav class="navigation">
+    <div class="brand">
+      <a href="/">
+        <i class="fa-solid fa-mask"></i>
+      </a>
+    </div>
+    <div id="menu">
+      <button class="hamburger hamburger--elastic" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+    <div class="list">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contributor.html">Contributors</a>
+    </div>
+  </nav>
+  <!-- end navigation -->
+  <div class="container">
+    <div data-aos="zoom-in-right" data-aos-duration="1500">
+      <h1 class="title">Your Fav Super Heroes</h1>
+    </div>
+    <div class="heroes">
+      <div id="info">
+        <div>
+          <input list="filtering" type="text" placeholder="Find Your Hero" />
+          <button id="find">🔍</button>
         </div>
-        <div id="results">
-          <div data-aos="flip-left" data-aos-duration="1000">
-            <img src="images/bg.jpg" alt="heroes" />
-          </div>
-          <div class="action">
-            <button id="random-hero">Random Hero</button>
-            <button id="download-hero">Download</button>
-          </div>
+
+        <div data-aos="zoom-in">
+          <h2 style="color: rgb(212 212 216)">[Type Hero Name]</h2>
+
+        </div>
+      </div>
+      <div id="results">
+        <div data-aos="flip-left" data-aos-duration="1000">
+          <img src="images/bg.jpg" alt="heroes" />
+        </div>
+        <div class="action">
+          <button id="random-hero">Random Hero</button>
+          <button id="download-hero">Download</button>
         </div>
       </div>
     </div>
-    <!-- footer -->
-    <footer class="footer">
-      <div class="link">
-        <a target="blank" href="https://www.linkedin.com/in/prajwalsomalkar/">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a target="blank" href="https://twitter.com/Prajwal__02">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a target="blank" href="https://github.com/Prajwal0225" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </div>
-      <div>
-        <p align="center" class="bookmark">
-          ©
-          <span id="year"></span>
-          Superhero's World By Prajwal Somalkar. All rights reserved.
-        </p>
-      </div>
-    </footer>
-    <!-- end footer -->
-    <!-- script -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="/js/app.js" type="module"></script>
-    <script src="/js/index.js" type="module"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <!-- end script -->
-  </body>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="link">
+      <a target="blank" href="https://www.linkedin.com/in/prajwalsomalkar/">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a target="blank" href="https://twitter.com/Prajwal__02">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a target="blank" href="https://github.com/Prajwal0225" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+    <div>
+      <p align="center" class="bookmark">
+        ©
+        <span id="year"></span>
+        Superhero's World By Prajwal Somalkar. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <!-- end footer -->
+  <!-- script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="/js/app.js" type="module"></script>
+  <script src="/js/index.js" type="module"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- end script -->
+</body>
+
 </html>
