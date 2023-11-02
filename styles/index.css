@@ -87,6 +87,11 @@
   gap: 50px;
 }
 
+.info__flex{
+display: flex;
+position: relative;
+}
+
 #info>div:nth-child(1) {
   position: relative;
   max-width: 400px;
